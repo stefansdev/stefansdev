@@ -1,0 +1,56 @@
+section.hero {
+	text-align: center;
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+	.content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		@media #{$desktop} {
+			width: 100%;
+		}
+		h1 {
+			// font-size: 32px;
+		}
+		h2 {
+			font-weight: 300;
+		}
+		.avatar {
+			border-radius: 50%;
+			width: 80px;
+			height: 80px;
+			display: block;
+			margin: 0 auto;
+			overflow: hidden;
+			border: 2px solid var(--brand_dark2);
+			margin-bottom: 90px;
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		ul {
+			display: block;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			li {
+				display: inline-block;
+				margin: 0 15px;
+				a {
+					color: white;
+					font-weight: 700;
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}

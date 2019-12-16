@@ -1,0 +1,25 @@
+:root {
+	// colors
+	--brand_main: #ff6a00;
+	--brand_dark: #19222e;
+	--brand_dark2: #202c3c;
+
+	// fonts
+	--font_default: "Titillium Web", sans-serif;
+}
+
+// socials
+$brand_facebook: #3c5a99;
+$brand_twitter: #1da1f2;
+$brand_instagram: #e1306c;
+$brand_youtube: #ff0000;
+$brand_vk: #4680c2;
+$brand_weibo: #df2029;
+$brand_gray: #b9b9b9;
+
+// -- Breakpoints shorthand
+$mobile: "(max-width: 768px)";
+$tablet: "(max-width: 768px)";
+$desktop: "(max-width: 1024px)";
+$hd_desktop: "(max-width: 1200px)";
+$fhd_desktop: "(max-width: 1920px)";
