@@ -1,0 +1,28 @@
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: white;
+	padding: 0 60px;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	height: 60px;
+	ul {
+		text-align: right;
+		padding: 0;
+		margin: 0;
+		li {
+			list-style-type: none;
+			display: inline-block;
+			margin-left: 30px;
+			a {
+				font-size: 16px;
+				color: var(--brand_dark);
+				text-transform: uppercase;
+				text-decoration: none;
+			}
+		}
+	}
+}

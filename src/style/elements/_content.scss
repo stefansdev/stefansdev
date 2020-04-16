@@ -1,0 +1,14 @@
+.content {
+	background-color: var(--brand_dark);
+	position: absolute;
+	top: 60px;
+	left: 60px;
+	right: 60px;
+	height: calc(100vh - 120px);
+}
+
+.page_wrap {
+	min-height: 100vh;
+	position: relative;
+	background-color: white;
+}
