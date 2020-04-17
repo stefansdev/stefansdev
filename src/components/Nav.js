@@ -10,20 +10,35 @@ const Nav = () => (
         </Link>
         <ul>
             <li>
-                <AniLink fade to="/">
+                <AniLink
+                    cover
+                    direction="right"
+                    to="/"
+                    bg="#222228"
+                    activeClassName="is_active"
+                >
                     Home
                 </AniLink>
             </li>
             <li>
-                <AniLink cover to="/about" bg="#222228">
+                <AniLink
+                    cover
+                    to="/about"
+                    bg="#222228"
+                    activeClassName="is_active"
+                >
                     ABOUT
                 </AniLink>
             </li>
             <li>
-                <Link to="/work">WORK</Link>
+                <Link activeClassName="is_active" to="/work">
+                    WORK
+                </Link>
             </li>
             <li>
-                <Link to="/contact">CONTACT</Link>
+                <Link activeClassName="is_active" to="/contact">
+                    CONTACT
+                </Link>
             </li>
         </ul>
     </nav>

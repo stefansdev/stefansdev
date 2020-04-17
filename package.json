@@ -8,6 +8,7 @@
 		"@mdx-js/mdx": "^1.5.8",
 		"@mdx-js/react": "^1.5.8",
 		"bourbon": "^6.0.0",
+		"framer-motion": "^1.10.3",
 		"gatsby": "^2.20.13",
 		"gatsby-image": "^2.3.2",
 		"gatsby-plugin-manifest": "^2.3.3",

@@ -1,0 +1,51 @@
+.welcome_box {
+	border: 10px solid var(--brand_white);
+	height: calc(100% - 120px);
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: 1.1fr 2fr;
+	align-items: center;
+	.profile_picture {
+		img {
+			position: absolute;
+			display: block;
+			bottom: -60px;
+			left: -60px;
+		}
+	}
+	.welcome_content {
+		padding-top: 40px;
+		h1,
+		h2 {
+			font-size: 48px;
+			line-height: 50px;
+			margin: 0;
+		}
+		h2 {
+			margin-bottom: 40px;
+		}
+		blockquote {
+			margin-bottom: 60px;
+		}
+		.call_to_actions {
+			a {
+				display: inline-block;
+				margin-right: 15px;
+				text-decoration: none;
+				width: 200px;
+				border: 2px solid var(--brand_white);
+				font-size: 16px;
+				line-height: 16px;
+				text-align: center;
+				color: var(--brand_white);
+				padding: 13px 40px;
+				transition: all 0.3s ease;
+				&:hover {
+					background-color: var(--brand_white);
+					color: var(--brand_dark2);
+					transition: all 0.3s ease;
+				}
+			}
+		}
+	}
+}

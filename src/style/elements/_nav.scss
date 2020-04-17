@@ -17,11 +17,34 @@ nav {
 			list-style-type: none;
 			display: inline-block;
 			margin-left: 30px;
+			position: relative;
 			a {
 				font-size: 16px;
 				color: var(--brand_dark);
 				text-transform: uppercase;
 				text-decoration: none;
+				font-weight: 600;
+				position: relative;
+				overflow: hidden;
+				display: block;
+				&.is_active,
+				&:hover {
+					&:after {
+						left: 0;
+						transition: all 0.3s ease;
+					}
+				}
+				&:after {
+					content: " ";
+					display: block;
+					position: absolute;
+					bottom: 0;
+					left: -102%;
+					height: 2px;
+					width: 100%;
+					background-color: var(--brand_dark);
+					transition: all 0.3s ease;
+				}
 			}
 		}
 	}
