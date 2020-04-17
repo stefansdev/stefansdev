@@ -1,14 +1,15 @@
-// reset
+// -- reset
 @import "vendor/reset";
 
-// main
+// -> main
 @import "fonts";
 @import "variables";
 @import "main";
 
-// elements
+// -- elements
 @import "elements/nav";
-@import "elements/hero";
-@import "elements/content";
-@import "elements/welcome_box";
 @import "elements/social_sidebar";
+@import "elements/hero";
+
+// -> pages
+@import "pages/about";

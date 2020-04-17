@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
-import Logo from './images/logo'
+import MailICon from '../images/icons/mail'
 
 const Nav = () => (
     <nav>
-        <Link to="/">
-            <Logo />
+        <Link to="/" className="logo">
+            STEFANS.DEV
         </Link>
         <ul>
             <li>
@@ -14,7 +14,7 @@ const Nav = () => (
                     cover
                     direction="right"
                     to="/"
-                    bg="#222228"
+                    bg="#232327"
                     activeClassName="is_active"
                 >
                     Home
@@ -24,7 +24,7 @@ const Nav = () => (
                 <AniLink
                     cover
                     to="/about"
-                    bg="#222228"
+                    bg="#232327"
                     activeClassName="is_active"
                 >
                     ABOUT
@@ -36,11 +36,19 @@ const Nav = () => (
                 </Link>
             </li>
             <li>
+                <Link activeClassName="is_active" to="/uses">
+                    USES
+                </Link>
+            </li>
+            <li>
                 <Link activeClassName="is_active" to="/contact">
                     CONTACT
                 </Link>
             </li>
         </ul>
+        <a href="mailto:s@stefans.dev" className="contact_email">
+            <MailICon />
+        </a>
     </nav>
 )
 

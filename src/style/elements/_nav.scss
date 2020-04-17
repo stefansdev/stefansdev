@@ -3,12 +3,20 @@ nav {
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: white;
-	padding: 0 60px;
+	background-color: var(--brand_dark);
 	display: grid;
-	grid-template-columns: auto 1fr;
+	grid-template-columns: auto 1fr 75px;
+	gap: 40px;
 	align-items: center;
-	height: 60px;
+	height: 75px;
+	z-index: 12;
+	.logo {
+		font-size: 24px;
+		font-weight: 600;
+		color: var(--brand_white);
+		text-decoration: none;
+		margin-left: 25px;
+	}
 	ul {
 		text-align: right;
 		padding: 0;
@@ -19,14 +27,15 @@ nav {
 			margin-left: 30px;
 			position: relative;
 			a {
-				font-size: 16px;
-				color: var(--brand_dark);
+				font-size: 14px;
+				font-weight: 600;
+				color: var(--brand_white);
 				text-transform: uppercase;
 				text-decoration: none;
-				font-weight: 600;
 				position: relative;
 				overflow: hidden;
 				display: block;
+				padding: 5px 0;
 				&.is_active,
 				&:hover {
 					&:after {
@@ -38,14 +47,25 @@ nav {
 					content: " ";
 					display: block;
 					position: absolute;
-					bottom: 0;
+					bottom: 0px;
 					left: -102%;
 					height: 2px;
 					width: 100%;
-					background-color: var(--brand_dark);
+					background-color: var(--brand_yellow);
 					transition: all 0.3s ease;
 				}
 			}
+		}
+	}
+	.contact_email {
+		background-color: var(--brand_yellow);
+		height: 75px;
+		position: relative;
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 		}
 	}
 }

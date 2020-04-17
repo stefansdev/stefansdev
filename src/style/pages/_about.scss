@@ -1,0 +1,57 @@
+.content {
+	.about_grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 40px;
+		padding: 60px;
+		.about_content {
+			h1 {
+				margin: 0;
+				margin-bottom: 60px;
+				font-weight: 700;
+				font-size: 52px;
+			}
+			h2 {
+				margin: 0;
+				margin-bottom: 40px;
+				margin-top: 80px;
+				font-size: 42px;
+				line-height: 44px;
+			}
+			p {
+				margin: 0;
+				margin-bottom: 20px;
+				font-size: 22px;
+				line-height: 26px;
+				font-weight: 300;
+			}
+			.skills_list {
+				padding: 0;
+				margin: 0;
+				li {
+					list-style-type: none;
+					display: inline-block;
+					padding: 8px 25px;
+					margin-right: 10px;
+					margin-bottom: 10px;
+					border-radius: 25px;
+					background-color: var(--brand_dark3);
+					font-size: 14px;
+					line-height: 15px;
+					font-weight: 600;
+				}
+			}
+		}
+		.about_image {
+			position: relative;
+			img {
+				display: block;
+				object-fit: contain;
+				position: absolute;
+				top: 65%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+}
