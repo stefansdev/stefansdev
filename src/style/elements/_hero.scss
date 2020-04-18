@@ -6,8 +6,9 @@ $dot-size: 1px;
 $dot-space: 6px;
 
 .hero {
-	height: 100vh;
-	width: 100vw;
+	height: calc(100vh - 75px);
+	width: calc(100vw - 75px);
+	margin-top: 75px;
 	position: relative;
 	background-color: black;
 	overflow: hidden;
@@ -37,7 +38,7 @@ $dot-space: 6px;
 	}
 	.content {
 		position: absolute;
-		top: 55%;
+		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		color: var(--brand_white);
