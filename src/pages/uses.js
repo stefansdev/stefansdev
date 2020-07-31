@@ -4,11 +4,11 @@ import '../style/app.scss'
 import Nav from '../components/Nav'
 
 const Uses = () => (
-    <>
-        <SEO title="Stefan Stankovic , stefans.dev | Web Design and Development" />
-        <Nav />
-        <section>USES</section>
-    </>
+	<>
+		<SEO title="Stefan Stankovic , stefans.dev | Web Design and Development" />
+		<Nav />
+		<section>USES GOING HERE</section>
+	</>
 )
 
 export default Uses
