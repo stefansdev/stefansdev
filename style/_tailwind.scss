@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+	.text-stroke {
+		text-shadow: -1px -1px 0 #1f2937, 1px -1px 0 #1f2937, -1px 1px 0 #1f2937,
+			1px 1px 0 #1f2937;
+	}
+	.text-stroke-white {
+		text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+			1px 1px 0 #ffffff;
+	}
+}
