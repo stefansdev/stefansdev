@@ -21,7 +21,7 @@ const SocialBar = () => (
 						<TwitterIcon />
 						<div className="text-sm">
 							<span className="block">Follow me on Twitter</span>
-							<span className="font-semibold">@stefans.dev</span>
+							<span className="font-semibold">@st3f4ns</span>
 						</div>
 					</a>
 				</li>
@@ -34,7 +34,7 @@ const SocialBar = () => (
 					>
 						<InstagramIcon />
 						<div className="text-sm">
-							<span className="block">Follow me on Twitter</span>
+							<span className="block">Follow me on Instagram</span>
 							<span className="font-semibold">@stefans.dev</span>
 						</div>
 					</a>
@@ -48,7 +48,7 @@ const SocialBar = () => (
 					>
 						<GithubIcon />
 						<div className="text-sm">
-							<span className="block">Follow me on Twitter</span>
+							<span className="block">Follow me on GitHub</span>
 							<span className="font-semibold">@stefans.dev</span>
 						</div>
 					</a>
@@ -62,8 +62,8 @@ const SocialBar = () => (
 					>
 						<UpworkIcon />
 						<div className="text-sm">
-							<span className="block">Follow me on Twitter</span>
-							<span className="font-semibold">@stefans.dev</span>
+							<span className="block">Hire me on Upwork</span>
+							<span className="font-semibold">Stefan S.</span>
 						</div>
 					</a>
 				</li>

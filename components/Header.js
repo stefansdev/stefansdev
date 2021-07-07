@@ -40,7 +40,7 @@ const Header = () => {
 		}
 	};
 	return (
-		<header className="bg-gray-800 py-4 dark:bg-gray-50">
+		<header className="bg-gray-800 py-4 dark:bg-gray-50 fixed top-0 left-0 w-full z-50">
 			<div className="container mx-auto max-w-7xl grid grid-cols-[1fr,auto] items-center">
 				<div className="">
 					<Link href="/">
