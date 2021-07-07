@@ -9,6 +9,8 @@
 	},
 	"dependencies": {
 		"@heroicons/react": "^1.0.1",
+		"@tailwindcss/forms": "^0.3.3",
+		"@tailwindcss/typography": "^0.4.1",
 		"eslint-config-next": "^11.0.1",
 		"next": "latest",
 		"next-themes": "0.0.15",
