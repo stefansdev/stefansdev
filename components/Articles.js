@@ -10,6 +10,7 @@ const articlesList = [
 		image: '/blog_placeholder.jpg',
 		excerpt:
 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.',
+		categories: ['javascript'],
 	},
 	{
 		id: 2,
@@ -18,6 +19,7 @@ const articlesList = [
 		image: '/blog_placeholder.jpg',
 		excerpt:
 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.',
+		categories: ['javascript'],
 	},
 	{
 		id: 3,
@@ -26,11 +28,12 @@ const articlesList = [
 		image: '/blog_placeholder.jpg',
 		excerpt:
 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.',
+		categories: ['javascript'],
 	},
 ];
 
 const Articles = () => (
-	<section className="py-12">
+	<section className="py-16">
 		<div className="container mx-auto max-w-7xl">
 			<SectionTitle
 				titleStroke="Latest."
@@ -45,6 +48,7 @@ const Articles = () => (
 						key={article.id}
 						image={article.image}
 						excerpt={article.excerpt}
+						categories={article.categories}
 					/>
 				))}
 			</div>
