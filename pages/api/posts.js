@@ -1,6 +1,6 @@
-import { getRecentBlogs } from '../../utils/blog';
+import { getAllPosts } from '../../utils/blog';
 
 export default function posts(req, res) {
-	const allPosts = getRecentBlogs();
-	res.status(200).json({ ...allPosts });
+	const allPosts = getAllPosts();
+	res.status(200).json({ allPosts });
 }

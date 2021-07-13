@@ -1,12 +1,13 @@
-import { getRecentBlogs, getPostBySlug } from '../../../utils/blog';
+import { getPostBySlug } from '../../../utils/blog';
 
 export default function post(req, res) {
 	const { slug } = req.query;
-	const singlePost = getPostBySlug(slug);
-	console.log(singlePost);
-	if (singlePost) {
+	try {
+		const singlePost = getPostBySlug(slug);
 		res.status(200).json({ ...singlePost });
-	} else {
-		res.status(404).json({ message: 'Post Not found!' });
+	} catch (error) {
+		res.status(404).json({
+			message: 'Error 404: Post you are looking for I havent created! Double check the slug!',
+		});
 	}
 }

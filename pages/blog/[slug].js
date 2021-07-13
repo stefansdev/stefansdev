@@ -1,5 +1,4 @@
 import React from 'react';
-import { getAllPosts, getPostBySlug } from '../../utils/blog';
 import markdownToHtml from '../../utils/markdown';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -21,9 +20,9 @@ export default function Post({ meta, content }) {
 }
 
 export async function getStaticProps({ params }) {
-	const post = getPostBySlug(params.slug);
+	const res = await fetch(`http://localhost:3000/api/post/${params.slug}`);
+	const post = await res.json();
 	const content = await markdownToHtml(post.content || '');
-
 	return {
 		props: {
 			...post,
@@ -33,10 +32,13 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-	const posts = getAllPosts();
+	const res = await fetch('http://localhost:3000/api/posts');
+	const posts = await res.json();
+	console.log('posts in static paths');
+	console.table(posts);
 
 	return {
-		paths: posts.map((post) => ({
+		paths: posts.allPosts.map((post) => ({
 			params: {
 				slug: post.slug,
 			},
