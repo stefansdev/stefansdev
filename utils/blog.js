@@ -9,22 +9,23 @@ export function getPostBySlug(slug) {
 	const fullPath = join(docsDirectory, `${realSlug}.md`);
 	const fileContents = fs.readFileSync(fullPath, 'utf8');
 	const { data, content } = matter(fileContents);
-
 	return { slug: realSlug, meta: data, content };
 }
 
+// get all posts
 export function getAllPosts() {
 	const files = fs.readdirSync(`${process.cwd()}/content/posts`);
 
 	const posts = files.map((filename) => {
 		const markdownWithMetadata = fs.readFileSync(`content/posts/${filename}`).toString();
 
-		const { data } = matter(markdownWithMetadata);
+		const { data, content } = matter(markdownWithMetadata);
 		const formattedDate = new Date(data.date).toISOString();
 
 		const postList = {
 			...data,
 			date: formattedDate,
+			content,
 		};
 
 		return {
@@ -38,6 +39,7 @@ export function getAllPosts() {
 	return postDataSortByDate;
 }
 
+// get recent posts (for homepage)
 export function getRecentBlogs() {
 	const allPosts = getAllPosts();
 
