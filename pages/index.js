@@ -5,7 +5,6 @@ import Articles from '../components/Articles';
 import Footer from '../components/Footer';
 import Tips from '../components/Tips';
 import Contact from '../components/Contact';
-import { getRecentBlogs } from '../utils/blog';
 
 const Home = ({ recentPosts }) => {
 	console.table(recentPosts);
@@ -25,7 +24,8 @@ const Home = ({ recentPosts }) => {
 export default Home;
 
 export async function getStaticProps() {
-	const recentPosts = getRecentBlogs();
+	const res = await fetch('http://localhost:3000/api/recent-posts');
+	const { recentPosts } = await res.json();
 	return {
 		props: {
 			recentPosts,
