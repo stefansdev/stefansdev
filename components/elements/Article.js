@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Article = ({ slug, title, excerpt, image, categories }) => (
 	<article>
-		<Link href={`/${slug}`}>
+		<Link href={`/blog/${slug}`}>
 			<a className="rounded-md overflow-hidden border border-gray-200 block hover:shadow-md transition-all dark:border-gray-700">
 				<div className="h-48 relative overflow-hidden after:content-[' '] after:block after:absolute after:inset-0 after:bg-gradient-to-b after:from-transparent after:to-black after:z-10 after:opacity-50">
 					<Image src={image} layout="fill" alt="description" />

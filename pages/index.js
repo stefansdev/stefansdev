@@ -5,17 +5,30 @@ import Articles from '../components/Articles';
 import Footer from '../components/Footer';
 import Tips from '../components/Tips';
 import Contact from '../components/Contact';
+import { getRecentBlogs } from '../utils/blog';
 
-export default function Home() {
+const Home = ({ recentPosts }) => {
+	console.table(recentPosts);
 	return (
 		<>
 			<Header />
 			<Hero />
 			<SocialBar />
-			<Articles />
+			<Articles posts={recentPosts} />
 			<Tips />
 			<Contact />
 			<Footer />
 		</>
 	);
+};
+
+export default Home;
+
+export async function getStaticProps() {
+	const recentPosts = getRecentBlogs();
+	return {
+		props: {
+			recentPosts,
+		},
+	};
 }
