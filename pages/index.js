@@ -14,7 +14,7 @@ const Home = ({ recentPosts }) => {
 			<Hero />
 			<SocialBar />
 			<Articles posts={recentPosts} />
-			<Tips />
+			{/* <Tips /> */}
 			<Contact />
 			<Footer />
 		</>

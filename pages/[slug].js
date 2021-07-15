@@ -1,7 +1,7 @@
 import React from 'react';
-import markdownToHtml from '../../utils/markdown';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import markdownToHtml from '../utils/markdown';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function Post({ meta, content }) {
 	console.log(meta);
@@ -34,8 +34,6 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
 	const res = await fetch('http://localhost:3000/api/posts');
 	const posts = await res.json();
-	console.log('posts in static paths');
-	console.table(posts);
 
 	return {
 		paths: posts.allPosts.map((post) => ({

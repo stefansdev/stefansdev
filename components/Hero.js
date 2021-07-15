@@ -33,17 +33,13 @@ export const Hero = () => (
 					<div className="max-w-[420px] pb-8 text-base font-light">
 						<p className=" mb-4">
 							I am mostly focuses on Headless / Jamstack tech stack, but I have experience in other web
-							dev areas too.
+							dev areas too. Love good UI/UX.
 						</p>
 						<p className=" mb-4">
 							Feel free to{' '}
 							<a href="mailto:s@stefans.dev" className="font-bold hover:underline">
 								say hi 👋{' '}
 							</a>
-							or{' '}
-							<Link href="/contact">
-								<a className="font-bold hover:underline">get in touch for work ‍💻!</a>
-							</Link>
 						</p>
 						<p className=" ">
 							You can{' '}
