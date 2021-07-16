@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -39,10 +38,18 @@ const About = () => (
 					how it all started, I knew what I want to do in life. Good times!
 				</p>
 				<p>
-					I wanted to properly learn how to make websites and not just edit and scrap the surface. So, I found
-					out about those short web development courses / bootcamps. And, as soon as I have finished high
-					school i signed up and moved to Belgrade. After each course I coudnt wait to come home and try the
-					new things I have learned. It helped a lot.
+					Initial experience in community organization, leading teams and events got from those gaming
+					communities. Initialy, smaller Counter Strike communities, but later I have created biggest gaming
+					community on Balkan - LoLSerbia (League of Legends community). We had huge online/LAN events. I
+					would manage tournaments with 250+ teams of 5 players. More then thousand people would play
+					tournament over a weekend.
+				</p>
+				<p>
+					While organizing all that I wanted to make proper websites for those communities and not just edit
+					and scrap the surface. So, got interested and did a research on whats the best way. I found out
+					about those short web development courses / bootcamps and it seemed interesting. And, as soon as I
+					have finished high school i signed up and moved to Belgrade. After each course I coudnt wait to come
+					home and try the new things I have learned. It helped a lot.
 				</p>
 				<h3>Proffesinal career - a story</h3>
 				<p>
@@ -89,3 +96,9 @@ const About = () => (
 );
 
 export default About;
+
+export async function getStaticProps() {
+	return {
+		props: {},
+	};
+}
