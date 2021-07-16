@@ -29,7 +29,7 @@ const PageTitle = ({ title, titleStroke, subtitle }) => (
 			</svg>
 		</div>
 		<div className="relative z-20 pb-16">
-			<h2 className="text-stroke text-6xl font-extrabold text-white text-stroke opacity-10 absolute top-0">
+			<h2 className="text-stroke text-8xl font-extrabold text-white text-stroke opacity-10 absolute top-0">
 				{subtitle}
 			</h2>
 			<h1 className="font-extrabold text-5xl pt-12 pl-4">
