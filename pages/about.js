@@ -28,9 +28,9 @@ const About = () => (
 				</div>
 			</div>
 		</div>
-		<div className="container mx-auto max-w-4xl pb-28">
-			<div className="prose">
-				<h3>Early times - How it started</h3>
+		<div className="container mx-auto max-w-4xl pb-28 ">
+			<div className="prose dark:text-gray-300">
+				<h3 className="dark:text-gray-200">Early times - How I started</h3>
 				<p>
 					I initialy got in touch in the times when forums were popular. I use to own couple biggest gaming
 					communities in my teenage days and I forums were really popular back then. I would install forum and
@@ -51,7 +51,7 @@ const About = () => (
 					have finished high school i signed up and moved to Belgrade. After each course I coudnt wait to come
 					home and try the new things I have learned. It helped a lot.
 				</p>
-				<h3>Proffesinal career - a story</h3>
+				<h3 className="dark:text-gray-200">Proffesinal career - a story</h3>
 				<p>
 					Right after I have finished courses, I started my internship at DooApp. Stayed in the same company
 					for around 15 months and left to try myself in freelance world. Even tho I knew to code, i didnt
@@ -79,12 +79,12 @@ const About = () => (
 					i feel passionate about, write about my experienced in development, tech, record short how-to videos
 					and try to help other devs.
 				</p>
-				<h3>Interests</h3>
+				<h3 className="dark:text-gray-200">Interests</h3>
 				<p>
 					First place belongs to frontend development. I love to learning new stuff, solve people’s
 					problems... I’m also passionate about design, UI / UX. I’m a tech lover, love everything about it.
 				</p>
-				<h3>Sports</h3>
+				<h3 className="dark:text-gray-200">Sports</h3>
 				<p>
 					I used to play futsal a lot as a kid. Still love it and try to play at least once a week. Other days
 					I’m going for a run.

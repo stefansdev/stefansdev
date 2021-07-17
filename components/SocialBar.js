@@ -4,9 +4,6 @@ import InstagramIcon from './svg/InstagramIcon';
 import GithubIcon from './svg/GithubIcon';
 import UpworkIcon from './svg/UpworkIcon';
 
-const classes =
-	'bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-600 rounded-md py-2 px-4 grid grid-cols-[auto,1fr] items-center gap-4 transition-gpu transition-all duration-300';
-
 const SocialBar = () => (
 	<section className="py-12 bg-gray-100 dark:bg-gray-900">
 		<div className="container mx-auto max-w-7xl ">

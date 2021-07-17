@@ -3,9 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import HeroAnimation from './elements/HeroAnimation';
 
-export const Hero = () => (
+const Hero = () => (
 	<>
-		<section className="relative">
+		<section className="relative pt-12">
 			<div className="container mx-auto max-w-7xl grid grid-cols-2 items-end gap-8 relative overflow-hidden">
 				<HeroAnimation />
 				<div className="">
@@ -53,4 +53,5 @@ export const Hero = () => (
 		</section>
 	</>
 );
+
 export default Hero;

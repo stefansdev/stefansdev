@@ -2,11 +2,20 @@ import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
 
-const docsDirectory = join(process.cwd(), 'content/posts');
+const docsDirectory = join(process.cwd(), 'content/');
 
 export function getPostBySlug(slug) {
 	const realSlug = slug.replace(/\.md$/, '');
-	const fullPath = join(docsDirectory, `${realSlug}.md`);
+	const fullPath = join(docsDirectory, `posts/${realSlug}.md`);
+	const fileContents = fs.readFileSync(fullPath, 'utf8');
+	const { data, content } = matter(fileContents);
+	return { slug: realSlug, meta: data, content };
+}
+
+// get page by slug
+export function getPageBySlug(slug) {
+	const realSlug = slug.replace(/\.md$/, '');
+	const fullPath = join(docsDirectory, `pages/${realSlug}.md`);
 	const fileContents = fs.readFileSync(fullPath, 'utf8');
 	const { data, content } = matter(fileContents);
 	return { slug: realSlug, meta: data, content };
