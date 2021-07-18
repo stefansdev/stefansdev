@@ -26,7 +26,7 @@ const Uses = ({ meta, content }) => (
 export default Uses;
 
 export async function getStaticProps({ params }) {
-	const res = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/page/uses`);
+	const res = await fetch(`${process.env.API}/api/page/uses`);
 	const page = await res.json();
 	const content = await markdownToHtml(page.content || '');
 	return {
