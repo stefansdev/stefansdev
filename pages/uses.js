@@ -26,7 +26,7 @@ const Uses = ({ meta, content }) => (
 export default Uses;
 
 export async function getStaticProps({ params }) {
-	const res = await fetch(`${process.env.VERCEL_URL}/page/uses`);
+	const res = await fetch(`${process.env.VERCEL_URL}/api/page/uses`);
 	const page = await res.json();
 	const content = await markdownToHtml(page.content || '');
 	return {
