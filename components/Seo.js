@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-const meta = ({ meta, title, description, image }) => {
+const meta = ({ title, description, image }) => {
 	const siteName = 'Stefan Stankovic - Full Stack Javascript Developer';
 	const defaultDescription = 'Full Stack Developer and Web Designer';
 
