@@ -48,7 +48,7 @@ const meta = ({ meta, title, description, image }) => {
 			<meta property="twitter:image" content={image || '/meta_placeholder.jpg'} />
 			{/* <meta property="google-site-verification" content="D47LBXjUmD9IfEnImjz2Nl7Or3fiMOMiSNtIxOSkDjo" /> */}
 			{/* analytics scripts */}
-			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-101482730-2" />
+			{/* <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101482730-2" />
 			<script
 				dangerouslySetInnerHTML={{
 					__html: `window.dataLayer = window.dataLayer || [];
@@ -56,7 +56,7 @@ const meta = ({ meta, title, description, image }) => {
 				gtag('js', new Date());
 				gtag('config', 'UA-101482730-2');`,
 				}}
-			/>
+			/> */}
 		</Head>
 	);
 };
