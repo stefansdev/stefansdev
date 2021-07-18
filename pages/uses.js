@@ -7,9 +7,9 @@ import Seo from '../components/Seo';
 
 const Uses = ({ meta, content }) => (
 	<>
-		<Seo title={meta.title} description={meta.excerpt} image={meta.image} />
+		{/* <Seo title={meta.title} description={meta.excerpt} image={meta.image} /> */}
 		<Header />
-		<div className="container mx-auto max-w-4xl py-28">
+		{/* <div className="container mx-auto max-w-4xl py-28">
 			<div className="relative">
 				<PageTitle titleStroke="USES" subtitle="What I use" />
 			</div>
@@ -19,20 +19,8 @@ const Uses = ({ meta, content }) => (
 					__html: content,
 				}}
 			/>
-		</div>
+		</div> */}
 		<Footer />
 	</>
 );
 export default Uses;
-
-export async function getServerSideProps({ params }) {
-	const res = await fetch(`${process.env.API}/page/uses`);
-	const page = await res.json();
-	const content = await markdownToHtml(page.content || '');
-	return {
-		props: {
-			...page,
-			content,
-		},
-	};
-}
