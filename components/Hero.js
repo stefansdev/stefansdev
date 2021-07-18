@@ -41,12 +41,12 @@ const Hero = () => (
 								say hi 👋{' '}
 							</a>
 						</p>
-						<p className=" ">
+						{/* <p className=" ">
 							You can{' '}
 							<Link href="/contact">
 								<a className="font-bold hover:underline">read more about me here.</a>
 							</Link>
-						</p>
+						</p> */}
 					</div>
 				</div>
 			</div>
