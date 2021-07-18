@@ -5,8 +5,8 @@ import HeroAnimation from './elements/HeroAnimation';
 
 const Hero = () => (
 	<>
-		<section className="relative pt-12">
-			<div className="container mx-auto max-w-7xl grid grid-cols-2 items-end gap-8 relative overflow-hidden">
+		<section className="relative pt-6 md:pt-12">
+			<div className="container mx-auto max-w-7xl md:grid md:grid-cols-2 items-end gap-8 relative overflow-hidden">
 				<HeroAnimation />
 				<div className="">
 					<Image
@@ -18,10 +18,10 @@ const Hero = () => (
 					/>
 				</div>
 				<div className="">
-					<h2 className="text-4xl leading-10 font-light mb-6">
+					<h2 className="text-2xl md:text-4xl leading-10 font-light mb-6">
 						Hi, I&apos;m <span className="font-semibold"> Stefan S.</span>
 					</h2>
-					<h1 className="text-6xl font-extrabold leading-26 mb-6">
+					<h1 className="text-4xl md:text-6xl font-extrabold leading-26 mb-6">
 						<span className="text-stroke dark:text-stroke-white text-white dark:text-gray-800">
 							I&apos;m{' '}
 						</span>
