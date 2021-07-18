@@ -2,31 +2,30 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import PageTitle from '../components/PageTitle';
+import Seo from '../components/Seo';
 
 const Contact = () => (
 	<>
+		<Seo
+			title="Contact | Stefan Stankovic - Full Stack Javascript Developer"
+			description="Full Stack Javascript Developer"
+		/>
 		<Header />
 		<div className="container mx-auto max-w-4xl py-28">
 			<div className="relative">
 				<PageTitle titleStroke="CONTACT" subtitle="REACH OUT TO ME" />
-				<div className="prose dark:text-gray-200">
+				<div className="prose dark:prose-dark">
 					<p>
 						If you would like to contact me for any reason, please email me at{' '}
-						<a className="dark:text-gray-100" href="mailto:s@stefans.dev">
-							s@stefans.dev
-						</a>
+						<a href="mailto:s@stefans.dev">s@stefans.dev</a>
 						.<br />
 						You can also use my social networks to do so:
-						<ul className="dark:text-gray-200">
+						<ul>
 							<li>
-								<a className="dark:text-gray-100" href="https://twitter.com/st3f4ns">
-									Twitter
-								</a>
+								<a href="https://twitter.com/st3f4ns">Twitter</a>
 							</li>
 							<li>
-								<a className="dark:text-gray-100" href="https://instagram.com/stefans.dev">
-									Instagram
-								</a>
+								<a href="https://instagram.com/stefans.dev">Instagram</a>
 							</li>
 						</ul>
 					</p>

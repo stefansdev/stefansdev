@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import PageTitle from '../components/PageTitle';
 import Project from '../components/Project';
+import Seo from '../components/Seo';
 
 const projectsList = [
 	{
@@ -27,6 +28,10 @@ const projectsList = [
 
 const Work = () => (
 	<>
+		<Seo
+			title="Work | Stefan Stankovic - Full Stack Javascript Developer"
+			description="Full Stack Javascript Developer"
+		/>
 		<Header />
 		<div className="container mx-auto max-w-4xl py-28">
 			<div className="relative">
