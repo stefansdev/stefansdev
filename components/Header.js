@@ -9,6 +9,10 @@ const menuItems = [
 		link: '/',
 	},
 	{
+		title: 'Blog',
+		link: '/blog',
+	},
+	{
 		title: 'About',
 		link: '/about',
 	},
@@ -28,6 +32,7 @@ const menuItems = [
 
 const Header = () => {
 	const [isMounted, setIsMounted] = useState(false);
+	const [menuIsOpen, setMenuIsOpen] = useState(false);
 	const { theme, setTheme } = useTheme();
 
 	useEffect(() => {
@@ -53,7 +58,7 @@ const Header = () => {
 					</Link>
 				</div>
 				<nav className="grid grid-cols-[auto,auto] gap-5 items-center">
-					<ul className="flex">
+					<ul className={`md:flex ${menuIsOpen ? '' : ''}`}>
 						{menuItems.map((item, i) => (
 							<li key={`key_${i}`} className="px-2">
 								<Link href={item.link}>
