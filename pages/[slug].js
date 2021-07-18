@@ -50,7 +50,7 @@ export default function Post({ meta, content }) {
 	);
 }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
 	const res = await fetch(`${process.env.API}/post/${params.slug}`);
 	const post = await res.json();
 	const content = await markdownToHtml(post.content || '');
@@ -62,16 +62,16 @@ export async function getStaticProps({ params }) {
 	};
 }
 
-export async function getStaticPaths() {
-	const res = await fetch(`${process.env.API}/posts`);
-	const posts = await res.json();
+// export async function getStaticPaths() {
+// 	const res = await fetch(`${process.env.API}/posts`);
+// 	const posts = await res.json();
 
-	return {
-		paths: posts.allPosts.map((post) => ({
-			params: {
-				slug: post.slug,
-			},
-		})),
-		fallback: false,
-	};
-}
+// 	return {
+// 		paths: posts.allPosts.map((post) => ({
+// 			params: {
+// 				slug: post.slug,
+// 			},
+// 		})),
+// 		fallback: false,
+// 	};
+// }
