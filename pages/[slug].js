@@ -51,7 +51,7 @@ export default function Post({ meta, content }) {
 }
 
 export async function getStaticProps({ params }) {
-	const res = await fetch(`${process.env.API}/post/${params.slug}`);
+	const res = await fetch(`${process.env.VERCEL_URL}/post/${params.slug}`);
 	const post = await res.json();
 	const content = await markdownToHtml(post.content || '');
 	return {
@@ -63,7 +63,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-	const res = await fetch(`${process.env.API}/posts`);
+	const res = await fetch(`${process.env.VERCEL_URL}/posts`);
 	const posts = await res.json();
 
 	return {
