@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import PageTitle from '../components/PageTitle';
 import markdownToHtml from '../utils/markdown';
 import Seo from '../components/Seo';
+import { getPageBySlug } from '../utils/pages';
 
 const Uses = ({ meta, content }) => (
 	<>
@@ -25,13 +26,12 @@ const Uses = ({ meta, content }) => (
 );
 export default Uses;
 
-export async function getStaticProps({ params }) {
-	const res = await fetch(`${process.env.API}/page/uses`);
-	const page = await res.json();
-	const content = await markdownToHtml(page.content || '');
+export async function getStaticProps() {
+	const post = getPageBySlug('uses');
+	const content = await markdownToHtml(post.content || '');
 	return {
 		props: {
-			...page,
+			meta: post.meta,
 			content,
 		},
 	};
