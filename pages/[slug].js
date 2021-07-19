@@ -2,12 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import readingTime from 'reading-time';
 import { ClockIcon, CalendarIcon } from '@heroicons/react/outline';
-import markdownToHtml from '../utils/markdown';
 import GithubIcon from '../components/svg/GithubIcon';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Seo from '../components/Seo';
 import { monthNames } from '../utils/monthNames';
+import { getAllPosts, getPostBySlug } from '../utils/blog';
+import markdownToHtml from '../utils/markdown';
 
 export default function Post({ meta, content }) {
 	const readTime = readingTime(content);
@@ -51,23 +52,21 @@ export default function Post({ meta, content }) {
 }
 
 export async function getStaticProps({ params }) {
-	const res = await fetch(`${process.env.API}/post/${params.slug}`);
-	const post = await res.json();
+	const post = getPostBySlug(params.slug);
 	const content = await markdownToHtml(post.content || '');
 	return {
 		props: {
-			...post,
+			meta: post.meta,
 			content,
 		},
 	};
 }
 
 export async function getStaticPaths() {
-	const res = await fetch(`${process.env.API}/posts`);
-	const posts = await res.json();
+	const posts = getAllPosts();
 
 	return {
-		paths: posts.allPosts.map((post) => ({
+		paths: posts.map((post) => ({
 			params: {
 				slug: post.slug,
 			},
