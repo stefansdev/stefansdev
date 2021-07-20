@@ -13,11 +13,11 @@ const Blog = ({ posts }) => (
 			description="Full Stack Javascript Developer"
 		/>
 		<Header />
-		<div className="container mx-auto max-w-7xl py-28 relative">
+		<div className="container mx-auto max-w-7xl py-12 md:py-28 relative">
 			<div className="relative">
 				<PageTitle title="BLOG" subtitle="Posts i wrote" />
 			</div>
-			<div className="grid grid-cols-3 gap-4 pt-16">
+			<div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-16">
 				{posts.map((article) => (
 					<Article
 						slug={article.slug}

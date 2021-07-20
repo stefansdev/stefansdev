@@ -11,7 +11,7 @@ const About = () => (
 			description="Full Stack Javascript Developer"
 		/>
 		<Header />
-		<div className="container mx-auto max-w-4xl py-28 ">
+		<div className="container mx-auto max-w-4xl py-12 md:py-28 ">
 			<div className="relative">
 				<PageTitle titleStroke="Stefan" title="Stankovic" subtitle="About" />
 			</div>

@@ -28,11 +28,11 @@ const PageTitle = ({ title, titleStroke, subtitle }) => (
 				<rect width={404} height={404} fill="url(#ad119f34-7694-4c31-947f-5c9d249b21f3)" />
 			</svg>
 		</div>
-		<div className="relative z-20 pb-16">
-			<h2 className="text-stroke text-8xl font-extrabold text-white text-stroke opacity-10 absolute top-0">
+		<div className="relative z-20 pb-16 text-center md:text-left">
+			<h2 className="text-stroke text-6xl md:text-8xl font-extrabold text-white text-stroke opacity-10 absolute top-0 w-full">
 				{subtitle}
 			</h2>
-			<h1 className="font-extrabold text-5xl pt-12 pl-4">
+			<h1 className="font-extrabold text-4xl md:text-5xl pt-12 md:pl-4">
 				{titleStroke ? (
 					<span className="text-stroke dark:text-stroke-white text-white dark:text-gray-800 ">
 						{titleStroke}{' '}

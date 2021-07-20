@@ -2,8 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 
 const Project = ({ title, description, categories, image }) => (
-	<div className="grid grid-cols-[auto,1fr] gap-8 py-4 items-center">
-		<div className="relative overflow-hidden h-[230px] w-[353px] rounded-lg">
+	<div className="grid grid-cols-1 md:grid-cols-[auto,1fr] gap-8 py-4 items-center mb-4 mb:mb-0 border-b border-gray-200 dark:border-gray-700 md:border-0">
+		<div className="relative overflow-hidden h-[230px] w-full md:w-[353px] rounded-lg">
 			<Image src={image} layout="fill" objectFit="cover" alt={title} />
 		</div>
 		<article>

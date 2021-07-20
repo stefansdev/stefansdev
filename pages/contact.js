@@ -10,9 +10,9 @@ const Contact = ({ meta, content }) => (
 	<>
 		<Seo title={meta.title} description={meta.excerpt} image={meta.image} />
 		<Header />
-		<div className="container mx-auto max-w-4xl py-28">
+		<div className="container mx-auto max-w-4xl py-12 md:py-28">
 			<div className="relative">
-				<PageTitle titleStroke="CONTACT" subtitle="REACH OUT TO ME" />
+				<PageTitle title="CONTACT" subtitle="REACH OUT TO ME" />
 				<div
 					className="prose dark:prose-dark"
 					dangerouslySetInnerHTML={{
