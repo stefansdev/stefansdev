@@ -10,14 +10,14 @@ Here, you can read about the tech, software, hardware, equipment I use.
 
 ### Hardware & Desk setup
 
--   I work on a [MacBook Pro 16' - Base model](https://www.amazon.com/Apple-MacBook-16-Inch-512GB-Storage/dp/B081FZV45H/). I do everything on it.
--   **Phone** : iPhone 12
--   For **external monitors**, I have two big 32" displays on which I connect my macbook pro , one at the office and one at home. At home I use Philips and at the office Samsung 4K .
--   **Mouse**: MX Master 2S
--   **Keyboard**: Lately I use Macbooks keyboard, but I also have Apple Magic Keyboard and [Keychron K2 Wireless Mechanical Keyboard (Version 2)
+-   💻 I work on a [MacBook Pro 16' - Base model](https://www.amazon.com/Apple-MacBook-16-Inch-512GB-Storage/dp/B081FZV45H/). I do everything on it.
+-   📱 **Phone** : iPhone 12
+-   🖥 For **external monitors**, I have two big 32" displays on which I connect my macbook pro , one at the office and one at home. At home I use Philips and at the office Samsung 4K .
+-   🖱 **Mouse**: MX Master 2S
+-   ⌨️ **Keyboard**: Lately I use Macbooks keyboard, but I also have Apple Magic Keyboard and [Keychron K2 Wireless Mechanical Keyboard (Version 2)
     ](https://www.keychron.com/products/keychron-k2-wireless-mechanical-keyboard)
 -   At office I have [IKEA's Skarsta desk](https://www.ikea.com/rs/sr/p/skarsta-podesivi-pisaci-sto-bela-s59324818/). Small, stirdy and cheap. Adjustable height.
--   **Chair** - For both, office and home, I have use [Ikea's Markus Chair](https://www.ikea.com/rs/sr/p/markus-kancelarijska-stolica-vissle-tamnosiva-70261150/).
+-   🪑 **Chair** - For both, office and home, I have use [Ikea's Markus Chair](https://www.ikea.com/rs/sr/p/markus-kancelarijska-stolica-vissle-tamnosiva-70261150/).
 
 ### Apps / tools
 

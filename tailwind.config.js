@@ -54,7 +54,7 @@ module.exports = {
 							a: { color: theme('colors.gray.100') },
 							strong: { color: theme('colors.gray.100') },
 							'ul > li::before': { backgroundColor: theme('colors.gray.700') },
-							hr: { borderColor: theme('colors.gray.800') },
+							hr: { borderColor: theme('colors.gray.700') },
 							blockquote: {
 								color: theme('colors.gray.100'),
 								borderLeftColor: theme('colors.gray.800'),
