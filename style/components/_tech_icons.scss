@@ -1,0 +1,10 @@
+.icon_wrap {
+	img {
+		@apply opacity-0 transform-gpu transition-all duration-500;
+	}
+	&.is_active {
+		img {
+			@apply opacity-100;
+		}
+	}
+}
