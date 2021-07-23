@@ -1,10 +1,11 @@
 .icon_wrap {
 	img {
-		@apply opacity-0 transform-gpu transition-all duration-500;
+		@apply filter grayscale transform-gpu transition-all duration-500;
 	}
-	&.is_active {
+	&.is_active,
+	&:hover {
 		img {
-			@apply opacity-100;
+			@apply opacity-100 filter-none;
 		}
 	}
 }

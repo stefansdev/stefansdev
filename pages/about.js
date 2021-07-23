@@ -17,10 +17,10 @@ const About = () => (
 				<div className="relative">
 					<PageTitle titleStroke="Stefan" title="Stankovic" subtitle="About" />
 				</div>
-				<div className="prose dark:prose-dark">
-					<div className="relative rounded-lg overflow-hidden h-[480px] mb-16">
-						<Image src="/stefans_image_with_bg.jpg" layout="fill" objectFit="cover" alt="stefans.dev" />
-					</div>
+				<div className="relative rounded-lg overflow-hidden h-[480px] mb-16">
+					<Image src="/stefans_image_with_bg.jpg" layout="fill" objectFit="cover" alt="stefans.dev" />
+				</div>
+				<div className="prose dark:prose-dark mx-auto">
 					<div className="prose dark:prose-dark">
 						<p>My name is Stefan Stankovic. I’m from Belgrade, Serbia.</p>
 						<p>
@@ -32,10 +32,11 @@ const About = () => (
 							a lot of experience with custom theme development for Wordress , Shopify, etc...
 						</p>
 						<p>Frontend development, UI/UX , CSS/JS is what I’m strongest with and love the most.</p>
+						<h3>Some of the tools,tech stack, SaaS I work with daily:</h3>
 					</div>
 				</div>
+				<TechIcons />
 			</div>
-			<TechIcons />
 		</div>
 		<Footer />
 	</>
