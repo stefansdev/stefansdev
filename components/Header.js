@@ -71,7 +71,12 @@ const Header = () => {
 						))}
 					</ul>
 
-					<button type="button" className="bg-gray-50 dark:bg-gray-800 p-2 rounded-md" onClick={switchTheme}>
+					<button
+						type="button"
+						className="bg-gray-50 dark:bg-gray-800 p-2 rounded-md"
+						onClick={switchTheme}
+						name="Toggle dark mode"
+					>
 						{(() => {
 							if (isMounted) {
 								return theme === 'dark' ? (
@@ -85,7 +90,7 @@ const Header = () => {
 					<button
 						onClick={() => setMenuIsOpen(!menuIsOpen)}
 						type="button"
-						// name="Menu Toggle"
+						name="Open menu"
 						className="block bg-gray-50 dark:bg-gray-800 p-2 rounded-md md:hidden"
 					>
 						<MenuIcon className="text-gray-800 dark:text-gray-50 w-4 h-4" />
