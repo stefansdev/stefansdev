@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect } from 'react';
 
 const iconList = [
@@ -8,6 +9,10 @@ const iconList = [
 	{
 		name: 'affinity-photo',
 		src: '/tech-icons/affinity-photo.svg',
+	},
+	{
+		name: 'apollo',
+		src: '/tech-icons/apollo.svg',
 	},
 	{
 		name: 'aws',
@@ -151,32 +156,14 @@ const iconList = [
 	},
 ];
 
-const TechIcons = () => {
-	useEffect(() => {
-		// add class to random element with class icon_wrap
-
-		const interval = setInterval(() => {
-			const icon = iconList[Math.floor(Math.random() * iconList.length)];
-			const iconName = `tech_icon_${icon.name}`;
-			const elementName = document.getElementsByClassName(iconName);
-			elementName[0].classList.add('is_active');
-
-			setTimeout(() => {
-				elementName[0].classList.remove('is_active');
-			}, 1000);
-		}, 2000);
-
-		return () => clearInterval(interval);
-	}, []);
-	return (
-		<div className="grid grid-cols-[repeat(auto-fit,minmax(65px,1fr))] gap-4 items-center place-content-center px-6 pt-12 ">
-			{iconList.map((icon, i) => (
-				<div className={`icon_wrap px-2 transition-gpu transition-all tech_icon_${icon.name}`} key={icon.name}>
-					<img src={icon.src} alt={icon.name} className="block " />
-				</div>
-			))}
-		</div>
-	);
-};
+const TechIcons = () => (
+	<div className="grid grid-cols-[repeat(auto-fit,minmax(65px,1fr))] gap-4 items-center place-content-center px-6 pt-12 ">
+		{iconList.map((icon, i) => (
+			<div className={`icon_wrap px-2 transition-gpu transition-all tech_icon_${icon.name}`} key={icon.name}>
+				<img src={icon.src} alt={icon.name} className="block " />
+			</div>
+		))}
+	</div>
+);
 
 export default TechIcons;

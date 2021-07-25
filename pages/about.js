@@ -32,7 +32,7 @@ const About = () => (
 							a lot of experience with custom theme development for Wordress , Shopify, etc...
 						</p>
 						<p>Frontend development, UI/UX , CSS/JS is what I’m strongest with and love the most.</p>
-						<h3>Some of the tools,tech stack, SaaS I work with daily:</h3>
+						<h3>Some of the tools, tech stacks, SaaS I work with daily:</h3>
 					</div>
 				</div>
 				<TechIcons />
