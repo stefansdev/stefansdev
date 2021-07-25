@@ -48,15 +48,15 @@ const meta = ({ title, description, image }) => {
 			<meta property="twitter:image" content={image || '/meta_placeholder.jpg'} />
 			{/* <meta property="google-site-verification" content="D47LBXjUmD9IfEnImjz2Nl7Or3fiMOMiSNtIxOSkDjo" /> */}
 			{/* analytics scripts */}
-			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154667516-1" />
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNKG44DRX6" />
 
 			<script
 				dangerouslySetInnerHTML={{
 					__html: `window.dataLayer = window.dataLayer || [];
-						function gtag(){dataLayer.push(arguments);}
-						gtag('js', new Date());
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
 
-						gtag('config', 'UA-154667516-1');`,
+					gtag('config', 'G-DNKG44DRX6');`,
 				}}
 			/>
 		</Head>
