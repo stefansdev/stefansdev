@@ -8,7 +8,7 @@ const Hero = () => (
 		<section className="relative pt-6 md:pt-12">
 			<div className="container mx-auto max-w-7xl md:grid md:grid-cols-2 items-end gap-8 relative overflow-hidden">
 				<HeroAnimation />
-				<div className="">
+				<div className="mb-8 md:mb-0">
 					<Image
 						src="/stefans_image.png"
 						alt="Stefan Stankovic - Stefans Dev"
@@ -41,12 +41,12 @@ const Hero = () => (
 								say hi 👋{' '}
 							</a>
 						</p>
-						{/* <p className=" ">
+						<p className=" ">
 							You can{' '}
 							<Link href="/contact">
 								<a className="font-bold hover:underline">read more about me here.</a>
 							</Link>
-						</p> */}
+						</p>
 					</div>
 				</div>
 			</div>
