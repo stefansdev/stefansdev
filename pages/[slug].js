@@ -13,6 +13,7 @@ import markdownToHtml from '../utils/markdown';
 export default function Post({ meta, content }) {
 	const readTime = readingTime(content);
 	const date = new Date(meta.date);
+	console.log(date);
 	return (
 		<>
 			<Seo title={meta.title} description={meta.excerpt} image={meta.image} />
@@ -24,14 +25,14 @@ export default function Post({ meta, content }) {
 					<div className="flex text-white text-sm">
 						<p className="grid grid-cols-[auto,1fr] gap-2 items-center mr-4">
 							<CalendarIcon className="w-4 h-4" />
-							{date.getDay()}. {monthNames[date.getMonth()]}, {date.getFullYear()}
+							{date.getDate()}. {monthNames[date.getMonth()]}, {date.getFullYear()}
 						</p>
 						<p className="grid grid-cols-[auto,1fr] gap-2 items-center mr-4">
 							<ClockIcon className="w-4 h-4" />
 							{readTime.text}
 						</p>
 						<a
-							href="https://github.com/stefansdev"
+							href={`https://github.com/stefansdev/stefansdev/blob/master/content/posts/${meta.slug}.mdx`}
 							className="grid grid-cols-[auto,1fr] gap-2 items-center"
 						>
 							<GithubIcon variant="small" />
