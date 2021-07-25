@@ -10,16 +10,12 @@ import { monthNames } from '../utils/monthNames';
 import { getAllPosts, getPostBySlug } from '../utils/blog';
 import markdownToHtml from '../utils/markdown';
 
-const components = {};
-
-export default function Post({ source, frontMatter }) {
-	// const readTime = readingTime(.frontMatter.content);
-	const date = new Date(frontMatter.date);
-	console.log(source);
-	console.log(frontMatter);
+export default function Post({ meta, content }) {
+	const readTime = readingTime(content);
+	const date = new Date(meta.date);
 	return (
 		<>
-			<Seo title={frontMatter.title} description={frontMatter.excerpt} image={frontMatter.image} />
+			<Seo title={meta.title} description={meta.excerpt} image={meta.image} />
 			<Header />
 			<div className="h-[300px] relative after:content-[' '] after:absolute after:inset-0 after:w-full after:h-full after:block after:bg-black after:z-20 after:opacity-40">
 				<Image src={meta.image} alt={meta.title} layout="fill" objectFit="cover" />
@@ -32,7 +28,7 @@ export default function Post({ source, frontMatter }) {
 						</p>
 						<p className="grid grid-cols-[auto,1fr] gap-2 items-center mr-4">
 							<ClockIcon className="w-4 h-4" />
-							{/* {readTime.text} */}
+							{readTime.text}
 						</p>
 						<a
 							href="https://github.com/stefansdev"
