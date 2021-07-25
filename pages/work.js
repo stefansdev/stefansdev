@@ -10,19 +10,23 @@ const projectsList = [
 		title: 'Saim se',
 		categories: ['design', 'development'],
 		image: '/placeholder_project.jpg',
+		link: 'https://dribbble.com/shots/11986498-Saim-se-Shopify-theme-design',
 		description: 'Custom design and custom shopify theme development for biggest youtuber on Balkan.',
 	},
 	{
-		title: 'Saim se',
+		title: 'Anomys',
 		categories: ['design', 'development'],
-		image: '/placeholder_project.jpg',
-		description: 'Custom design and custom shopify theme development for biggest youtuber on Balkan.',
+		image: '/projects/anomys.jpg',
+		link: 'https://anomys.com',
+		description: 'Custom Design & Development. Developed in GatsbyJS',
 	},
 	{
-		title: 'Saim se',
+		title: 'Creativ Depot - Gulp & Tailwindcss starter',
 		categories: ['design', 'development'],
-		image: '/placeholder_project.jpg',
-		description: 'Custom design and custom shopify theme development for biggest youtuber on Balkan.',
+		image: '/projects/creativdepot.jpg',
+		link: 'https://github.com/stefansdev/creativdepot',
+		description:
+			"I've been using similar gulp setup for years, for my custom wordpress development. It's now extended to support tailwindcss.",
 	},
 ];
 
@@ -51,6 +55,7 @@ const Work = () => (
 						categories={project.categories}
 						image={project.image}
 						description={project.description}
+						link={project.link}
 						key={`project_${i}`}
 					/>
 				))}
