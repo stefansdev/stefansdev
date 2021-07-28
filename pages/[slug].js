@@ -10,10 +10,9 @@ import { monthNames } from '../utils/monthNames';
 import { getAllPosts, getPostBySlug } from '../utils/blog';
 import markdownToHtml from '../utils/markdown';
 
-export default function Post({ meta, content }) {
+export default function Post({ meta, content, slug }) {
 	const readTime = readingTime(content);
 	const date = new Date(meta.date);
-	console.log(date);
 	return (
 		<>
 			<Seo title={meta.title} description={meta.excerpt} image={meta.image} />
@@ -32,7 +31,7 @@ export default function Post({ meta, content }) {
 							{readTime.text}
 						</p>
 						<a
-							href={`https://github.com/stefansdev/stefansdev/blob/master/content/posts/${meta.slug}.mdx`}
+							href={`https://github.com/stefansdev/stefansdev/blob/master/content/posts/${slug}.md`}
 							className="grid grid-cols-[auto,1fr] gap-2 items-center"
 						>
 							<GithubIcon variant="small" />
@@ -58,6 +57,7 @@ export async function getStaticProps({ params }) {
 	return {
 		props: {
 			meta: post.meta,
+			slug: params.slug,
 			content,
 		},
 	};
