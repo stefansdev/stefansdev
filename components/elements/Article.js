@@ -18,7 +18,7 @@ const Article = ({ slug, title, image, categories }) => (
 							</li>
 						))}
 					</ul>
-					<div className="absolute bottom-4 left-5 z-20">
+					<div className="absolute bottom-4 left-5 right-5 z-20">
 						<h4 className="text-xl font-semibold text-white">{title}</h4>
 					</div>
 				</div>
