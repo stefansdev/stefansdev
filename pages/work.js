@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import PageTitle from '../components/PageTitle';
@@ -30,6 +31,41 @@ const projectsList = [
 	},
 ];
 
+const clientList = [
+	{
+		title: 'singularminds.eu',
+		image: '/clients/singularminds.svg',
+	},
+	{
+		title: 'anomys.com',
+		image: '/clients/anomys.svg',
+	},
+	{
+		title: 'mediaperformance.no',
+		image: '/clients/mediaperformance.png',
+	},
+	{
+		title: 'saimse.com',
+		image: '/clients/saimse.svg',
+	},
+	{
+		title: 'Blue Ocean',
+		image: '/clients/blueocean.svg',
+	},
+	{
+		title: 'Project By It',
+		image: '/clients/projectbyit.png',
+	},
+	{
+		title: 'wellingtonrevive.com',
+		image: '/clients/revive.png',
+	},
+	{
+		title: 'Makonda',
+		image: '/clients/makonda.png',
+	},
+];
+
 const Work = () => (
 	<>
 		<Seo
@@ -39,16 +75,33 @@ const Work = () => (
 		<Header />
 		<div className="container mx-auto max-w-4xl py-12 md:py-28">
 			<div className="relative">
-				<PageTitle titleStroke="PROJECTS" subtitle="My Work" />
+				<PageTitle titleStroke="Work" />
 			</div>
-			<div className="py-16 border-b border-gray-200 dark:border-gray-700">
-				<div className="py-5 ">
-					<h3 className="font-bold text-2xl mb-4">Projects</h3>
+			<div className="py-16 pt-4 border-b border-gray-200 dark:border-gray-700">
+				<div className="py-4 ">
+					{/* <h3 className="font-bold text-2xl mb-4">Projects</h3> */}
 					<div className="prose dark:text-gray-200 max-w-full">
-						Most of my projects are under NDA, company projects, but here is the short list of some
-						white-label projects, some side projects, tools I have fully created or worked on.
+						Most of my projects are under NDA, company projects, but here is the short list of clients,
+						partners, white-label projects, some side projects, tools I’ve created ...
 					</div>
 				</div>
+				<ul className="grid grid-cols-2 lg:grid-cols-4 gap-4 py-12 mb-8">
+					{clientList.map((client, i) => (
+						<li key={i}>
+							<div className="bg-gray-100 relative h-20 rounded-sm grid items-center justify-center">
+								<Image
+									src={client.image}
+									height="40"
+									width="114"
+									objectPosition="middle"
+									objectFit="contain"
+									alt={client.tiltle}
+								/>
+							</div>
+							<span className="block text-center text-sm py-2">{client.title}</span>
+						</li>
+					))}
+				</ul>
 				{projectsList.map((project, i) => (
 					<Project
 						title={project.title}
