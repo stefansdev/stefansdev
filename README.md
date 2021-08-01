@@ -8,4 +8,4 @@ For more info visit my website: [stefans.dev](https://stefans.dev)
 
 ---
 
-[![GitHub stats](https://github-readme-stats.vercel.app/api?username=stefansdev)](https://github.com/anuraghazra/github-readme-stats)
+[![GitHub stats](https://github-readme-stats.vercel.app/api?username=stefansdev&theme=synthwave&count_private=true)](https://github.com/anuraghazra/github-readme-stats)
