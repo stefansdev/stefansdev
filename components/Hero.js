@@ -25,20 +25,28 @@ const Hero = () => (
 						<span className="text-stroke dark:text-stroke-white text-white dark:text-gray-800">
 							I&apos;m{' '}
 						</span>
-						Full Stack Javascript Developer{' '}
-						<span className="text-stroke block dark:text-stroke-white text-white dark:text-gray-800">
-							from Serbia
-						</span>
+						not a web developer.
 					</h1>
 					<div className="max-w-[420px] pb-8 text-base font-light">
-						<p className=" mb-4">
-							I am mostly focuses on Headless / Jamstack tech stack, but I have experience in other web
-							dev areas too. Love good UI/UX.
+						<p className="">- Not just a web developer, anyway.</p>
+						<p className="mb-4">
+							<br />
+							Besides being a fullstack Javascript developer, I’m here to help you with your web business,
+							product, ecommerce, idea and so on.
 						</p>
 						<p className=" mb-4">
 							Feel free to{' '}
 							<a href="mailto:s@stefans.dev" className="font-bold hover:underline">
 								say hi 👋{' '}
+							</a>{' '}
+							or{' '}
+							<a
+								href="https://calendly.com/stefansdev/meet-me?month=2021-08"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="font-bold hover:underline"
+							>
+								schedule a call with me 📆.
 							</a>
 						</p>
 						{/* <p className=" ">
