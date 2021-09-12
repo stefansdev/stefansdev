@@ -2,7 +2,7 @@
 
 ## Full Stack Javascript Developer
 
-Nowadays, I am mostly focuses on Headless / Jamstack tech stack, but I have experience in other web dev areas too. I'm also Lead Web Dev at [Singular Minds](https://singularminds.eu).
+Nowadays, I am mostly focuses on Headless / Jamstack tech stack, but I have experience in other web dev areas too. CEO at [Anomys](https://anomys.com),Lead Web Dev at [Singular Minds](https://singularminds.eu).
 
 For more info visit my website: [stefans.dev](https://stefans.dev)
 
