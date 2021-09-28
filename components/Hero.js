@@ -29,9 +29,7 @@ const Hero = () => (
 					</div>
 					<div className="max-w-[420px] pb-8 text-base font-light">
 						<p className=" mb-4">Full Stack Web Developer specialised in Jamstack and Headless.</p>
-						<p className=" mb-4">
-							Websites deserve to be fast and accessible. Let`&apos;`s give them wings.
-						</p>
+						<p className=" mb-4">Websites deserve to be fast and accessible. Let&apos;s give them wings.</p>
 						<p className=" mb-4">
 							Feel free to{' '}
 							<a href="mailto:s@stefans.dev" className="hover:underline font-bold">
