@@ -8,16 +8,13 @@ import Article from '../components/elements/Article';
 
 const Blog = ({ posts }) => (
 	<>
-		<Seo
-			title="Blog | Stefan Stankovic - Full Stack Javascript Developer"
-			description="Full Stack Javascript Developer"
-		/>
+		<Seo title="Blog" description="Full Stack Javascript Developer specialised in Jamstack and Headless" />
 		<Header />
-		<div className="container mx-auto max-w-7xl py-12 md:py-28 relative">
+		<div className="max-w-7xl md:py-28 container relative py-12 mx-auto">
 			<div className="relative">
 				<PageTitle title="BLOG" subtitle="Posts i wrote" />
 			</div>
-			<div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-16">
+			<div className="md:grid-cols-3 grid grid-cols-1 gap-4 pt-16">
 				{posts.map((article) => (
 					<Article
 						slug={article.slug}
