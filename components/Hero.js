@@ -5,10 +5,10 @@ import HeroAnimation from './elements/HeroAnimation';
 
 const Hero = () => (
 	<>
-		<section className="relative pt-6 md:pt-12">
-			<div className="container mx-auto max-w-7xl md:grid md:grid-cols-2 items-end gap-8 relative overflow-hidden">
+		<section className="md:pt-12 relative pt-6">
+			<div className="max-w-7xl md:grid md:grid-cols-2 container relative items-end gap-8 mx-auto overflow-hidden">
 				<HeroAnimation />
-				<div className="mb-8 md:mb-0">
+				<div className="md:mb-0 mb-8">
 					<Image
 						src="/stefans_image.png"
 						alt="Stefan Stankovic - Stefans Dev"
@@ -18,41 +18,37 @@ const Hero = () => (
 					/>
 				</div>
 				<div className="">
-					<h2 className="text-2xl md:text-4xl leading-10 font-light mb-6">
+					<h2 className="md:text-4xl mb-6 text-2xl font-light leading-10">
 						Hi, I&apos;m <span className="font-semibold"> Stefan S.</span>
 					</h2>
-					<h1 className="text-4xl md:text-6xl font-extrabold leading-26 mb-6">
-						<span className="text-stroke dark:text-stroke-white text-white dark:text-gray-800">
-							I&apos;m{' '}
+					<div className="md:text-6xl leading-26 mb-6 text-4xl font-extrabold">
+						<span className="text-stroke dark:text-stroke-white dark:text-gray-800 text-white">
+							I&apos;m a{' '}
 						</span>
-						not a web developer.
-					</h1>
+						<h1 className="">Jamstack Web Developer</h1>
+					</div>
 					<div className="max-w-[420px] pb-8 text-base font-light">
-						<p className="">- Not just a web developer, anyway.</p>
-						<p className="mb-4">
-							<br />
-							Besides being a fullstack Javascript developer, I’m here to help you with your web business,
-							product, ecommerce, idea and so on.
-						</p>
+						<p className=" mb-4">Full Stack Web Developer specialised in Jamstack and Headless.</p>
+						<p className=" mb-4">Websites deserve to be fast and accessible. Let's give them wings.</p>
 						<p className=" mb-4">
 							Feel free to{' '}
-							<a href="mailto:s@stefans.dev" className="font-bold hover:underline">
+							<a href="mailto:s@stefans.dev" className="hover:underline font-bold">
 								say hi 👋{' '}
 							</a>{' '}
 							or{' '}
 							<a
-								href="https://calendly.com/stefansdev/meet-me?month=2021-08"
+								href="https://calendly.com/stefansdev/meet-me"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="font-bold hover:underline"
+								className="hover:underline font-bold"
 							>
 								schedule a call with me 📆.
 							</a>
 						</p>
-						{/* <p className=" ">
+						{/* <p className="">
 							You can{' '}
 							<Link href="/contact">
-								<a className="font-bold hover:underline">read more about me here.</a>
+								<a className="hover:underline font-bold">read more about me here.</a>
 							</Link>
 						</p> */}
 					</div>
