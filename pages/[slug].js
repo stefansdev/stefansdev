@@ -19,9 +19,9 @@ export default function Post({ meta, content, slug }) {
 			<Header />
 			<div className="h-[300px] relative after:content-[' '] after:absolute after:inset-0 after:w-full after:h-full after:block after:bg-black after:z-20 after:opacity-40">
 				<Image src={meta.image} alt={meta.title} layout="fill" objectFit="cover" />
-				<div className="container mx-auto max-w-4xl absolute bottom-5 left-1/2 -translate-x-1/2 z-30 ">
-					<h1 className="font-semibold text-2xl md:text-4xl text-white mb-4">{meta.title}</h1>
-					<div className="flex text-white text-sm">
+				<div className="bottom-5 left-1/2 container absolute z-30 max-w-4xl mx-auto -translate-x-1/2">
+					<h1 className="md:text-4xl mb-4 text-2xl font-semibold text-white">{meta.title}</h1>
+					<div className="flex text-sm text-white">
 						<p className="grid grid-cols-[auto,1fr] gap-2 items-center mr-4">
 							<CalendarIcon className="w-4 h-4" />
 							{date.getDate()}. {monthNames[date.getMonth()]}, {date.getFullYear()}
@@ -41,7 +41,7 @@ export default function Post({ meta, content, slug }) {
 				</div>
 			</div>
 			<div
-				className="prose dark:prose-dark mx-auto py-12 px-4 md:px-0"
+				className="dark:prose-dark md:px-0 px-4 py-12 mx-auto prose"
 				dangerouslySetInnerHTML={{
 					__html: content,
 				}}
