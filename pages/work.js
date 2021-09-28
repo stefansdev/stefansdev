@@ -32,19 +32,16 @@ const projectsList = [
 
 const Work = () => (
 	<>
-		<Seo
-			title="Work | Stefan Stankovic - Full Stack Javascript Developer"
-			description="Full Stack Javascript Developer"
-		/>
+		<Seo title="Work" description="Full Stack Javascript Developer specialised in Jamstack and Headless" />
 		<Header />
-		<div className="container mx-auto max-w-4xl py-12 md:py-28">
+		<div className="md:py-28 container max-w-4xl py-12 mx-auto">
 			<div className="relative">
 				<PageTitle titleStroke="PROJECTS" subtitle="My Work" />
 			</div>
-			<div className="py-16 border-b border-gray-200 dark:border-gray-700">
-				<div className="py-5 ">
-					<h3 className="font-bold text-2xl mb-4">Projects</h3>
-					<div className="prose dark:text-gray-200 max-w-full">
+			<div className="dark:border-gray-700 py-16 border-b border-gray-200">
+				<div className=" py-5">
+					<h3 className="mb-4 text-2xl font-bold">Projects</h3>
+					<div className="dark:text-gray-200 max-w-full prose">
 						Most of my projects are under NDA, company projects, but here is the short list of some
 						white-label projects, some side projects, tools I have fully created or worked on.
 					</div>

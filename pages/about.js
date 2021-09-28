@@ -7,21 +7,18 @@ import TechIcons from '../components/TechIcons';
 
 const About = () => (
 	<>
-		<Seo
-			title="About | Stefan Stankovic - Full Stack Javascript Developer"
-			description="Full Stack Javascript Developer"
-		/>
+		<Seo title="About" description="Full Stack Javascript Developer specialised in Jamstack and Headless" />
 		<Header />
-		<div className="relative ">
-			<div className="container mx-auto max-w-4xl py-12 md:py-28 relative z-20">
+		<div className=" relative">
+			<div className="md:py-28 container relative z-20 max-w-4xl py-12 mx-auto">
 				<div className="relative">
 					<PageTitle titleStroke="Stefan" title="Stankovic" subtitle="About" />
 				</div>
 				<div className="relative rounded-lg overflow-hidden h-[480px] mb-16">
 					<Image src="/stefans_image_with_bg.jpg" layout="fill" objectFit="cover" alt="stefans.dev" />
 				</div>
-				<div className="prose dark:prose-dark mx-auto">
-					<div className="prose dark:prose-dark">
+				<div className="dark:prose-dark mx-auto prose">
+					<div className="dark:prose-dark prose">
 						<p>My name is Stefan Stankovic. I’m from Belgrade, Serbia.</p>
 						<p>
 							I’m 27 years old and I’ve been making websites since I was 18 years old. Proffesionaly from
