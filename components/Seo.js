@@ -36,7 +36,7 @@ const meta = ({ title, description, image }) => {
 			<meta property="og:type" content="website" />
 			<meta property="og:title" content={title || siteName} />
 			<meta property="og:description" content={description ? desc : defaultDescription} />
-			<meta property="og:image" content={image || '/meta_placeholder.jpg'} />
+			<meta property="og:image" content={image || 'https://stefans.dev/meta_placeholder.jpg'} />
 			<meta property="og:url" content={permalink} />
 			<meta property="og:site_name" content={siteName} />
 			{/* Twitter */}
@@ -45,9 +45,7 @@ const meta = ({ title, description, image }) => {
 			<meta property="twitter:title" content={title} />
 			<meta property="twitter:description" content={description ? desc : defaultDescription} />
 			{/* Robots */}
-			<meta property="twitter:image" content={image || '/meta_placeholder.jpg'} />
-			{/* <meta property="google-site-verification" content="D47LBXjUmD9IfEnImjz2Nl7Or3fiMOMiSNtIxOSkDjo" /> */}
-			{/* analytics scripts */}
+			<meta property="twitter:image" content={image || 'https://stefans.dev/meta_placeholder.jpg'} />
 			<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNKG44DRX6" />
 
 			<script
