@@ -6,7 +6,10 @@ import Seo from '../components/Seo';
 
 const Home = () => (
 	<div>
-		<Seo title="Stefan Stankovic - Full Stack Javascript Developer" description="Full Stack Javascript Developer" />
+		<Seo
+			title="Stefan Stankovic"
+			description="Full Stack Javascript Developer specialised in Jamstack and Headless"
+		/>
 		<Header />
 		<Hero />
 		<SocialBar />

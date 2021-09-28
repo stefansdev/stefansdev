@@ -2,8 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 
 const meta = ({ title, description, image }) => {
-	const siteName = 'Stefan Stankovic - Full Stack Javascript Developer';
-	const defaultDescription = 'Full Stack Developer and Web Designer';
+	const siteName = 'Jamstack Web Developer';
+	const defaultDescription = 'Full Stack Web developer specialised in Jamstack and Headless';
 
 	const permalink = `https://stefans.dev`;
 
