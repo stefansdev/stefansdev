@@ -21,7 +21,7 @@ const About = () => (
 					<div className="dark:prose-dark prose">
 						<p>My name is Stefan Stankovic. I’m from Belgrade, Serbia.</p>
 						<p>
-							I’m 27 years old and I’ve been making websites since I was 18 years old. Proffesionaly from
+							I’m 27 years old and I’ve been making websites since I was 18. Proffesionaly from
 							2013.
 						</p>
 						<p>

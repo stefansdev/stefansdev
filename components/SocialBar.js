@@ -10,7 +10,7 @@ const SocialBar = () => (
 			<ul className="grid grid-cols-1 md:grid-cols-4 gap-6">
 				<li>
 					<a
-						href="https://twitter.com/st3f4ns"
+						href="https://twitter.com/stefans_dev"
 						target="_blank"
 						rel="noreferrer"
 						className="bg-white border border-gray-100 dark:border-gray-600 rounded-md py-2 px-4 grid grid-cols-[auto,1fr] items-center gap-4 transition-gpu transition-all duration-300 hover:bg-brand-twitter hover:text-white dark:bg-gray-800 dark:hover:bg-brand-twitter hover:-translate-y-1"
@@ -18,7 +18,7 @@ const SocialBar = () => (
 						<TwitterIcon />
 						<div className="text-sm">
 							<span className="block">Follow me on Twitter</span>
-							<span className="font-semibold">@st3f4ns</span>
+							<span className="font-semibold">@stefans_dev</span>
 						</div>
 					</a>
 				</li>
