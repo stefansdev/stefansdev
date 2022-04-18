@@ -28,15 +28,13 @@ const Hero = () => (
 						<h1 className="">Jamstack Web Developer</h1>
 					</div>
 					<div className="max-w-[420px] pb-8 text-base font-light">
-						<p className=" mb-4">Full Stack Web Developer specialised in Jamstack and Headless.</p>
+						<p className=" mb-4">Full Stack JS Web Developer specialised in Jamstack and Headless.</p>
 						<p className=" mb-4">Websites deserve to be fast and accessible. Let&apos;s give them wings.</p>
                         <div className='flex space-x-3'>
                             <Link href="/contact">
-                                <a className="bg-gray-800 border border-gray-100 dark:border-gray-600 rounded-md py-3 text-center px-4 items-center gap-4 transition-gpu transition-all duration-300 hover:bg-brand-twitter hover:text-white dark:bg-gray-800 dark:hover:bg-brand-twitter hover:-translate-y-1 font-bold">👋  Contact me </a>
+                                <a className="bg-gray-800 border border-gray-100 dark:border-gray-600 rounded-md py-3 text-center px-4 items-center gap-4 transition-gpu transition-all duration-300 hover:bg-brand-twitter hover:text-white dark:bg-gray-800 dark:hover:bg-brand-twitter hover:-translate-y-1 font-bold">👋 <span className='pl-2'>Say Hi!</span></a>
                             </Link>
-                            <Link href="/contact">
-                                <a className="bg-white border border-gray-100 dark:border-gray-600 rounded-md py-3 text-center px-4 items-center gap-4 transition-gpu transition-all duration-300 hover:bg-brand-twitter hover:text-white dark:bg-gray-800 dark:hover:bg-brand-twitter hover:-translate-y-1 font-bold">👋  Schedule a call</a>
-                            </Link>
+                            <a className="bg-white border border-gray-100 dark:border-gray-600 rounded-md py-3 text-center px-4 items-center gap-4 transition-gpu transition-all duration-300 hover:bg-brand-twitter hover:text-white dark:bg-gray-800 dark:hover:bg-brand-twitter hover:-translate-y-1 font-bold" href="https://calendly.com/stefansdev/meet-me" target="_blank">🗓 <span className='pl-2'>Schedule a call</span></a>
                         </div>
 					</div>
 				</div>
