@@ -57,6 +57,8 @@ const meta = ({ title, description, image }) => {
 					gtag('config', 'G-DNKG44DRX6');`,
 				}}
 			/>
+
+            <script src="//code.tidio.co/zehnhekqv2dzvmderu7cywcgnqfabugv.js" async></script>
 		</Head>
 	);
 };

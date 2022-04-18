@@ -30,27 +30,14 @@ const Hero = () => (
 					<div className="max-w-[420px] pb-8 text-base font-light">
 						<p className=" mb-4">Full Stack Web Developer specialised in Jamstack and Headless.</p>
 						<p className=" mb-4">Websites deserve to be fast and accessible. Let&apos;s give them wings.</p>
-						<p className=" mb-4">
-							Feel free to{' '}
-							<a href="mailto:s@stefans.dev" className="hover:underline font-bold">
-								say hi 👋{' '}
-							</a>{' '}
-							or{' '}
-							<a
-								href="https://calendly.com/stefansdev/meet-me"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="hover:underline font-bold"
-							>
-								schedule a call with me 📆.
-							</a>
-						</p>
-						{/* <p className="">
-							You can{' '}
-							<Link href="/contact">
-								<a className="hover:underline font-bold">read more about me here.</a>
-							</Link>
-						</p> */}
+                        <div className='flex space-x-3'>
+                            <Link href="/contact">
+                                <a className="bg-gray-800 border border-gray-100 dark:border-gray-600 rounded-md py-3 text-center px-4 items-center gap-4 transition-gpu transition-all duration-300 hover:bg-brand-twitter hover:text-white dark:bg-gray-800 dark:hover:bg-brand-twitter hover:-translate-y-1 font-bold">👋  Contact me </a>
+                            </Link>
+                            <Link href="/contact">
+                                <a className="bg-white border border-gray-100 dark:border-gray-600 rounded-md py-3 text-center px-4 items-center gap-4 transition-gpu transition-all duration-300 hover:bg-brand-twitter hover:text-white dark:bg-gray-800 dark:hover:bg-brand-twitter hover:-translate-y-1 font-bold">👋  Schedule a call</a>
+                            </Link>
+                        </div>
 					</div>
 				</div>
 			</div>

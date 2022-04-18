@@ -1,3 +1,4 @@
+@import "global";
 @import "tailwind";
 @import "fonts";
 
@@ -5,3 +6,4 @@
 @import "vendor/prism/monokai";
 
 // components
+@import "components/chatbot";
