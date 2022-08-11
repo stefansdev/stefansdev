@@ -155,7 +155,7 @@ const iconList = [
 
 const TechIcons = () => (
 	<div className="grid grid-cols-[repeat(auto-fit,minmax(65px,1fr))] gap-4 items-center place-content-center px-6 pt-12 ">
-		{iconList.map((icon, i) => (
+		{iconList.map((icon) => (
 			<div className={`icon_wrap px-2 transition-gpu transition-all tech_icon_${icon.name}`} key={icon.name}>
 				<img src={icon.src} alt={icon.name} className="block " />
 			</div>
