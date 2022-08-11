@@ -1,14 +1,14 @@
-import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import { getAllPosts } from '../utils/blog';
-import Seo from '../components/Seo';
-import PageTitle from '../components/PageTitle';
-import Article from '../components/elements/Article';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import Seo from '@/components/Seo';
+import PageTitle from '@/components/PageTitle';
+import Article from '@/components/elements/Article';
+import GetPosts from '@/hooks/GetPosts';
+import GetBlog from '@/hooks/GetBlog';
 
-const Blog = ({ posts }) => (
+const Blog = ({ posts, blog }) => (
 	<>
-		<Seo title="Blog" description="Full Stack Javascript Developer specialised in Jamstack and Headless" />
+		<Seo seo={blog.seo} />
 		<Header />
 		<div className="max-w-7xl md:py-28 container relative py-12 mx-auto">
 			<div className="relative">
@@ -20,9 +20,9 @@ const Blog = ({ posts }) => (
 						slug={article.slug}
 						title={article.title}
 						key={article.slug}
-						image={article.image}
+						image={article.featuredImage}
 						excerpt={article.excerpt}
-						categories={article.categories}
+						categories={article.categories.nodes}
 					/>
 				))}
 			</div>
@@ -34,9 +34,11 @@ const Blog = ({ posts }) => (
 export default Blog;
 
 export async function getStaticProps() {
-	const posts = await getAllPosts();
+	const posts = await GetPosts();
+	const blog = await GetBlog();
 	return {
 		props: {
+			blog,
 			posts,
 		},
 	};

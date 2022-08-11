@@ -1,19 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
 
-const meta = ({ title, description, image }) => {
+const meta = ({ seo }) => {
 	const siteName = 'Jamstack Web Developer';
 	const defaultDescription = 'Full Stack Web developer specialised in Jamstack and Headless';
 
 	const permalink = `https://stefans.dev`;
 
-	const desc = `${description.substring(0, 156)}...`;
-
 	return (
 		<Head>
 			{/* main */}
-			<title>{`${title || ''} | ${siteName}`}</title>
-			<meta name="description" content={description ? desc : defaultDescription} />
+			<title>{`${seo.title ? `${seo.title}` : 'Stefans.dev'}`}</title>
+			<meta name="description" content={seo.metaDesc} />
 			<meta name="viewport" content="width=device-width, initial-scale=1" />
 			{/* Manifest */}
 			<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -34,18 +32,18 @@ const meta = ({ title, description, image }) => {
 			<meta name="theme-color" content="#ffffff" />
 			{/* Open Graph / Facebook */}
 			<meta property="og:type" content="website" />
-			<meta property="og:title" content={title || siteName} />
-			<meta property="og:description" content={description ? desc : defaultDescription} />
-			<meta property="og:image" content={image || 'https://stefans.dev/meta_placeholder.jpg'} />
+			<meta property="og:title" content={seo.opengraphTitle} />
+			<meta property="og:description" content={seo.opengraphDescription} />
+			<meta property="og:image" content={seo.opengraphImage?.mediaItemUrl || '/meta_placeholder.jpg'} />
 			<meta property="og:url" content={permalink} />
-			<meta property="og:site_name" content={siteName} />
+			<meta property="og:site_name" content={seo.opengraphSiteName} />
 			{/* Twitter */}
 			<meta property="twitter:card" content="summary_large_image" />
 			<meta property="twitter:url" content={permalink} />
-			<meta property="twitter:title" content={title} />
-			<meta property="twitter:description" content={description ? desc : defaultDescription} />
-			{/* Robots */}
-			<meta property="twitter:image" content={image || 'https://stefans.dev/meta_placeholder.jpg'} />
+			<meta property="twitter:title" content={seo.twitterTitle} />
+			<meta property="twitter:description" content={seo.twitterDescription} />
+			<meta property="twitter:image" content={seo.opengraphImage?.mediaItemUrl || '/meta_placeholder.jpg'} />
+			{/* Scripts */}
 			<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNKG44DRX6" />
 
 			<script
@@ -58,7 +56,7 @@ const meta = ({ title, description, image }) => {
 				}}
 			/>
 
-            <script src="//code.tidio.co/zehnhekqv2dzvmderu7cywcgnqfabugv.js" async></script>
+			{/* <script src="//code.tidio.co/zehnhekqv2dzvmderu7cywcgnqfabugv.js" async /> */}
 		</Head>
 	);
 };

@@ -1,36 +1,36 @@
 import Image from 'next/image';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import PageTitle from '../components/PageTitle';
-import Seo from '../components/Seo';
-import TechIcons from '../components/TechIcons';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import PageTitle from '@/components/PageTitle';
+import Seo from '@/components/Seo';
+import TechIcons from '@/components/TechIcons';
+import GetAbout from '@/hooks/GetAbout';
 
-const About = () => (
+const About = ({ about }) => (
 	<>
-		<Seo title="About" description="Full Stack Javascript Developer specialised in Jamstack and Headless" />
+		<Seo seo={about.seo} />
 		<Header />
 		<div className=" relative">
 			<div className="md:py-28 container relative z-20 max-w-4xl py-12 mx-auto">
 				<div className="relative">
 					<PageTitle titleStroke="Stefan" title="Stankovic" subtitle="About" />
 				</div>
-				<div className="relative rounded-lg overflow-hidden h-[480px] mb-16">
-					<Image src="/stefans_image_with_bg.jpg" layout="fill" objectFit="cover" alt="stefans.dev" />
+				<div className="relative rounded-lg overflow-hidden mb-16">
+					<Image
+						src={about.about.mainImage.mediaItemUrl}
+						alt="stefans.dev"
+						layout="responsive"
+						width={about.about.mainImage.mediaDetails.width}
+						height={about.about.mainImage.mediaDetails.height}
+					/>
 				</div>
 				<div className="dark:prose-dark mx-auto prose">
-					<div className="dark:prose-dark prose">
-						<p>My name is Stefan Stankovic. I’m from Belgrade, Serbia.</p>
-						<p>
-							I’m 27 years old and I’ve been making websites since I was 18. Proffesionaly from
-							2013.
-						</p>
-						<p>
-							I’m primarily working with Javascript and Headless / Jamstack stack nowadays, but also have
-							a lot of experience with custom theme development for Wordress , Shopify, etc...
-						</p>
-						<p>Frontend development, UI/UX , CSS/JS is what I’m strongest with and love the most.</p>
-						<h3>Some of the tools, tech stacks, SaaS I work with daily:</h3>
-					</div>
+					<div
+						className="dark:prose-dark prose "
+						dangerouslySetInnerHTML={{
+							__html: about.content,
+						}}
+					/>
 				</div>
 				<TechIcons />
 			</div>
@@ -42,7 +42,10 @@ const About = () => (
 export default About;
 
 export async function getStaticProps() {
+	const about = await GetAbout();
 	return {
-		props: {},
+		props: {
+			about,
+		},
 	};
 }

@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'next-themes';
 import { AppContextProvider } from '../utils/AppContext'; // import based on where you put it
 
-import '../style/app.scss';
+import '@/styles/app.scss';
 
 function MyApp({ Component, pageProps }) {
 	return (

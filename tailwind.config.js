@@ -1,5 +1,8 @@
+/* eslint-disable global-require */
+/* eslint-disable import/no-extraneous-dependencies */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
-	mode: 'jit',
 	content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
 	darkMode: 'class', // or 'media' or 'class'
 	theme: {
@@ -19,6 +22,9 @@ module.exports = {
 			},
 			animation: {
 				blob: 'blob 7s infinite',
+			},
+			fontFamily: {
+				sans: ['Lexend', ...defaultTheme.fontFamily.sans],
 			},
 			keyframes: {
 				blob: {

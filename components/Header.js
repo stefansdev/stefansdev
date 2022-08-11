@@ -63,7 +63,7 @@ const Header = () => {
 						{menuItems.map((item, i) => (
 							<li key={`key_${i}`} className="px-2">
 								<Link href={item.link}>
-									<a className="leading-6 font-bold text-white dark:text-gray-800 uppercase hover:underline py-1">
+									<a className="leading-6 font-medium text-white dark:text-gray-800 uppercase hover:underline py-1">
 										{item.title}
 									</a>
 								</Link>
@@ -110,7 +110,7 @@ const Header = () => {
 					{menuItems.map((item, i) => (
 						<li key={`key_${i}`} className="py-2">
 							<Link href={item.link}>
-								<a className="leading-6 font-bold text-white dark:text-gray-800 uppercase hover:underline py-1">
+								<a className="leading-6 font-medium text-white dark:text-gray-800 uppercase hover:underline py-1">
 									{item.title}
 								</a>
 							</Link>

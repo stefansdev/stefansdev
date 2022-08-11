@@ -1,26 +1,28 @@
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import SocialBar from '../components/SocialBar';
-import Footer from '../components/Footer';
-import Seo from '../components/Seo';
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import SocialBar from '@/components/SocialBar';
+import Footer from '@/components/Footer';
+import Seo from '@/components/Seo';
+import GetHomepage from '@/hooks/GetHomepage';
 
-const Home = () => (
-	<div>
-		<Seo
-			title="Stefan Stankovic"
-			description="Full Stack Javascript Developer specialised in Jamstack and Headless"
-		/>
+const Home = ({ homepage }) => (
+	<>
+		<Seo seo={homepage.seo} />
 		<Header />
 		<Hero />
 		<SocialBar />
 		<Footer />
-	</div>
+	</>
 );
 
 export default Home;
 
 export async function getStaticProps() {
+	const homepage = await GetHomepage();
+
 	return {
-		props: {},
+		props: {
+			homepage,
+		},
 	};
 }
