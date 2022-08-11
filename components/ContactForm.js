@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, Fragment } from 'react';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';

@@ -48,7 +48,6 @@ export default function Post({ post }) {
 }
 
 export async function getStaticProps({ params }) {
-	console.log(params);
 	const post = await GetPost(params.slug);
 	return {
 		props: {

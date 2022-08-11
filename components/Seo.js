@@ -1,12 +1,7 @@
-import React from 'react';
 import Head from 'next/head';
 
-const meta = ({ seo }) => {
-	const siteName = 'Jamstack Web Developer';
-	const defaultDescription = 'Full Stack Web developer specialised in Jamstack and Headless';
-
+const Seo = ({ seo }) => {
 	const permalink = `https://stefans.dev`;
-
 	return (
 		<Head>
 			{/* main */}
@@ -61,4 +56,4 @@ const meta = ({ seo }) => {
 	);
 };
 
-export default meta;
+export default Seo;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { MailIcon, PhoneIcon } from '@heroicons/react/outline';
+import { MailIcon } from '@heroicons/react/outline';
 import ContactForm from './elements/ContactForm';
 
 const Contact = () => (
