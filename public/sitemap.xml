@@ -1,0 +1,23 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://stefans.dev</loc>
+    </url>
+    <url>
+        <loc>https://stefans.dev/about</loc>
+    </url>
+    <url>
+        <loc>https://stefans.dev/blog</loc>
+    </url>
+    <url>
+        <loc>https://stefans.dev/uses</loc>
+    </url>
+    <url>
+        <loc>https://stefans.dev/contact</loc>
+    </url>
+    <url>
+        <loc>https://stefans.dev/work</loc>
+    </url>
+    <url>
+        <loc>https://stefans.dev/how-to-create-scroll-triggered-moving-text-with-react-gsap</loc>
+    </url>
+</urlset>
