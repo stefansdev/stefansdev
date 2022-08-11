@@ -1,6 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-import React from 'react';
-
 const iconList = [
 	{
 		name: 'affinity-designer',
