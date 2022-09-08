@@ -38,18 +38,7 @@ const Seo = ({ seo }) => {
 			<meta property="twitter:title" content={seo.twitterTitle} />
 			<meta property="twitter:description" content={seo.twitterDescription} />
 			<meta property="twitter:image" content={seo.opengraphImage?.mediaItemUrl || '/meta_placeholder.jpg'} />
-			{/* Scripts */}
-			<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNKG44DRX6" />
 
-			<script
-				dangerouslySetInnerHTML={{
-					__html: `window.dataLayer = window.dataLayer || [];
-					function gtag(){dataLayer.push(arguments);}
-					gtag('js', new Date());
-
-					gtag('config', 'G-DNKG44DRX6');`,
-				}}
-			/>
 			<script defer data-domain="stefans.dev" src="https://stats.anomys.com/js/plausible.js" />
 
 			{/* <script src="//code.tidio.co/zehnhekqv2dzvmderu7cywcgnqfabugv.js" async /> */}
