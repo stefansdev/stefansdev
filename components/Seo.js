@@ -50,6 +50,7 @@ const Seo = ({ seo }) => {
 					gtag('config', 'G-DNKG44DRX6');`,
 				}}
 			/>
+			<script defer data-domain="stefans.dev" src="https://stats.anomys.com/js/plausible.js" />
 
 			{/* <script src="//code.tidio.co/zehnhekqv2dzvmderu7cywcgnqfabugv.js" async /> */}
 		</Head>
