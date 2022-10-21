@@ -1,6 +1,6 @@
 # Stefan Stankovic - stefans.dev
 
-## Jamstack and Headless web developer
+## Jamstack / Headless web developer
 
 Full Stack Web Developer specialised in Jamstack and Headless. CEO at [Anomys](https://anomys.com),Lead Web Dev at [Singular Minds](https://singularminds.eu).
 
