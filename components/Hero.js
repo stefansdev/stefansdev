@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import HeroAnimation from './elements/HeroAnimation';
@@ -14,7 +13,7 @@ const Hero = () => (
 					alt="Stefan Stankovic - Stefans Dev"
 					width="620"
 					height="751"
-					blur="true"
+					priority
 					layout="responsive"
 				/>
 			</div>

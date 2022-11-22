@@ -1,4 +1,7 @@
-module.exports = () => ({
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+	reactStrictMode: true,
+	swcMinify: true,
 	images: {
 		domains: ['localhost', 'stefansdev.loc', process.env.NEXT_IMAGE_URL],
 	},
@@ -7,4 +10,6 @@ module.exports = () => ({
 		defaultLocale: 'en',
 		localeDetection: false,
 	},
-});
+};
+
+module.exports = nextConfig;

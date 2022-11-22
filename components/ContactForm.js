@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, Fragment } from 'react';
+import { useState, Fragment } from 'react';
 import Link from 'next/link';
-import { useForm } from 'react-hook-form';
 import { Dialog, Transition } from '@headlessui/react';
-import { CheckIcon } from '@heroicons/react/outline';
+import { CheckIcon } from '@heroicons/react/24/outline';
+import { useForm } from 'react-hook-form';
 
 const ContactForm = () => {
 	const API = `${process.env.NEXT_PUBLIC_CMS_URL}/wp-json/contact-form-7/v1/contact-forms/5/feedback`;
@@ -25,7 +25,7 @@ const ContactForm = () => {
 		body.append('email', data.email);
 		body.append('company', data.company);
 		body.append('message', data.message);
-		const response = await fetch(API, {
+		await fetch(API, {
 			method: 'POST',
 			body,
 		})

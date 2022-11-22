@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import readingTime from 'reading-time';
-import { ClockIcon, CalendarIcon } from '@heroicons/react/outline';
+import { ClockIcon, CalendarIcon } from '@heroicons/react/24/outline';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Seo from '@/components/Seo';

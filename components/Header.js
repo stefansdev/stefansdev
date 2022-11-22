@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { LightBulbIcon, MoonIcon, MenuIcon } from '@heroicons/react/solid';
+import { LightBulbIcon, MoonIcon, Bars3Icon } from '@heroicons/react/24/solid';
 import { useTheme } from 'next-themes';
 import { Transition } from '@headlessui/react';
 
@@ -93,7 +93,7 @@ const Header = () => {
 						name="Open menu"
 						className="block bg-gray-50 dark:bg-gray-800 p-2 rounded-md md:hidden"
 					>
-						<MenuIcon className="text-gray-800 dark:text-gray-50 w-4 h-4" />
+						<Bars3Icon className="text-gray-800 dark:text-gray-50 w-4 h-4" />
 					</button>
 				</nav>
 			</div>
