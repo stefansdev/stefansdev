@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'next-themes';
-import { AppContextProvider } from '../utils/AppContext'; // import based on where you put it
+import { Analytics } from '@vercel/analytics/react';
+import { AppContextProvider } from '@/utils/AppContext';
 
 import '@/styles/app.scss';
 
@@ -8,6 +9,7 @@ function MyApp({ Component, pageProps }) {
 		<AppContextProvider>
 			<ThemeProvider attribute="class">
 				<Component {...pageProps} />
+				<Analytics />
 			</ThemeProvider>
 		</AppContextProvider>
 	);
