@@ -5,34 +5,20 @@ export default async function GetBlog() {
 	const { data } = await client.query({
 		query: gql`
 			query BLOG {
-				pageBy(uri: "/blog") {
-					content
-					seo {
-						title
-						twitterTitle
-						twitterDescription
-						opengraphType
-						opengraphTitle
-						opengraphSiteName
-						opengraphPublisher
-						opengraphPublishedTime
-						opengraphModifiedTime
-						opengraphImage {
-							mediaItemUrl
-						}
-						opengraphDescription
-						opengraphAuthor
-						metaRobotsNoindex
-						metaRobotsNofollow
-						metaKeywords
-						metaDesc
-						focuskw
-						cornerstone
+				blog_page {
+					meta_description
+					meta_image {
+						id
+						width
+						height
 					}
+					meta_title
+					title
+					subtitle
 				}
 			}
 		`,
 	});
 
-	return data.pageBy;
+	return data.blog_page;
 }

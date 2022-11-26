@@ -5,47 +5,25 @@ export default async function GetPost(slug) {
 	const { data } = await client.query({
 		query: gql`
 			query ($slug: String) {
-				postBy(slug: $slug) {
-					id
-					date
-					slug
+				posts(filter: { slug: { _eq: $slug } }, limit: 1) {
 					title
-					content
-					date
-					dateGmt
-					featuredImage {
-						node {
-							mediaItemUrl
-							mediaDetails {
-								height
-								width
-								meta {
-									title
-								}
-							}
-						}
-					}
-					seo {
+					meta_title
+					date_created
+					meta_image {
+						id
+						width
+						height
 						title
-						twitterTitle
-						twitterDescription
-						opengraphType
-						opengraphTitle
-						opengraphSiteName
-						opengraphPublisher
-						opengraphPublishedTime
-						opengraphModifiedTime
-						opengraphImage {
-							mediaItemUrl
-						}
-						opengraphDescription
-						opengraphAuthor
-						metaRobotsNoindex
-						metaRobotsNofollow
-						metaKeywords
-						metaDesc
-						focuskw
-						cornerstone
+					}
+					meta_description
+					slug
+					id
+					content
+					featured_image {
+						id
+						width
+						height
+						title
 					}
 				}
 			}
@@ -55,5 +33,5 @@ export default async function GetPost(slug) {
 		},
 	});
 
-	return data.postBy;
+	return data.posts[0];
 }

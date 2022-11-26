@@ -5,37 +5,21 @@ export default async function GetUses() {
 	const { data } = await client.query({
 		query: gql`
 			query USES {
-				pageBy(uri: "/uses") {
+				uses {
+					meta_description
+					meta_image {
+						id
+						width
+						height
+					}
+					meta_title
+					title
+					subtitle
 					content
-					uses {
-						subtitle
-					}
-					seo {
-						title
-						twitterTitle
-						twitterDescription
-						opengraphType
-						opengraphTitle
-						opengraphSiteName
-						opengraphPublisher
-						opengraphPublishedTime
-						opengraphModifiedTime
-						opengraphImage {
-							mediaItemUrl
-						}
-						opengraphDescription
-						opengraphAuthor
-						metaRobotsNoindex
-						metaRobotsNofollow
-						metaKeywords
-						metaDesc
-						focuskw
-						cornerstone
-					}
 				}
 			}
 		`,
 	});
 
-	return data.pageBy;
+	return data.uses;
 }

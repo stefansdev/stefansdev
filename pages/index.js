@@ -7,7 +7,7 @@ import GetHomepage from '@/hooks/GetHomepage';
 
 const Home = ({ homepage }) => (
 	<>
-		<Seo seo={homepage.seo} />
+		<Seo title={homepage.meta_title} description={homepage.meta_description} image={homepage.meta_image} />
 		<Header />
 		<Hero />
 		<SocialBar />

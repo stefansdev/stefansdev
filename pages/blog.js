@@ -8,11 +8,11 @@ import GetBlog from '@/hooks/GetBlog';
 
 const Blog = ({ posts, blog }) => (
 	<>
-		<Seo seo={blog.seo} />
+		<Seo title={blog.meta_title} description={blog.meta_description} image={blog.meta_image} />
 		<Header />
 		<div className="max-w-7xl md:py-28 container relative py-12 mx-auto">
 			<div className="relative">
-				<PageTitle title="BLOG" subtitle="Posts i wrote" />
+				<PageTitle title={blog.title} subtitle={blog.subtitle} />
 			</div>
 			<div className="md:grid-cols-3 grid grid-cols-1 gap-4 pt-16">
 				{posts.map((article) => (
@@ -20,9 +20,8 @@ const Blog = ({ posts, blog }) => (
 						slug={article.slug}
 						title={article.title}
 						key={article.slug}
-						image={article.featuredImage}
-						excerpt={article.excerpt}
-						categories={article.categories.nodes}
+						image={article.featured_image}
+						categories={article.categories}
 					/>
 				))}
 			</div>

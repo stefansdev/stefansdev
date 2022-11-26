@@ -5,46 +5,27 @@ export default async function GetAbout() {
 	const { data } = await client.query({
 		query: gql`
 			query ABOUT {
-				pageBy(uri: "/about") {
-					content
-					about {
-						mainImage {
-							mediaItemUrl
-							mediaDetails {
-								width
-								height
-								meta {
-									title
-								}
-							}
-						}
-					}
-					seo {
+				about {
+					meta_description
+					meta_image {
+						id
+						width
+						height
 						title
-						twitterTitle
-						twitterDescription
-						opengraphType
-						opengraphTitle
-						opengraphSiteName
-						opengraphPublisher
-						opengraphPublishedTime
-						opengraphModifiedTime
-						opengraphImage {
-							mediaItemUrl
-						}
-						opengraphDescription
-						opengraphAuthor
-						metaRobotsNoindex
-						metaRobotsNofollow
-						metaKeywords
-						metaDesc
-						focuskw
-						cornerstone
+					}
+					meta_title
+					title
+					subtitle
+					content
+					image {
+						id
+						width
+						height
 					}
 				}
 			}
 		`,
 	});
 
-	return data.pageBy;
+	return data.about;
 }

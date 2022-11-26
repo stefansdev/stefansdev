@@ -5,37 +5,18 @@ export default async function GetHomepage() {
 	const { data } = await client.query({
 		query: gql`
 			query HOMEPAGE {
-				pageBy(uri: "/") {
-					title
-					homepage {
-						profession
+				homepage {
+					meta_description
+					meta_image {
+						id
+						width
+						height
 					}
-					seo {
-						title
-						twitterTitle
-						twitterDescription
-						opengraphType
-						opengraphTitle
-						opengraphSiteName
-						opengraphPublisher
-						opengraphPublishedTime
-						opengraphModifiedTime
-						opengraphImage {
-							mediaItemUrl
-						}
-						opengraphDescription
-						opengraphAuthor
-						metaRobotsNoindex
-						metaRobotsNofollow
-						metaKeywords
-						metaDesc
-						focuskw
-						cornerstone
-					}
+					meta_title
 				}
 			}
 		`,
 	});
 
-	return data.pageBy;
+	return data.homepage;
 }
