@@ -6,34 +6,29 @@ export default async function GetPosts() {
 		query: gql`
 			query POSTS {
 				posts {
-					nodes {
-						title
-						date
-						slug
+					title
+					meta_title
+					meta_image {
 						id
-						excerpt
-						categories {
-							nodes {
-								name
-								slug
-								id
-							}
-						}
-						featuredImage {
-							node {
-								id
-								mediaItemUrl
-								mediaDetails {
-									width
-									height
-								}
-							}
-						}
+						width
+						height
+						title
+					}
+					meta_description
+					slug
+					id
+					content
+					categories
+					featured_image {
+						id
+						width
+						height
+						title
 					}
 				}
 			}
 		`,
 	});
 
-	return data.posts.nodes;
+	return data.posts;
 }

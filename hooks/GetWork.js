@@ -5,62 +5,48 @@ export default async function GetWork() {
 	const { data } = await client.query({
 		query: gql`
 			query WORK {
-				pageBy(uri: "/work") {
+				portfolio {
+					meta_description
+					meta_image {
+						id
+						width
+						height
+					}
+					meta_title
+					title
+					subtitle
 					content
-					work {
-						companies {
-							website
-							name
-							logo {
-								altText
-								mediaItemUrl
-								mediaDetails {
-									height
-									width
-								}
-							}
-						}
-						projects {
-							categories
-							description
+					partners {
+						partners_id {
 							name
 							url
+							id
 							image {
-								altText
-								mediaItemUrl
-								mediaDetails {
-									height
-									width
-								}
+								type
+								id
+								width
+								height
 							}
 						}
 					}
-					seo {
-						title
-						twitterTitle
-						twitterDescription
-						opengraphType
-						opengraphTitle
-						opengraphSiteName
-						opengraphPublisher
-						opengraphPublishedTime
-						opengraphModifiedTime
-						opengraphImage {
-							mediaItemUrl
+					projects {
+						projects_id {
+							id
+							description
+							title
+							categories
+							url
+							image {
+								width
+								height
+								id
+							}
 						}
-						opengraphDescription
-						opengraphAuthor
-						metaRobotsNoindex
-						metaRobotsNofollow
-						metaKeywords
-						metaDesc
-						focuskw
-						cornerstone
 					}
 				}
 			}
 		`,
 	});
 
-	return data.pageBy;
+	return data.portfolio;
 }

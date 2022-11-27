@@ -1,12 +1,12 @@
 import Head from 'next/head';
 
-const Seo = ({ seo }) => {
+const Seo = ({ title, description, image }) => {
 	const permalink = `https://stefans.dev`;
 	return (
 		<Head>
 			{/* main */}
-			<title>{`${seo.title ? `${seo.title}` : 'Stefans.dev'}`}</title>
-			<meta name="description" content={seo.metaDesc} />
+			<title>{`${title || 'Stefans.dev'}`}</title>
+			<meta name="description" content={description} />
 			<meta name="viewport" content="width=device-width, initial-scale=1" />
 			{/* Manifest */}
 			<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -27,17 +27,17 @@ const Seo = ({ seo }) => {
 			<meta name="theme-color" content="#ffffff" />
 			{/* Open Graph / Facebook */}
 			<meta property="og:type" content="website" />
-			<meta property="og:title" content={seo.opengraphTitle} />
-			<meta property="og:description" content={seo.opengraphDescription} />
-			<meta property="og:image" content={seo.opengraphImage?.mediaItemUrl || '/meta_placeholder.jpg'} />
+			<meta property="og:title" content={title} />
+			<meta property="og:description" content={description} />
+			<meta property="og:image" content={`${image ? `/assets/${image.id}` : '/meta_placeholder.jpg'}`} />
 			<meta property="og:url" content={permalink} />
-			<meta property="og:site_name" content={seo.opengraphSiteName} />
+			<meta property="og:site_name" content="stefansdev" />
 			{/* Twitter */}
 			<meta property="twitter:card" content="summary_large_image" />
 			<meta property="twitter:url" content={permalink} />
-			<meta property="twitter:title" content={seo.twitterTitle} />
-			<meta property="twitter:description" content={seo.twitterDescription} />
-			<meta property="twitter:image" content={seo.opengraphImage?.mediaItemUrl || '/meta_placeholder.jpg'} />
+			<meta property="twitter:title" content={title} />
+			<meta property="twitter:description" content={description} />
+			<meta property="twitter:image" content={`${image ? `/assets/${image.id}` : '/meta_placeholder.jpg'}`} />
 
 			<script defer data-domain="stefans.dev" src="https://stats.anomys.com/js/plausible.js" />
 

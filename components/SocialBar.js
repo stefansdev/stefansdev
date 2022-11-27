@@ -1,4 +1,3 @@
-import React from 'react';
 import TwitterIcon from './svg/TwitterIcon';
 import InstagramIcon from './svg/InstagramIcon';
 import GithubIcon from './svg/GithubIcon';
@@ -18,7 +17,7 @@ const SocialBar = () => (
 						<TwitterIcon />
 						<div className="text-sm">
 							<span className="block">Follow me on Twitter</span>
-							<span className="font-semibold">@stefans_dev</span>
+							<span className="font-semibold">@stefansdev</span>
 						</div>
 					</a>
 				</li>

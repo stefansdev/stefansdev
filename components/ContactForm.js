@@ -6,7 +6,6 @@ import { CheckIcon } from '@heroicons/react/24/outline';
 import { useForm } from 'react-hook-form';
 
 const ContactForm = () => {
-	const API = `${process.env.NEXT_PUBLIC_CMS_URL}/wp-json/contact-form-7/v1/contact-forms/5/feedback`;
 	const [open, setOpen] = useState(false);
 	const [submitState, setSubmitState] = useState(false);
 
@@ -19,19 +18,16 @@ const ContactForm = () => {
 	} = useForm();
 
 	const onSubmit = async (data, e) => {
-		const body = new FormData();
-		body.append('firstName', data.firstName);
-		body.append('lastName', data.lastName);
-		body.append('email', data.email);
-		body.append('company', data.company);
-		body.append('message', data.message);
-		await fetch(API, {
+		await fetch('/api/contact', {
 			method: 'POST',
-			body,
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({ ...data }),
 		})
 			.then((res) => res.json())
 			.then((data) => {
-				if (data.status === 'mail_sent') {
+				if (data.status === 'success') {
 					setSubmitState(true);
 					setOpen(true);
 					reset();
@@ -55,7 +51,7 @@ const ContactForm = () => {
 							type="text"
 							name="first-name"
 							id="first-name"
-							{...register('firstName', { required: true })}
+							{...register('first_name', { required: true })}
 							autoComplete="given-name"
 							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded-md"
 						/>
@@ -70,7 +66,7 @@ const ContactForm = () => {
 							type="text"
 							name="last-name"
 							id="last-name"
-							{...register('lastName')}
+							{...register('last_name')}
 							autoComplete="family-name"
 							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded-md"
 						/>
