@@ -35,7 +35,7 @@ const Hero = () => (
 						</Link>
 						<a
 							className="bg-white border border-gray-100 dark:border-gray-600 rounded-md py-3 text-center px-4 items-center gap-4 transition-gpu transition-all duration-300 hover:bg-brand-twitter hover:text-white dark:bg-gray-800 dark:hover:bg-brand-twitter hover:-translate-y-1 font-bold"
-							href="https://calendly.com/stefansdev/meet-me"
+                            href="https://calendar.app.google/ZhWTK2ac66nAXTV18"
 							target="_blank"
 							rel="noreferrer"
 						>
