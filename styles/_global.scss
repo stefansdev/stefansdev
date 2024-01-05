@@ -1,0 +1,6 @@
+// selection color
+* {
+    ::selection {
+        @apply bg-red-500 text-white;
+    }
+}

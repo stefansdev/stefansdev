@@ -15,6 +15,9 @@ module.exports = {
 						DEFAULT: '#000000',
 						lighter: '#151515',
 					},
+					red: {
+						DEFAULT: '#CD3F37',
+					},
 				},
 			},
 			container: {

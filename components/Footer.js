@@ -38,6 +38,7 @@ const navigation = [
 ];
 
 export default function Footer() {
+	const year = new Date().getFullYear();
 	return (
 		<footer className=" border-t border-gray-100 dark:border-gray-700 overflow-hidden relative">
 			<div className="absolute inset-x-0 bottom-0 top-0 text-slate-900/10 [mask-image:linear-gradient(transparent,white)] pointer-events-none">
@@ -61,7 +62,7 @@ export default function Footer() {
 				</div>
 				<div className="mt-4 md:mt-0 md:order-1">
 					<p className="text-center text-sm md:text-base text-gray-400">
-						&copy; 2009 - 2022 stefans.dev. All rights reserved.
+						&copy; 2009 - {year} stefans.dev. All rights reserved.
 					</p>
 				</div>
 			</div>

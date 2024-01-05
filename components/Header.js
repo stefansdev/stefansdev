@@ -1,5 +1,7 @@
+'use client';
+
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
 const menuItems = [
@@ -30,7 +32,7 @@ const menuItems = [
 ];
 
 const Header = () => {
-	const router = useRouter();
+	const pathname = usePathname();
 
 	return (
 		<header className="absolute top-12 z-10 w-full text-white">
@@ -51,66 +53,20 @@ const Header = () => {
 					</div>
 				</Link>
 				<ul className="font-headings flex space-x-5 text-xs font-medium uppercase leading-none">
-					<li>
-						<a
-							href="/"
-							className={`rounded-sm border border-transparent px-5 py-2 transition-all hover:border-brand-black-lighter hover:bg-[#070707] ${
-								router.pathname === '/' ? 'border-brand-black-lighter bg-[#070707]' : ''
-							}`}
-						>
-							Home
-						</a>
-					</li>
-					<li>
-						<a
-							href="/about"
-							className={`rounded-sm border border-transparent px-5 py-2 transition-all hover:border-brand-black-lighter hover:bg-[#070707] ${
-								router.pathname === '/about' ? 'border-brand-black-lighter bg-[#070707]' : ''
-							}`}
-						>
-							About
-						</a>
-					</li>
-					<li>
-						<a
-							href="/blog"
-							className={`rounded-sm border border-transparent px-5 py-2 transition-all hover:border-brand-black-lighter hover:bg-[#070707] ${
-								router.pathname === '/blog' ? 'border-brand-black-lighter bg-[#070707]' : ''
-							}`}
-						>
-							Blog
-						</a>
-					</li>
-					<li>
-						<a
-							href="/work"
-							className={`rounded-sm border border-transparent px-5 py-2 transition-all hover:border-brand-black-lighter hover:bg-[#070707] ${
-								router.pathname === '/work' ? 'border-brand-black-lighter bg-[#070707]' : ''
-							}`}
-						>
-							Work
-						</a>
-					</li>
-					<li>
-						<a
-							href="/uses"
-							className={`rounded-sm border border-transparent px-5 py-2 transition-all hover:border-brand-black-lighter hover:bg-[#070707] ${
-								router.pathname === '/uses' ? 'border-brand-black-lighter bg-[#070707]' : ''
-							}`}
-						>
-							Uses
-						</a>
-					</li>
-					<li>
-						<a
-							href="/contact"
-							className={`rounded-sm border border-transparent px-5 py-2 transition-all hover:border-brand-black-lighter hover:bg-[#070707] ${
-								router.pathname === '/contact' ? 'border-brand-black-lighter bg-[#070707]' : ''
-							}`}
-						>
-							Contact
-						</a>
-					</li>
+					{menuItems.map((item) => (
+						<li key={item.link}>
+							<Link
+								href={item.link}
+								className={`rounded-sm border  px-5 py-2 transition-all hover:border-brand-black-lighter hover:bg-neutral-950 ${
+									pathname === item.link
+										? 'border-brand-black-lighter bg-neutral-950 text-red-500'
+										: 'border-transparent bg-transparent'
+								}`}
+							>
+								{item.title}
+							</Link>
+						</li>
+					))}
 				</ul>
 			</div>
 		</header>

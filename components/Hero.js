@@ -9,6 +9,8 @@ const Hero = () => (
 			width={1076}
 			height={1076}
 			alt="Stefan S. | stefans.dev"
+			priority
+			quality={100}
 			className="block h-full w-auto"
 		/>
 		<div className="container absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-[40%] text-white">
@@ -24,7 +26,7 @@ const Hero = () => (
 				<div className="font-headings flex items-center space-x-10">
 					<Link
 						href="/contact"
-						class="rounded-sm bg-white px-14 py-4 text-xs font-medium tracking-[14%] text-black transition-all hover:bg-slate-100"
+						class="rounded-sm bg-white px-14 py-4 text-xs font-medium tracking-[14%] transition-all text-black hover:text-white hover:bg-red-500"
 					>
 						CONTACT
 					</Link>
@@ -32,7 +34,7 @@ const Hero = () => (
 						href="https://calendly.com/stefansdev/meet-me"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="flex items-center space-x-3 border-b border-neutral-700 py-1 text-xs font-medium uppercase tracking-[14%] transition-all hover:border-neutral-300"
+						className="flex items-center space-x-3 border-b border-neutral-700 py-1 text-xs font-medium uppercase tracking-[14%] transition-all hover:border-red-800 hover:text-red-500"
 					>
 						<span> Or schedule a call</span>
 						<ExternalLink />
