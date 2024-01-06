@@ -1,7 +1,7 @@
-import TwitterIcon from './svg/TwitterIcon';
-import InstagramIcon from './svg/InstagramIcon';
-import GithubIcon from './svg/GithubIcon';
-import UpworkIcon from './svg/UpworkIcon';
+import TwitterIcon from '@/svg/TwitterIcon';
+import InstagramIcon from '@/svg/InstagramIcon';
+import GithubIcon from '@/svg/GithubIcon';
+import UpworkIcon from '@/svg/UpworkIcon';
 
 const SocialBar = () => (
 	<section className="py-12 bg-gray-100 dark:bg-gray-900">
