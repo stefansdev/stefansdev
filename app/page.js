@@ -1,9 +1,9 @@
 import Hero from '@/components/Hero';
-
-import GetHomepage from '@/hooks/GetHomepage';
+// data
+import getHomepage from '$queries/getHomepage';
 
 export async function generateMetadata() {
-	const data = await GetHomepage();
+	const data = await getHomepage();
 	return {
 		title: data.meta_title,
 		description: data.meta_description,
@@ -15,7 +15,7 @@ export async function generateMetadata() {
 }
 
 const Home = async () => {
-	const homepage = await GetHomepage();
+	const homepage = await getHomepage();
 	return <Hero />;
 };
 export default Home;

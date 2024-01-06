@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 import client from '@/utils/apollo-client';
 
-export default async function GetPost(slug) {
+export default async function getPost(slug) {
 	const { data } = await client.query({
 		query: gql`
 			query ($slug: String) {

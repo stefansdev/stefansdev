@@ -1,3 +1,5 @@
+'use client';
+
 /* eslint-disable no-unused-vars */
 import { useState, Fragment } from 'react';
 import Link from 'next/link';
@@ -53,7 +55,7 @@ const ContactForm = () => {
 							id="first-name"
 							{...register('first_name', { required: true })}
 							autoComplete="given-name"
-							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded-md"
+							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded-sm"
 						/>
 					</div>
 				</div>
@@ -68,7 +70,7 @@ const ContactForm = () => {
 							id="last-name"
 							{...register('last_name')}
 							autoComplete="family-name"
-							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded-md"
+							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded-sm"
 						/>
 					</div>
 				</div>
@@ -83,7 +85,7 @@ const ContactForm = () => {
 							type="email"
 							{...register('email', { required: true })}
 							autoComplete="email"
-							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded-md"
+							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded-sm"
 						/>
 					</div>
 				</div>
@@ -98,7 +100,7 @@ const ContactForm = () => {
 							id="company"
 							{...register('company')}
 							autoComplete="organization"
-							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded-md"
+							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded-sm"
 						/>
 					</div>
 				</div>
@@ -121,7 +123,7 @@ const ContactForm = () => {
 							{...register('message', { required: true })}
 							aria-describedby="how-can-we-help-description"
 							rows={4}
-							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 border bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded-md "
+							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 border bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded-sm"
 							defaultValue=""
 						/>
 					</div>

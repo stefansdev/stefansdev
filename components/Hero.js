@@ -26,7 +26,7 @@ const Hero = () => (
 				<div className="font-headings flex items-center space-x-10">
 					<Link
 						href="/contact"
-						class="rounded-sm bg-white px-14 py-4 text-xs font-medium tracking-[14%] transition-all text-black hover:text-white hover:bg-red-500"
+						className="rounded-sm bg-white px-14 py-4 text-xs font-medium tracking-[14%] transition-all text-black hover:text-white hover:bg-red-500"
 					>
 						CONTACT
 					</Link>

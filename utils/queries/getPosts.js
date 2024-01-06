@@ -1,31 +1,34 @@
 import { gql } from '@apollo/client';
 import client from '@/utils/apollo-client';
 
-export default async function GetAbout() {
+export default async function getPosts() {
 	const { data } = await client.query({
 		query: gql`
-			query ABOUT {
-				about {
-					meta_description
+			query POSTS {
+				posts {
+					title
+					meta_title
 					meta_image {
 						id
 						width
 						height
 						title
 					}
-					meta_title
-					title
-					subtitle
+					meta_description
+					slug
+					id
 					content
-					image {
+					categories
+					featured_image {
 						id
 						width
 						height
+						title
 					}
 				}
 			}
 		`,
 	});
 
-	return data.about;
+	return data.posts;
 }

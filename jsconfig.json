@@ -11,11 +11,14 @@
             "@/utils/*": [
                 "utils/*"
             ],
+            "$queries/*": [
+                "utils/queries/*"
+            ],
             "@/styles/*": [
                 "styles/*"
             ],
             "@/hooks/*": [
-                "hooks/*"
+                "utils/queries/*"
             ]
         }
     }
