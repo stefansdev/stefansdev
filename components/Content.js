@@ -18,8 +18,8 @@ const NestedList = ({ data }) => (
 	</ul>
 );
 
-const Content = ({ content }) => (
-	<div className=" prose mx-auto px-3">
+const Content = ({ content, fullWidth }) => (
+	<div className={`prose mx-auto px-3 ${fullWidth && 'max-w-full'} prose-headings:font-headings`}>
 		<Blocks
 			data={content}
 			config={{

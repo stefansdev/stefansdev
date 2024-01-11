@@ -22,43 +22,37 @@ const page = async () => {
 	return (
 		<>
 			<HeroSingle title={work.title} />
-			<div className="container">
-				<div className="py-20 border-b border-gray-200 dark:border-gray-700 max-w-4xl mx-auto">
-					<div className="mb-4">
-						<div className="prose dark:text-gray-200 max-w-full ">
-							<Content content={work.content} />
-						</div>
-					</div>
-					<ul className="grid grid-cols-2 lg:grid-cols-4 gap-4 py-12 mb-8 ">
-						{work.partners.map((partner, i) => (
-							<li key={i}>
-								<a href={partner.partners_id.url} target="_blank" rel="noopener noreferrer">
-									<div className="bg-gray-50 relative h-20 rounded-sm grid items-center justify-center">
-										{partner.partners_id.image.type === 'image/svg+xml' ? (
-											<img
-												src={`/assets/${partner.partners_id.image.id}`}
-												alt={partner.partners_id.name}
-												className="max-h-[40px] w-auto block"
-											/>
-										) : (
-											<Image
-												src={`/assets/${partner.partners_id.image.id}`}
-												height={partner.partners_id.image.height}
-												width={partner.partners_id.image.width}
-												alt={partner.partners_id.title}
-												className="max-h-[40px] w-auto block"
-											/>
-										)}
-									</div>
-									<span className="block text-center text-sm py-2">{partner.partners_id.name}</span>
-								</a>
-							</li>
-						))}
-					</ul>
-					{work.projects.map((project, i) => (
-						<Project project={project} key={`project_${i}`} />
-					))}
+			<div className="py-20 border-b border-gray-200 max-w-5xl mx-auto">
+				<div className="mb-4">
+					<Content content={work.content} fullWidth />
 				</div>
+				<ul className="grid grid-cols-2 lg:grid-cols-5 gap-4 py-12 mb-8 ">
+					{work.partners.map((partner, i) => (
+						<li key={i}>
+							<a href={partner.partners_id.url} target="_blank" rel="noopener noreferrer">
+								{partner.partners_id.image.type === 'image/svg+xml' ? (
+									<img
+										src={`/assets/${partner.partners_id.image.id}`}
+										alt={partner.partners_id.name}
+										className="w-full block"
+									/>
+								) : (
+									<Image
+										src={`/assets/${partner.partners_id.image.id}`}
+										height={partner.partners_id.image.height}
+										width={partner.partners_id.image.width}
+										alt={partner.partners_id.title}
+										className="w-full block"
+									/>
+								)}
+								{/* <span className="block text-center text-sm py-2">{partner.partners_id.name}</span> */}
+							</a>
+						</li>
+					))}
+				</ul>
+				{/* {work.projects.map((project, i) => (
+						<Project project={project} key={`project_${i}`} />
+					))} */}
 			</div>
 		</>
 	);

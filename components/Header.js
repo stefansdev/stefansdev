@@ -47,12 +47,12 @@ const Header = () => {
 							height={53}
 							priority
 							quality={100}
-							className="aspect-auto w-[50px] rounded-full"
+							className="aspect-auto w-[50px] rounded-full border-2 border-transparent hover:border-brand-red transition-all"
 						/>
 					</div>
 					<div className="grid">
-						<span className="font-headings text-lg font-semibold leading-none">Stefan S.</span>
-						<span className="text-sm font-light leading-none">Full Stack JS Dev</span>
+						<span className="font-headings text-lg font-semibold leading-none mb-1">Stefan S.</span>
+						<span className="text-sm font-light leading-none text-neutral-300">Full Stack JS Dev</span>
 					</div>
 				</Link>
 				<ul className="font-headings hidden lg:flex space-x-5 text-xs font-medium uppercase leading-none">

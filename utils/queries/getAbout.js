@@ -23,6 +23,14 @@ export default async function getAbout() {
 						width
 						height
 					}
+					gallery {
+						directus_files_id {
+							id
+							width
+							height
+							title
+						}
+					}
 				}
 			}
 		`,
