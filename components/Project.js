@@ -5,9 +5,10 @@ const Project = ({ project }) => (
 		<div className="relative overflow-hidden h-[230px] w-full md:w-[353px] rounded-lg">
 			<Image
 				src={`/assets/${project.projects_id.image.id}`}
-				layout="fill"
-				objectFit="cover"
+				height={project.projects_id.image.height}
+				width={project.projects_id.image.width}
 				alt={project.projects_id.image.altText}
+				className="image_cover"
 			/>
 		</div>
 		<article>

@@ -1,0 +1,12 @@
+// selection color
+* {
+    ::selection {
+        @apply bg-red-500 text-white;
+    }
+}
+
+@layer components {
+    .image_cover {
+        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block w-full h-full object-cover;
+    }
+}

@@ -19,16 +19,18 @@ const NestedList = ({ data }) => (
 );
 
 const Content = ({ content }) => (
-	<Blocks
-		data={content}
-		config={{
-			image: {},
-			nestedlist: {},
-		}}
-		renderers={{
-			image: Images,
-			nestedlist: NestedList,
-		}}
-	/>
+	<div className=" prose mx-auto px-3">
+		<Blocks
+			data={content}
+			config={{
+				image: {},
+				nestedlist: {},
+			}}
+			renderers={{
+				image: Images,
+				nestedlist: NestedList,
+			}}
+		/>
+	</div>
 );
 export default Content;

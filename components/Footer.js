@@ -38,8 +38,9 @@ const navigation = [
 ];
 
 export default function Footer() {
+	const year = new Date().getFullYear();
 	return (
-		<footer className=" border-t border-gray-100 dark:border-gray-700 overflow-hidden relative">
+		<footer className="border-t border-gray-100 dark:border-gray-700 overflow-hidden relative">
 			<div className="absolute inset-x-0 bottom-0 top-0 text-slate-900/10 [mask-image:linear-gradient(transparent,white)] pointer-events-none">
 				<svg aria-hidden="true" className="absolute inset-0 h-full w-full ">
 					<defs>
@@ -50,7 +51,7 @@ export default function Footer() {
 					<rect width="100%" height="100%" fill="url(#:Rem:)" />
 				</svg>
 			</div>
-			<div className="max-w-7xl mx-auto py-8 md:py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+			<div className="container mx-auto py-8 md:py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
 				<div className="flex justify-center space-x-6 md:order-2">
 					{navigation.map((item) => (
 						<a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
@@ -61,7 +62,7 @@ export default function Footer() {
 				</div>
 				<div className="mt-4 md:mt-0 md:order-1">
 					<p className="text-center text-sm md:text-base text-gray-400">
-						&copy; 2009 - 2022 stefans.dev. All rights reserved.
+						&copy; {year} stefans.dev. All rights reserved.
 					</p>
 				</div>
 			</div>
