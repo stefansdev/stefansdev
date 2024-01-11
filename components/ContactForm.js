@@ -42,10 +42,10 @@ const ContactForm = () => {
 		<>
 			<form
 				onSubmit={handleSubmit(onSubmit)}
-				className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8 max-w-2xl "
+				className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8 max-w-2xl px-3 lg:px-0 "
 			>
 				<div>
-					<label htmlFor="first-name" className="block text-sm font-medium text-gray-700 dark:text-gray-200">
+					<label htmlFor="first-name" className="block text-sm font-medium text-gray-700 ">
 						First name
 					</label>
 					<div className="mt-1">
@@ -55,12 +55,12 @@ const ContactForm = () => {
 							id="first-name"
 							{...register('first_name', { required: true })}
 							autoComplete="given-name"
-							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded-sm"
+							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 bg-white border-gray-300  rounded-sm"
 						/>
 					</div>
 				</div>
 				<div>
-					<label htmlFor="last-name" className="block text-sm font-medium text-gray-700 dark:text-gray-200">
+					<label htmlFor="last-name" className="block text-sm font-medium text-gray-700 ">
 						Last name
 					</label>
 					<div className="mt-1">
@@ -70,12 +70,12 @@ const ContactForm = () => {
 							id="last-name"
 							{...register('last_name')}
 							autoComplete="family-name"
-							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded-sm"
+							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 bg-white border-gray-300 rounded-sm"
 						/>
 					</div>
 				</div>
 				<div className="sm:col-span-2">
-					<label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-200">
+					<label htmlFor="email" className="block text-sm font-medium text-gray-700 ">
 						Email
 					</label>
 					<div className="mt-1">
@@ -85,12 +85,12 @@ const ContactForm = () => {
 							type="email"
 							{...register('email', { required: true })}
 							autoComplete="email"
-							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded-sm"
+							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 bg-white  border-gray-300 rounded-sm"
 						/>
 					</div>
 				</div>
 				<div className="sm:col-span-2">
-					<label htmlFor="company" className="block text-sm font-medium text-gray-700 dark:text-gray-200">
+					<label htmlFor="company" className="block text-sm font-medium text-gray-700 ">
 						Company
 					</label>
 					<div className="mt-1">
@@ -100,16 +100,13 @@ const ContactForm = () => {
 							id="company"
 							{...register('company')}
 							autoComplete="organization"
-							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded-sm"
+							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 bg-white  border-gray-300 rounded-sm"
 						/>
 					</div>
 				</div>
 				<div className="sm:col-span-2">
 					<div className="flex justify-between">
-						<label
-							htmlFor="how-can-we-help"
-							className="block text-sm font-medium text-gray-700 dark:text-gray-200"
-						>
+						<label htmlFor="how-can-we-help" className="block text-sm font-medium text-gray-700 ">
 							How can I help you?
 						</label>
 						<span id="how-can-we-help-description" className="text-sm text-gray-500">
@@ -123,7 +120,7 @@ const ContactForm = () => {
 							{...register('message', { required: true })}
 							aria-describedby="how-can-we-help-description"
 							rows={4}
-							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 border bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded-sm"
+							className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-indigo-500 border bg-white  border-gray-300 rounded-sm"
 							defaultValue=""
 						/>
 					</div>
@@ -131,7 +128,7 @@ const ContactForm = () => {
 				<div className="text-right sm:col-span-2">
 					<button
 						type="submit"
-						className="bg-gray-800 border border-gray-100 dark:border-gray-600 rounded-md py-3 text-center px-4 items-center gap-4 transition-gpu transition-all duration-300 hover:bg-blue-500 text-white hover:text-white dark:bg-gray-600 dark:hover:bg-blue-500 hover:-translate-y-1 font-bold"
+						className="bg-neutral-900 font-headings uppercase text-xs hover:bg-neutral-800 rounded py-3 text-center px-10 gap-4 transition-all duration-300 font-medium text-white"
 					>
 						Submit
 					</button>
@@ -165,7 +162,7 @@ const ContactForm = () => {
 							leaveFrom="opacity-100 translate-y-0 sm:scale-100"
 							leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
 						>
-							<div className="inline-block align-bottom bg-white dark:bg-gray-900 rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-xl sm:w-full sm:p-6">
+							<div className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-xl sm:w-full sm:p-6">
 								<div>
 									<div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-500 mb-12">
 										<CheckIcon className="h-6 w-6 text-white" aria-hidden="true" />
@@ -186,7 +183,7 @@ const ContactForm = () => {
 									<Link href="/">
 										<button
 											type="button"
-											className="bg-gray-800 border border-gray-100 dark:border-gray-600 rounded-md py-3 text-center px-4 items-center gap-4 transition-gpu transition-all duration-300 hover:bg-blue-500 text-white hover:text-white dark:bg-gray-600 dark:hover:bg-blue-500 hover:-translate-y-1 font-bold block w-full"
+											className="bg-gray-800 border border-gray-100  rounded-md py-3 text-center px-4 items-center gap-4 transition-gpu transition-all duration-300 hover:bg-blue-500 text-white hover:text-white hover:-translate-y-1 font-bold block w-full"
 											onClick={() => setOpen(false)}
 										>
 											Go back to homepage

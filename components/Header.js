@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import MobileMenu from '@/components/shared/MobileMenu';
 
 const menuItems = [
 	{
@@ -35,7 +36,7 @@ const Header = () => {
 	const pathname = usePathname();
 
 	return (
-		<header className="absolute top-12 z-10 w-full text-white">
+		<header className="absolute top-4 lg:top-12 z-40 w-full text-white">
 			<div className="container flex items-center justify-between">
 				<Link href="/" className="flex items-center space-x-3">
 					<div>
@@ -44,6 +45,8 @@ const Header = () => {
 							alt="Stefan S. | stefans.dev"
 							width={53}
 							height={53}
+							priority
+							quality={100}
 							className="aspect-auto w-[50px] rounded-full"
 						/>
 					</div>
@@ -52,7 +55,7 @@ const Header = () => {
 						<span className="text-sm font-light leading-none">JS Dev</span>
 					</div>
 				</Link>
-				<ul className="font-headings flex space-x-5 text-xs font-medium uppercase leading-none">
+				<ul className="font-headings hidden lg:flex space-x-5 text-xs font-medium uppercase leading-none">
 					{menuItems.map((item) => (
 						<li key={item.link}>
 							<Link
@@ -68,6 +71,7 @@ const Header = () => {
 						</li>
 					))}
 				</ul>
+				<MobileMenu menu={menuItems} />
 			</div>
 		</header>
 	);

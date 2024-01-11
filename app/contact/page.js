@@ -9,12 +9,9 @@ const page = async () => {
 	return (
 		<>
 			<HeroSingle title={contact.title} />
-			<div className="py-20">
-				<div className="prose mx-auto">
-					<Content content={contact.content} />
-					<h2 className="text-2xl font-extrabold tracking-tight sm:text-3xl">Send me a message</h2>
-					<ContactForm />
-				</div>
+			<div className="py-16 lg:py-20">
+				<Content content={contact.content} />
+				<ContactForm />
 			</div>
 		</>
 	);

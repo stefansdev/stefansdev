@@ -8,7 +8,7 @@ const AboutPage = async () => {
 	return (
 		<>
 			<HeroSingle title={about.subtitle} />
-			<section className="py-20">
+			<section className="px-3 py-16 lg:py-20">
 				<div className="mx-auto prose">
 					<div
 						className="prose "
@@ -18,7 +18,6 @@ const AboutPage = async () => {
 					/>
 				</div>
 			</section>
-			{/* <TechIcons /> */}
 		</>
 	);
 };

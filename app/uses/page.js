@@ -8,10 +8,8 @@ const page = async () => {
 	return (
 		<>
 			<HeroSingle title={uses.title} />
-			<div className="py-20">
-				<div className="dark:prose-dark prose mx-auto">
-					<Content content={uses.content} />
-				</div>
+			<div className="py-16 lg:py-20">
+				<Content content={uses.content} />
 			</div>
 		</>
 	);

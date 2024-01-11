@@ -3,7 +3,7 @@ import Link from 'next/link';
 import ExternalLink from '$svg/ExternalLink';
 
 const Hero = () => (
-	<section className="relative grid h-screen min-h-[720px] justify-end overflow-hidden bg-black">
+	<section className="relative grid h-[calc(100vh-120px)] lg:h-screen min-h-[720px] justify-end overflow-hidden bg-black">
 		<Image
 			src="/images/hero_image.png"
 			width={1076}
@@ -11,19 +11,21 @@ const Hero = () => (
 			alt="Stefan S. | stefans.dev"
 			priority
 			quality={100}
-			className="block h-full w-auto"
+			className="block lg:h-full w-auto"
 		/>
-		<div className="container absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-[40%] text-white">
+		<div className="container absolute left-1/2 bottom-10 lg:bottom-auto lg:top-1/2 z-10 -translate-x-1/2 lg:-translate-y-[40%] text-white">
 			<div className="max-w-[680px]">
-				<h1 className="font-headings mb-12 text-6xl font-bold">Jamstack & Headless web developer</h1>
-				<div className="mb-16 text-lg font-light text-neutral-400">
+				<h1 className="font-headings mb-4 lg:mb-12 text-4xl lg:text-6xl font-bold">
+					Jamstack & Headless web developer
+				</h1>
+				<div className="mb-10 lg:mb-16 lg:text-lg font-light text-neutral-400">
 					<p className="mb-2">Full Stack Javascript developer specialised in Jamstack & Headless.</p>
 					<p>
 						With a team of talented creatives by my side, we are building blazingly fast web sites and
 						applications.
 					</p>
 				</div>
-				<div className="font-headings flex items-center space-x-10">
+				<div className="font-headings flex items-center space-x-6 lg:space-x-10">
 					<Link
 						href="/contact"
 						className="rounded-sm bg-white px-14 py-4 text-xs font-medium tracking-[14%] transition-all text-black hover:text-white hover:bg-red-500"
