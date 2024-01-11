@@ -22,7 +22,7 @@ const page = async () => {
 	return (
 		<>
 			<HeroSingle title={work.title} />
-			<div className="py-20 border-b border-gray-200 max-w-5xl mx-auto">
+			<div className="py-16 lg:py-20 max-w-5xl mx-auto">
 				<div className="mb-4">
 					<Content content={work.content} fullWidth />
 				</div>
