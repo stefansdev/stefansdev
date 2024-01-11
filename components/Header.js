@@ -52,7 +52,7 @@ const Header = () => {
 					</div>
 					<div className="grid">
 						<span className="font-headings text-lg font-semibold leading-none">Stefan S.</span>
-						<span className="text-sm font-light leading-none">JS Dev</span>
+						<span className="text-sm font-light leading-none">Full Stack JS Dev</span>
 					</div>
 				</Link>
 				<ul className="font-headings hidden lg:flex space-x-5 text-xs font-medium uppercase leading-none">
