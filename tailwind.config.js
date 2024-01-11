@@ -1,7 +1,4 @@
 /* eslint-disable global-require */
-/* eslint-disable import/no-extraneous-dependencies */
-const defaultTheme = require('tailwindcss/defaultTheme');
-const colors = require('tailwindcss/colors');
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
