@@ -4,6 +4,18 @@ import Content from '@/components/Content';
 
 import getPost from '$queries/getPost';
 
+export async function generateMetadata({ params }) {
+	const data = await getPost(params.slug);
+	return {
+		title: data.meta_title,
+		description: data.meta_description,
+		openGraph: {
+			title: data.meta_title,
+			description: data.meta_description,
+		},
+	};
+}
+
 const SinglePost = async ({ params }) => {
 	const post = await getPost(params.slug);
 	const date = new Date(post.date_created);

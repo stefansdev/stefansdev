@@ -5,6 +5,18 @@ import Project from '@/components/Project';
 // data
 import getWork from '$queries/getWork';
 
+export async function generateMetadata() {
+	const data = await getWork();
+	return {
+		title: data.meta_title,
+		description: data.meta_description,
+		openGraph: {
+			title: data.meta_title,
+			description: data.meta_description,
+		},
+	};
+}
+
 const page = async () => {
 	const work = await getWork();
 	return (

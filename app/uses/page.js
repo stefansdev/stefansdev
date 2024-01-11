@@ -3,6 +3,18 @@ import Content from '@/components/Content';
 // data
 import getUses from '$queries/getUses';
 
+export async function generateMetadata() {
+	const data = await getUses();
+	return {
+		title: data.meta_title,
+		description: data.meta_description,
+		openGraph: {
+			title: data.meta_title,
+			description: data.meta_description,
+		},
+	};
+}
+
 const page = async () => {
 	const uses = await getUses();
 	return (

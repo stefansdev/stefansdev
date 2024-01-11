@@ -3,6 +3,18 @@ import HeroSingle from '@/components/HeroSingle';
 // data
 import getAbout from '@/utils/queries/getAbout';
 
+export async function generateMetadata() {
+	const data = await getAbout();
+	return {
+		title: data.meta_title,
+		description: data.meta_description,
+		openGraph: {
+			title: data.meta_title,
+			description: data.meta_description,
+		},
+	};
+}
+
 const AboutPage = async () => {
 	const about = await getAbout();
 	return (
