@@ -1,9 +1,10 @@
-import { gql } from '@apollo/client';
-import client from '@/utils/apollo-client';
+import directus from '@/utils/directus';
+
+const gql = String.raw;
 
 export default async function getPost(slug) {
-	const { data } = await client.query({
-		query: gql`
+	const data = await directus(
+		gql`
 			query ($slug: String) {
 				posts(filter: { slug: { _eq: $slug } }, limit: 1) {
 					title
@@ -28,10 +29,13 @@ export default async function getPost(slug) {
 				}
 			}
 		`,
-		variables: {
-			slug,
-		},
-	});
+		{
+			cache: 'force-cache',
+			variables: {
+				slug,
+			},
+		}
+	);
 
 	return data.posts[0];
 }

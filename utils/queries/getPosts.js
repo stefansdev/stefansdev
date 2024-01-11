@@ -1,10 +1,11 @@
-import { gql } from '@apollo/client';
-import client from '@/utils/apollo-client';
+import directus from '@/utils/directus';
+
+const gql = String.raw;
 
 export default async function getPosts() {
-	const { data } = await client.query({
-		query: gql`
-			query POSTS {
+	const data = await directus(
+		gql`
+			query {
 				posts {
 					title
 					meta_title
@@ -28,7 +29,11 @@ export default async function getPosts() {
 				}
 			}
 		`,
-	});
+		{
+			cache: 'force-cache',
+			variables: {},
+		}
+	);
 
 	return data.posts;
 }

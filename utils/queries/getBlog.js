@@ -1,10 +1,11 @@
-import { gql } from '@apollo/client';
-import client from '@/utils/apollo-client';
+import directus from '@/utils/directus';
 
-export default async function getBlog() {
-	const { data } = await client.query({
-		query: gql`
-			query BLOG {
+const gql = String.raw;
+
+export default async function getBlogPage() {
+	const data = await directus(
+		gql`
+			query {
 				blog_page {
 					meta_description
 					meta_image {
@@ -18,7 +19,11 @@ export default async function getBlog() {
 				}
 			}
 		`,
-	});
+		{
+			cache: 'force-cache',
+			variables: {},
+		}
+	);
 
 	return data.blog_page;
 }

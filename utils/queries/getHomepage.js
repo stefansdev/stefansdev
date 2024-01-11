@@ -1,10 +1,11 @@
-import { gql } from '@apollo/client';
-import client from '@/utils/apollo-client';
+import directus from '@/utils/directus';
 
-export default async function GetHomepage() {
-	const { data } = await client.query({
-		query: gql`
-			query HOMEPAGE {
+const gql = String.raw;
+
+export default async function getHome() {
+	const data = await directus(
+		gql`
+			query {
 				homepage {
 					meta_description
 					meta_image {
@@ -16,7 +17,10 @@ export default async function GetHomepage() {
 				}
 			}
 		`,
-	});
+		{
+			cache: 'force-cache',
+		}
+	);
 
 	return data.homepage;
 }

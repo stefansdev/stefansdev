@@ -1,23 +1,22 @@
-import { Directus } from '@directus/sdk';
+export default async function fetcher(query, { variables, cache = 'force-cache' } = {}) {
+	const res = await fetch(`${process.env.DIRECTUS_URL}/graphql`, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+			Authorization: `Bearer ${process.env.DIRECTUS_TOKEN}`,
+		},
+		cache,
+		body: JSON.stringify({
+			query,
+			variables,
+		}),
+	});
 
-import invariant from 'tiny-invariant';
-
-invariant(process.env.DIRECTUS_URL, 'DIRECTUS_URL must be set');
-invariant(process.env.DIRECTUS_TOKEN, 'DIRECTUS_TOKEN must be set');
-
-const directus = new Directus(process.env.DIRECTUS_URL);
-
-export async function getDirectusClient() {
-	// if (directus.auth.token) return directus;
-
-	if (process.env.DIRECTUS_EMAIL && process.env.DIRECTUS_PASSWORD) {
-		await directus.auth.login({
-			email: process.env.DIRECTUS_EMAIL,
-			password: process.env.DIRECTUS_PASSWORD,
-		});
-	} else if (process.env.DIRECTUS_TOKEN) {
-		await directus.auth.static(process.env.DIRECTUS_TOKEN);
+	const json = await res.json();
+	if (json.errors) {
+		console.error(json.errors);
+		throw new Error('Failed to fetch API');
 	}
 
-	return directus;
+	return json.data;
 }

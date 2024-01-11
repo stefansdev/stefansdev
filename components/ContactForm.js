@@ -1,6 +1,5 @@
 'use client';
 
-/* eslint-disable no-unused-vars */
 import { useState, Fragment } from 'react';
 import Link from 'next/link';
 import { Dialog, Transition } from '@headlessui/react';
@@ -14,12 +13,11 @@ const ContactForm = () => {
 	const {
 		register,
 		handleSubmit,
-		watch,
 		reset,
 		formState: { errors },
 	} = useForm();
 
-	const onSubmit = async (data, e) => {
+	const onSubmit = async (data) => {
 		await fetch('/api/contact', {
 			method: 'POST',
 			headers: {
@@ -42,7 +40,7 @@ const ContactForm = () => {
 		<>
 			<form
 				onSubmit={handleSubmit(onSubmit)}
-				className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8 max-w-2xl px-3 lg:px-0 "
+				className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8 max-w-2xl px-3 lg:px-0 mx-auto"
 			>
 				<div>
 					<label htmlFor="first-name" className="block text-sm font-medium text-gray-700 ">
