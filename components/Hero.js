@@ -11,7 +11,7 @@ const Hero = () => (
 			alt="Stefan S. | stefans.dev"
 			priority
 			quality={100}
-			className="block lg:h-full w-auto"
+			className="block lg:h-full lg:object-contain lg:object-right-bottom lg:max-w-[1100px] w-auto"
 		/>
 		<div className="container absolute left-1/2 bottom-10 lg:bottom-auto lg:top-1/2 z-10 -translate-x-1/2 lg:-translate-y-[40%] text-white">
 			<div className="max-w-[680px]">
