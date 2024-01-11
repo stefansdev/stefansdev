@@ -6,6 +6,7 @@ export default async function fetcher(query, { variables, cache = 'force-cache' 
 			Authorization: `Bearer ${process.env.DIRECTUS_TOKEN}`,
 		},
 		cache,
+		next: { tags: ['cms'] },
 		body: JSON.stringify({
 			query,
 			variables,
