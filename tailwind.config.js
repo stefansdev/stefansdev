@@ -29,8 +29,8 @@ module.exports = {
 				},
 			},
 			fontFamily: {
-				sans: ['Mona Sans', ...fontFamily.sans],
-				headings: ['nohemi-variable', ...fontFamily.sans],
+				sans: ['var(--font-mona-sans)', ...fontFamily.sans],
+				headings: ['var(--font-nohemi)', ...fontFamily.sans],
 			},
 		},
 	},
