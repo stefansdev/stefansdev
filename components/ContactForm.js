@@ -40,7 +40,7 @@ const ContactForm = () => {
 		<>
 			<form
 				onSubmit={handleSubmit(onSubmit)}
-				className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8 max-w-2xl px-3 lg:px-0 mx-auto"
+				className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8 max-w-xl px-3 lg:px-0 mx-auto"
 			>
 				<div>
 					<label htmlFor="first-name" className="block text-sm font-medium text-gray-700 ">
