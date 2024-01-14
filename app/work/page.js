@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import HeroSingle from '@/components/HeroSingle';
 import Content from '@/components/Content';
-import Project from '@/components/Project';
 // data
 import getWork from '$queries/getWork';
 

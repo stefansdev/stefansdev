@@ -15,7 +15,7 @@ const Hero = () => (
 		/>
 		<div className="container absolute left-1/2 bottom-10 lg:bottom-auto lg:top-1/2 z-10 -translate-x-1/2 lg:-translate-y-[40%] text-white">
 			<div className="max-w-[680px]">
-				<h1 className="font-headings mb-4 lg:mb-12 text-4xl lg:text-6xl font-bold">
+				<h1 className="font-headings mb-4 lg:mb-12 text-4xl lg:text-6xl font-bold bg-[linear-gradient(158deg,rgb(255,255,247)_8.55094%,rgb(152,152,138)_107.012%)] bg-clip-text text-transparent">
 					Jamstack & Headless web developer
 				</h1>
 				<div className="mb-10 lg:mb-16 lg:text-lg font-light text-neutral-400">
