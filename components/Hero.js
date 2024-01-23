@@ -19,8 +19,8 @@ const Hero = () => (
 					Jamstack & Headless web developer
 				</h1>
 				<div className="mb-10 lg:mb-16 lg:text-lg font-light text-neutral-400">
-					<p className="mb-2">Full Stack Javascript developer specialised in Jamstack & Headless.</p>
-					<p>
+  				<p className="mb-2">Full Stack Javascript developer specialised in Jamstack & Headless.</p>
+<p>
 						With a team of talented creatives by my side, we are building blazingly fast web sites and
 						applications.
 					</p>

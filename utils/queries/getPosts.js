@@ -6,7 +6,7 @@ export default async function getPosts() {
 	const data = await directus(
 		gql`
 			query {
-				posts {
+				posts(sort: "-date_created") {
 					title
 					meta_title
 					meta_image {
