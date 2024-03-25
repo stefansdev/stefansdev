@@ -19,8 +19,8 @@ const Hero = () => (
 					Jamstack & Headless web developer
 				</h1>
 				<div className="mb-10 lg:mb-16 lg:text-lg font-light text-neutral-400">
-  				<p className="mb-2">Full Stack Javascript developer specialised in Jamstack & Headless.</p>
-<p>
+					<p className="mb-2">Full Stack Javascript developer specialised in Jamstack & Headless.</p>
+					<p>
 						With a team of talented creatives by my side, we are building blazingly fast web sites and
 						applications.
 					</p>
@@ -33,7 +33,7 @@ const Hero = () => (
 						CONTACT
 					</Link>
 					<a
-						href="https://calendly.com/stefansdev/meet-me"
+						href="https://calendly.com/stefansdev/jamtime"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="flex items-center space-x-3 border-b border-neutral-700 py-1 text-xs font-medium uppercase tracking-[14%] transition-all hover:border-red-800 hover:text-red-500"
