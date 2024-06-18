@@ -2,7 +2,7 @@
 
 ## Jamstack / Headless web developer
 
-Full Stack Web Developer specialised in Jamstack and Headless. CEO at [Anomys](https://anomys.com),Lead Web Dev at [Singular Minds](https://singularminds.eu).
+Full Stack Javascript Developer specialised in Jamstack and Headless. CEO at [Anomys](https://anomys.com).
 
 For more info visit my website: [stefans.dev](https://stefans.dev)
 
