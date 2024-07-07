@@ -134,6 +134,11 @@ export default function RootLayout({ children }) {
 				<meta name="msapplication-TileColor" content="#ffffff" />
 				<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png" />
 				<meta name="theme-color" content="#ffffff" />
+				<script
+					defer
+					src="https://umami.anomys.dev/script.js"
+					data-website-id="6bc763e6-26dd-4ba8-ab64-0dd6b86ff051"
+				/>
 			</head>
 			<body className="">
 				<Header />
