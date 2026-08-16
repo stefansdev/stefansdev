@@ -2,19 +2,17 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const Article = ({ slug, title, image, categories = [] }) => (
-	<article className="border-t border-neutral-950/10 py-8 first:border-t-0 first:pt-0">
-		<Link href={`/${slug}`} className="group grid gap-6 sm:grid-cols-[2fr_5fr_1fr] sm:items-start sm:gap-8">
+	<article className="border-t border-white/10 py-5 first:border-t-0 first:pt-0">
+		<Link href={`/${slug}`} className="group grid grid-cols-[5rem_1fr] gap-4 sm:grid-cols-[7rem_1fr_auto] sm:items-start">
 			{image ? (
-				<div className="relative aspect-[3/2] overflow-hidden bg-neutral-100 outline-1 -outline-offset-1 outline-neutral-950/5">
-					<Image src={`/assets/${image.id}`} fill sizes="(min-width: 640px) 24vw, 100vw" alt="" className="object-cover" />
+				<div className="relative aspect-[4/3] overflow-hidden bg-neutral-900 outline-1 -outline-offset-1 outline-white/10">
+					<Image src={`/assets/${image.id}`} fill sizes="112px" alt="" className="object-cover" />
 				</div>
 			) : (
-				<div className="aspect-[3/2] bg-neutral-100" aria-hidden="true" />
+				<div className="aspect-[4/3] bg-neutral-900" aria-hidden="true" />
 			)}
-			<h2 className="max-w-[32ch] text-2xl font-medium tracking-tight text-balance text-neutral-950 group-hover:text-neutral-500 sm:text-3xl">
-				{title}
-			</h2>
-			<p className="text-base text-neutral-400 sm:text-sm">{categories[0] || 'Note'}</p>
+			<h2 className="max-w-[32ch] text-xl font-medium tracking-tight text-balance text-neutral-100 group-hover:text-neutral-400 sm:text-2xl">{title}</h2>
+			<p className="col-start-2 text-base text-neutral-500 sm:col-start-3 sm:row-start-1 sm:text-sm">{categories[0] || 'Note'}</p>
 		</Link>
 	</article>
 );

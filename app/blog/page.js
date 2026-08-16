@@ -14,14 +14,11 @@ const Blog = async () => {
 	return (
 		<>
 			<HeroSingle title={blog.title} eyebrow="Notes" />
-			<section className="py-16 sm:py-24 lg:py-32">
-				<div className="container grid gap-12 border-t border-neutral-950/10 pt-8 lg:grid-cols-[3fr_9fr]">
-					<p className="text-base font-medium text-neutral-950 sm:text-sm">Writing</p>
-					<div>
-						{posts.map((article) => (
-							<Article key={article.slug} slug={article.slug} title={article.title} image={article.featured_image} categories={article.categories} />
-						))}
-					</div>
+			<section className="pb-12 sm:pb-16">
+				<div className="container border-t border-white/10 pt-8">
+					{posts.map((article) => (
+						<Article key={article.slug} slug={article.slug} title={article.title} image={article.featured_image} categories={article.categories} />
+					))}
 				</div>
 			</section>
 		</>

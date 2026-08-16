@@ -13,9 +13,8 @@ const UsesPage = async () => {
 	return (
 		<>
 			<HeroSingle title={uses.title} eyebrow="Tools and setup" />
-			<section className="py-16 sm:py-24 lg:py-32">
-				<div className="container grid gap-12 border-t border-neutral-950/10 pt-8 lg:grid-cols-[3fr_9fr]">
-					<p className="text-base font-medium text-neutral-950 sm:text-sm">Current stack</p>
+			<section className="pb-12 sm:pb-16">
+				<div className="container border-t border-white/10 pt-8">
 					<Content content={uses.content} />
 				</div>
 			</section>

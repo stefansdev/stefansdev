@@ -17,9 +17,8 @@ export const metadata = {
 const AboutPage = () => (
 	<>
 		<HeroSingle title="About, without the long biography" eyebrow="Profile" />
-		<section className="py-16 sm:py-24 lg:py-32">
-			<div className="container grid gap-12 border-t border-neutral-950/10 pt-8 lg:grid-cols-[3fr_9fr]">
-				<p className="text-base font-medium text-neutral-950 sm:text-sm">The short version</p>
+		<section className="pb-12 sm:pb-16">
+			<div className="container border-t border-white/10 pt-8">
 				<div className="prose max-w-[70ch]">
 					<h2>Who</h2>
 					<p>I’m Stefan Stankovic. I design things, build things and quite often work out what the thing should be in the first place.</p>
@@ -46,11 +45,11 @@ const AboutPage = () => (
 				</div>
 			</div>
 		</section>
-		<section className="py-16 sm:py-24 lg:py-32">
+		<section className="pb-12 sm:pb-16">
 			<div className="container">
-				<div className="grid grid-cols-2 gap-5 border-t border-neutral-950/10 pt-8 md:grid-cols-4 md:gap-8">
+				<div className="grid grid-cols-2 gap-3 border-t border-white/10 pt-8 sm:grid-cols-4">
 					{gallery.map((image) => (
-						<Image src={`/assets/${image.id}`} width={image.width} height={image.height} alt={image.alt} key={image.id} className="w-full outline-1 -outline-offset-1 outline-neutral-950/5" />
+						<Image src={`/assets/${image.id}`} width={image.width} height={image.height} alt={image.alt} key={image.id} className="w-full outline-1 -outline-offset-1 outline-white/10" />
 					))}
 				</div>
 			</div>

@@ -42,20 +42,20 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en" className={monaSans.variable}>
+		<html lang="en" className={`${monaSans.variable} scheme-only-dark antialiased`}>
 			<head>
 				<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png" />
 				<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
 				<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
 				<link rel="manifest" href="/favicon/manifest.json" />
-				<meta name="theme-color" content="#ffffff" />
+				<meta name="theme-color" content="#0a0a0a" />
 				<script
 					defer
 					src="https://umami.anomys.dev/script.js"
 					data-website-id="6bc763e6-26dd-4ba8-ab64-0dd6b86ff051"
 				/>
 			</head>
-			<body className="antialiased">
+			<body>
 				<div className="isolate flex min-h-svh flex-col">
 					<Header />
 					<main className="min-w-0 flex-1">{children}</main>
