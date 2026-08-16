@@ -111,14 +111,14 @@ const WorkPage = async () => {
 		<>
 			<HeroSingle title={work.title} eyebrow="Selected work" />
 			<section className="pb-12 sm:pb-16">
-				<div className="container grid gap-5 border-t border-white/10 pt-8">
-					<div className="grid gap-3">
+				<div className="container grid gap-5 border-t border-white/10 pt-8" data-reveal-group>
+					<div className="grid gap-3" data-reveal-item>
 						<p className="text-base font-medium text-neutral-500 sm:text-sm">Current work</p>
 						<h2 className="text-2xl font-medium tracking-tight text-pretty text-neutral-100 sm:text-xl">
 							Most of my work now lives at Anomys.
 						</h2>
 					</div>
-					<p className="text-base/7 text-pretty text-neutral-400 sm:text-sm/6">
+					<p className="text-base/7 text-pretty text-neutral-400 sm:text-sm/6" data-reveal-item>
 						That is where I lead product, design and development across AI, automation, ecommerce and digital systems. This page is a record of the teams and businesses I have worked with directly or alongside.
 					</p>
 					<a
@@ -126,6 +126,7 @@ const WorkPage = async () => {
 						target="_blank"
 						rel="noopener noreferrer"
 						className="w-fit border-b border-neutral-100 pb-1 text-base text-neutral-100 hover:border-neutral-500 sm:text-sm"
+						data-reveal-item
 					>
 						Visit anomys.com
 					</a>
@@ -133,12 +134,12 @@ const WorkPage = async () => {
 			</section>
 			{partners.length ? (
 				<section className="pb-12 sm:pb-16">
-					<div className="container grid gap-6 border-t border-white/10 pt-8">
-						<div className="grid content-start gap-3">
+					<div className="container grid gap-6 border-t border-white/10 pt-8" data-reveal-group>
+						<div className="grid content-start gap-3" data-reveal-item>
 							<p className="text-base font-medium text-neutral-100 sm:text-sm">Partners and clients</p>
 							<p className="text-base/7 text-pretty text-neutral-400 sm:text-sm/6">A selection of teams and businesses I have worked with directly or alongside.</p>
 						</div>
-						<ul role="list" className="grid border-t border-white/10 sm:grid-cols-2 md:grid-cols-3">
+						<ul role="list" className="grid border-t border-white/10 sm:grid-cols-2 md:grid-cols-3" data-reveal-item data-reveal-group>
 							{partners.map((item) => {
 								const content = (
 									<>
@@ -148,7 +149,7 @@ const WorkPage = async () => {
 								);
 
 								return (
-									<li key={item.id} className="border-b border-white/10">
+									<li key={item.id} className="border-b border-white/10" data-reveal-item>
 										{item.url ? (
 											<a
 												href={item.url}

@@ -21,7 +21,7 @@ const AboutPage = () => (
 	<>
 		<HeroSingle title="About, without the long biography" eyebrow="Profile" />
 		<section className="pb-12 sm:pb-16">
-			<div className="container border-t border-white/10 pt-8">
+			<div className="container border-t border-white/10 pt-8" data-reveal>
 				<div className="prose max-w-[70ch]">
 					<h2>Who</h2>
 					<p>I’m Stefan Stankovic. I design things, build things and quite often work out what the thing should be in the first place.</p>
@@ -50,9 +50,11 @@ const AboutPage = () => (
 		</section>
 		<section className="pb-12 sm:pb-16">
 			<div className="container">
-				<div className="grid grid-cols-2 gap-3 border-t border-white/10 pt-8 sm:grid-cols-4">
+				<div className="grid grid-cols-2 gap-3 border-t border-white/10 pt-8 sm:grid-cols-4" data-reveal-group>
 					{gallery.map((image) => (
-						<Image src={`/assets/${image.id}`} width={image.width} height={image.height} alt={image.alt} key={image.id} className="w-full outline-1 -outline-offset-1 outline-white/10" />
+						<div key={image.id} className="overflow-hidden" data-reveal-item="image" data-motion-image>
+							<Image src={`/assets/${image.id}`} width={image.width} height={image.height} alt={image.alt} className="w-full outline-1 -outline-offset-1 outline-white/10" />
+						</div>
 					))}
 				</div>
 			</div>

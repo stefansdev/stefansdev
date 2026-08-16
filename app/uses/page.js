@@ -189,14 +189,14 @@ const sections = [
 ];
 
 const UsesSection = ({ title, icon: Icon, items }) => (
-	<section className="grid gap-6 border-t border-white/10 py-8 sm:grid-cols-[9rem_1fr] sm:gap-10 sm:py-10">
-		<div className="flex items-start gap-3">
+	<section className="grid gap-6 border-t border-white/10 py-8 sm:grid-cols-[9rem_1fr] sm:gap-10 sm:py-10" data-reveal-group>
+		<div className="flex items-start gap-3" data-reveal-item>
 			<Icon aria-hidden="true" className="size-6 shrink-0 stroke-neutral-500" />
 			<h2 className="text-base font-medium text-neutral-100 sm:text-sm">{title}</h2>
 		</div>
-		<dl className="grid gap-x-8 sm:grid-cols-2">
+		<dl className="grid gap-x-8 sm:grid-cols-2" data-reveal-item data-reveal-group>
 			{items.map((item) => (
-				<div key={item.name} className="grid content-start gap-1 border-t border-white/10 py-4 first:border-t-0 first:pt-0 sm:nth-2:border-t-0 sm:nth-2:pt-0">
+				<div key={item.name} className="grid content-start gap-1 border-t border-white/10 py-4 first:border-t-0 first:pt-0 sm:nth-2:border-t-0 sm:nth-2:pt-0" data-reveal-item>
 					<dt className="text-lg font-medium text-neutral-100 sm:text-base">{item.name}</dt>
 					<dd className="text-base/7 text-pretty text-neutral-400 sm:text-sm/6">{item.description}</dd>
 				</div>
@@ -209,8 +209,8 @@ const UsesPage = () => (
 	<>
 		<HeroSingle title="Uses" eyebrow="Tools and setup" />
 		<div className="container pb-12 sm:pb-16">
-			<figure className="grid gap-3 border-t border-white/10 pt-8">
-				<div className="relative aspect-[3/2] overflow-hidden outline-1 -outline-offset-1 outline-white/10">
+			<figure className="grid gap-3 border-t border-white/10 pt-8" data-reveal-group>
+				<div className="relative aspect-[3/2] overflow-hidden outline-1 -outline-offset-1 outline-white/10" data-reveal-item="image" data-motion-image>
 					<Image
 						src="/uses-desk-setup.png"
 						fill
@@ -220,7 +220,7 @@ const UsesPage = () => (
 						priority
 					/>
 				</div>
-				<figcaption className="text-base/7 text-pretty text-neutral-400 sm:text-sm/6">
+				<figcaption className="text-base/7 text-pretty text-neutral-400 sm:text-sm/6" data-reveal-item>
 					The hardware, software and AI tools I currently rely on for product, design and development work.
 				</figcaption>
 			</figure>

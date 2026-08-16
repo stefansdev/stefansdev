@@ -16,12 +16,12 @@ const SinglePost = async ({ params }) => {
 
 	return (
 		<article>
-			<header className="container grid gap-3 py-12 sm:py-16">
-				<p className="tabular-nums text-base text-neutral-500 sm:text-sm">{formattedDate}</p>
-				<h1 className="max-w-[22ch] text-4xl font-medium tracking-tight text-pretty text-neutral-100 sm:text-5xl">{post.title}</h1>
+			<header className="container grid gap-3 py-12 sm:py-16" data-reveal-group>
+				<p className="tabular-nums text-base text-neutral-500 sm:text-sm" data-reveal-item>{formattedDate}</p>
+				<h1 className="max-w-[22ch] text-4xl font-medium tracking-tight text-pretty text-neutral-100 sm:text-5xl" data-reveal-item>{post.title}</h1>
 			</header>
 			<section className="pb-12 sm:pb-16">
-				<div className="container border-t border-white/10 pt-8">
+				<div className="container border-t border-white/10 pt-8" data-reveal>
 					<Content content={post.content} />
 				</div>
 			</section>

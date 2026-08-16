@@ -4,6 +4,7 @@ import localFont from 'next/font/local';
 import Script from 'next/script';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import Motion from '@/components/Motion';
 
 const monaSans = localFont({
 	variable: '--font-mona-sans',
@@ -56,6 +57,7 @@ export default function RootLayout({ children }) {
 				/>
 			</head>
 			<body>
+				<Motion />
 				<div className="isolate flex min-h-svh flex-col">
 					<Header />
 					<main className="min-w-0 flex-1">{children}</main>
