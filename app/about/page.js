@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import HeroSingle from '@/components/HeroSingle';
+import { buildPageMetadata } from '@/utils/pageMetadata';
 
 const gallery = [
 	{ id: '59b1d57c-54db-4b63-9af0-9af51771a24b', width: 410, height: 456, alt: 'Stefan Stankovic' },
@@ -9,10 +10,12 @@ const gallery = [
 	{ id: '9b4610eb-6c56-4b44-9df8-8bce6f2b3f44', width: 410, height: 456, alt: 'Stefan Stankovic' },
 ];
 
-export const metadata = {
+export const metadata = buildPageMetadata({
 	title: 'About',
 	description: 'About Stefan Stankovic, founder of Anomys, co-owner of KASTM and consultant working across AI, automation, ecommerce and digital products.',
-};
+	image: '/meta/about.jpg',
+	imageAlt: 'About Stefan Stankovic',
+});
 
 const AboutPage = () => (
 	<>

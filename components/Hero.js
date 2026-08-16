@@ -10,7 +10,7 @@ const capabilities = [
 const currentWork = [
 	['Anomys', 'CEO, digital products and AI systems.'],
 	['KASTM', 'Merchandise, ecommerce and operations.'],
-	['Independent', 'Long-term product partnerships.'],
+	['Consulting', 'Long-term product partnerships.'],
 ];
 
 const IndexRow = ({ label, children }) => (
@@ -25,7 +25,7 @@ const Hero = () => (
 		<header className="grid gap-7 pb-12 sm:grid-cols-[1fr_8rem] sm:items-start sm:gap-10 sm:pb-16">
 			<div className="grid gap-5">
 				<div className="grid gap-1">
-					<p className="text-sm text-neutral-500">Independent product builder · Dubai</p>
+					<p className="text-sm text-neutral-500">Founder &amp; CEO at Anomys · Dubai</p>
 					<h1 className="text-4xl font-medium tracking-tight text-neutral-100 sm:text-5xl">Stefan Stankovic</h1>
 				</div>
 				<p className="max-w-[34ch] text-2xl tracking-tight text-pretty text-neutral-300 sm:text-3xl">
@@ -36,7 +36,7 @@ const Hero = () => (
 					<Link href="/contact" className="border-b border-white/20 pb-1 text-neutral-400 hover:border-neutral-100 hover:text-neutral-100">Get in touch</Link>
 				</div>
 			</div>
-			<div className="relative row-start-1 aspect-[4/5] w-24 overflow-hidden bg-neutral-900 outline-1 -outline-offset-1 outline-white/10 sm:col-start-2 sm:w-32">
+			<div className="relative row-start-1 aspect-[4/5] w-24 overflow-hidden sm:col-start-2 sm:w-32">
 				<Image src="/images/hero_image.png" fill sizes="128px" alt="Stefan Stankovic" className="object-cover object-bottom" priority />
 			</div>
 		</header>
@@ -63,25 +63,14 @@ const Hero = () => (
 			</dl>
 		</IndexRow>
 
-		<IndexRow label="Archive">
-			<div className="grid gap-3">
-				<div className="grid grid-cols-[3fr_2fr] gap-3">
-					<figure className="grid gap-2">
-						<div className="relative aspect-[4/3] overflow-hidden bg-neutral-900 outline-1 -outline-offset-1 outline-white/10">
-							<Image src="/desk_setup.jpg" fill sizes="(min-width: 640px) 350px, 60vw" alt="Stefan's desk setup" className="object-cover" />
-						</div>
-						<figcaption className="text-sm text-neutral-400">Desk</figcaption>
-					</figure>
-					<figure className="grid gap-2">
-						<div className="relative aspect-[4/3] overflow-hidden bg-neutral-900 outline-1 -outline-offset-1 outline-white/10">
-							<Image src="/stefans_image_with_bg.jpg" fill sizes="(min-width: 640px) 230px, 40vw" alt="Stefan having coffee outdoors" className="object-cover" />
-						</div>
-						<figcaption className="text-sm text-neutral-400">Coffee</figcaption>
-					</figure>
-				</div>
-				<p className="text-sm text-neutral-400">Space for the car, setup and everything outside work.</p>
-			</div>
-		</IndexRow>
+		<section aria-label="Personal photographs" className="grid gap-3 border-t border-white/10 py-8 sm:grid-cols-2 sm:py-10">
+			<figure className="relative aspect-[4/3] overflow-hidden bg-neutral-900 outline-1 -outline-offset-1 outline-white/10">
+				<Image src="/home-car.png" fill sizes="(min-width: 640px) 300px, 100vw" alt="Grey Dodge Challenger parked beside a lake" className="object-cover" />
+			</figure>
+			<figure className="relative aspect-[4/3] overflow-hidden bg-neutral-900 outline-1 -outline-offset-1 outline-white/10">
+				<Image src="/home-dubai-sunset.png" fill sizes="(min-width: 640px) 300px, 100vw" alt="Sunset over the Dubai skyline" className="object-cover" />
+			</figure>
+		</section>
 
 		<IndexRow label="Contact">
 			<div className="grid gap-4">
@@ -90,7 +79,7 @@ const Hero = () => (
 				</p>
 				<div className="flex flex-wrap gap-x-6 gap-y-3 text-sm">
 					<Link href="/contact" className="border-b border-neutral-100 pb-1 text-neutral-100 hover:border-neutral-500">Send a message</Link>
-					<a href="https://calendly.com/stefansdev/jamtime" target="_blank" rel="noopener noreferrer" className="border-b border-white/20 pb-1 text-neutral-400 hover:border-neutral-100 hover:text-neutral-100">Schedule a call</a>
+					<a href="https://stefans.dev/call" target="_blank" rel="noopener noreferrer" className="border-b border-white/20 pb-1 text-neutral-400 hover:border-neutral-100 hover:text-neutral-100">Schedule a call</a>
 				</div>
 			</div>
 		</IndexRow>

@@ -8,7 +8,6 @@ import MobileMenu from '@/components/shared/MobileMenu';
 export const menuItems = [
 	{ title: 'Work', link: '/work' },
 	{ title: 'About', link: '/about' },
-	{ title: 'Notes', link: '/blog' },
 	{ title: 'Uses', link: '/uses' },
 ];
 
