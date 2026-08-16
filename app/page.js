@@ -1,29 +1,13 @@
 import Hero from '@/components/Hero';
-// data
-import getHomepage from '$queries/getHomepage';
+import { buildPageMetadata } from '@/utils/pageMetadata';
 
-export async function generateMetadata() {
-	const data = await getHomepage();
-	return {
-		title: data.meta_title,
-		description: data.meta_description,
-		openGraph: {
-			title: data.meta_title,
-			description: data.meta_description,
-			images: [
-				{
-					url: `https://stefans.dev/assets/${data.meta_image.id}`,
-					width: data.meta_image.width,
-					height: data.meta_image.height,
-					alt: data.meta_image.title,
-				},
-			],
-		},
-	};
-}
+export const metadata = buildPageMetadata({
+	title: 'Stefan Stankovic | Products, Systems & AI',
+	description:
+		'I build AI products, automation and digital systems that solve real business problems, simplify daily work and create room to grow.',
+	image: '/meta/home.jpg',
+	imageAlt: 'Stefan Stankovic — Products, Systems & AI',
+});
 
-const Home = async () => {
-	const homepage = await getHomepage();
-	return <Hero />;
-};
+const Home = () => <Hero />;
 export default Home;

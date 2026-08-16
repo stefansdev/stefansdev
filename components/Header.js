@@ -1,79 +1,44 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import Image from 'next/image';
 import MobileMenu from '@/components/shared/MobileMenu';
 
-const menuItems = [
-	{
-		title: 'Home',
-		link: '/',
-	},
-	{
-		title: 'Blog',
-		link: '/blog',
-	},
-	{
-		title: 'About',
-		link: '/about',
-	},
-	{
-		title: 'Work',
-		link: '/work',
-	},
-	{
-		title: 'Uses',
-		link: '/uses',
-	},
-	{
-		title: 'Contact',
-		link: '/contact',
-	},
+export const menuItems = [
+	{ title: 'Work', link: '/work' },
+	{ title: 'About', link: '/about' },
+	{ title: 'Uses', link: '/uses' },
 ];
 
 const Header = () => {
 	const pathname = usePathname();
 
 	return (
-		<header className="absolute top-4 lg:top-12 z-40 w-full text-white">
-			<div className="container flex items-center justify-between">
-				<Link href="/" className="flex items-center space-x-3">
-					<div>
-						<Image
-							src="/images/avatar.png"
-							alt="Stefan S. | stefans.dev"
-							width={53}
-							height={53}
-							priority
-							quality={100}
-							className="aspect-auto w-[50px] rounded-full border-2 border-transparent hover:border-brand-red transition-all"
-						/>
-					</div>
-					<div className="grid">
-						<span className="font-headings text-lg font-semibold leading-none mb-1">Stefan S.</span>
-						<span className="text-sm font-light leading-none text-neutral-300">Full Stack JS Dev</span>
-					</div>
+		<header className="bg-neutral-950">
+			<div className="container flex h-16 items-center justify-between sm:h-20">
+				<Link href="/" aria-label="Homepage" className="shrink-0">
+					<Image src="/images/avatar.png" width={28} height={28} alt="" className="size-7 rounded-full object-cover outline-1 -outline-offset-1 outline-white/10" priority />
 				</Link>
-				<ul className="font-headings hidden lg:flex space-x-5 text-xs font-medium uppercase leading-none">
-					{menuItems.map((item) => (
-						<li key={item.link}>
-							<Link
-								href={item.link}
-								className={`rounded-xs border px-5 py-2 transition-all hover:border-brand-black-lighter hover:bg-neutral-950 ${
-									pathname === item.link
-										? 'border-brand-black-lighter bg-neutral-950 text-red-500'
-										: 'border-transparent bg-transparent'
-								}`}
-							>
-								{item.title}
-							</Link>
-						</li>
-					))}
-				</ul>
+				<nav aria-label="Primary navigation" className="hidden items-center gap-5 md:flex">
+					<ul role="list" className="flex items-center gap-5 text-sm">
+						{menuItems.map((item) => {
+							const active = pathname === item.link || pathname.startsWith(`${item.link}/`);
+							return (
+								<li key={item.link}>
+									<Link href={item.link} aria-current={active ? 'page' : undefined} className={active ? 'text-neutral-100' : 'text-neutral-500 hover:text-neutral-100'}>
+										{item.title}
+									</Link>
+								</li>
+							);
+						})}
+					</ul>
+					<Link href="/contact" className="text-sm text-neutral-100 hover:text-neutral-400">Contact</Link>
+				</nav>
 				<MobileMenu menu={menuItems} />
 			</div>
 		</header>
 	);
 };
+
 export default Header;

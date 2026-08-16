@@ -1,61 +1,27 @@
-import GithubIcon from '$svg/GithubIcon';
-import InstagramIcon from '$svg/InstagramIcon';
-import LinkedInIcon from '$svg/LinkedInIcon';
-import XIcon from '$svg/XIcon';
+import Link from 'next/link';
 
-const Footer = () => {
-	const year = new Date().getFullYear();
-	return (
-		<footer className="border-t border-gray-100  overflow-hidden relative">
-			<div className="absolute inset-x-0 bottom-0 top-0 text-slate-900/10 [mask-image:linear-gradient(transparent,white)] pointer-events-none">
-				<svg aria-hidden="true" className="absolute inset-0 h-full w-full ">
-					<defs>
-						<pattern id=":Rem:" width="128" height="128" patternUnits="userSpaceOnUse" x="50%" y="100%">
-							<path d="M0 128V.5H128" fill="none" stroke="currentColor" />
-						</pattern>
-					</defs>
-					<rect width="100%" height="100%" fill="url(#:Rem:)" />
-				</svg>
+const socialLinks = [
+	{ label: 'GitHub', href: 'https://github.com/stefansdev' },
+	{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/stefansdev/' },
+	{ label: 'Instagram', href: 'https://www.instagram.com/stefans.dev/' },
+];
+
+const Footer = () => (
+	<footer className="bg-neutral-950">
+		<div className="container flex flex-col gap-6 border-t border-white/10 py-8 sm:flex-row sm:items-center sm:justify-between">
+			<p className="text-base text-neutral-500 sm:text-sm">© {new Date().getFullYear()} Stefan Stankovic</p>
+			<div className="flex flex-wrap gap-x-5 gap-y-3 text-base text-neutral-400 sm:text-sm">
+				<Link href="/blog" className="font-normal hover:text-neutral-100">Notes</Link>
+				<ul role="list" className="flex gap-5">
+					{socialLinks.map((link) => (
+						<li key={link.label}>
+							<a href={link.href} target="_blank" rel="noreferrer" className="font-normal hover:text-neutral-100">{link.label}</a>
+						</li>
+					))}
+				</ul>
 			</div>
-			<div className="container mx-auto grid gap-4 justify-center lg:flex lg:justify-between lg:space-x-10 py-10 ">
-				<div>
-					<ul className="text-neutral-600 flex space-x-4 items-center justify-center lg:justify-normal">
-						<li>
-							<a href="https://twitter.com/stefansdev" className="" target="_blank" rel="noreferrer">
-								<XIcon />
-							</a>
-						</li>
-						<li>
-							<a href="https://github.com/stefansdev" target="_blank" rel="noreferrer">
-								<GithubIcon />
-							</a>
-						</li>
-						<li>
-							<a
-								href="https://www.instagram.com/stefans.dev/"
-								className="[&_svg]:size-6"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<InstagramIcon />
-							</a>
-						</li>
-						<li>
-							<a
-								href="https://www.linkedin.com/in/stefansdev/"
-								className=""
-								target="_blank"
-								rel="noreferrer"
-							>
-								<LinkedInIcon />
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div className="text-neutral-400">&copy; {year} Stefan S. | All rights reserved.</div>
-			</div>
-		</footer>
-	);
-};
+		</div>
+	</footer>
+);
 
 export default Footer;
