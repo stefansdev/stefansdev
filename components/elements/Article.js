@@ -1,34 +1,20 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Article = ({ slug, title, image, categories }) => (
-	<article>
-		<Link
-			href={`/${slug}`}
-			className="rounded-md overflow-hidden border border-gray-200 block hover:shadow-md transition-all duration-300 dark:border-gray-700 transform-gpu hover:-translate-y-1 group"
-		>
-			<div className="">
-				<Image
-					src={`/assets/${image.id}`}
-					width={image.width}
-					height={image.height}
-					alt={image.title}
-					className="block w-full"
-				/>
-				{/* <ul className="flex mb-2 absolute top-4 left-4">
-					{categories.map((category, i) => (
-						<li
-							className="text-[10px] mr-2 font-semibold uppercase rounded-xs bg-gray-700 px-2 py-[2px] text-gray-50"
-							key={`cat_${i}`}
-						>
-							{category}
-						</li>
-					))}
-				</ul> */}
-				{/* <div className="">
-					<h4 className="text-xl font-semibold text-white">{title}</h4>
-				</div> */}
-			</div>
+const Article = ({ slug, title, image, categories = [] }) => (
+	<article className="border-t border-neutral-950/10 py-8 first:border-t-0 first:pt-0">
+		<Link href={`/${slug}`} className="group grid gap-6 sm:grid-cols-[2fr_5fr_1fr] sm:items-start sm:gap-8">
+			{image ? (
+				<div className="relative aspect-[3/2] overflow-hidden bg-neutral-100 outline-1 -outline-offset-1 outline-neutral-950/5">
+					<Image src={`/assets/${image.id}`} fill sizes="(min-width: 640px) 24vw, 100vw" alt="" className="object-cover" />
+				</div>
+			) : (
+				<div className="aspect-[3/2] bg-neutral-100" aria-hidden="true" />
+			)}
+			<h2 className="max-w-[32ch] text-2xl font-medium tracking-tight text-balance text-neutral-950 group-hover:text-neutral-500 sm:text-3xl">
+				{title}
+			</h2>
+			<p className="text-base text-neutral-400 sm:text-sm">{categories[0] || 'Note'}</p>
 		</Link>
 	</article>
 );

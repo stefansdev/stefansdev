@@ -1,68 +1,46 @@
+'use client';
+
 import { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react';
+import { Dialog, DialogPanel } from '@headlessui/react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 const MobileMenu = ({ menu }) => {
 	const [open, setOpen] = useState(false);
+	const pathname = usePathname();
+
 	return (
 		<>
-			{open ? (
-				<button
-					type="button"
-					className="relative lg:hidden"
-					onClick={() => {
-						setOpen(!open);
-					}}
-				>
-					<XMarkIcon className="h-6 w-6" aria-hidden="true" />
-					<span className="sr-only">Close menu</span>
-				</button>
-			) : (
-				<button
-					type="button"
-					className="relative lg:hidden"
-					onClick={() => {
-						setOpen(!open);
-					}}
-				>
-					<Bars3Icon className="h-6 w-6" aria-hidden="true" />
-					<span className="sr-only">Open menu</span>
-				</button>
-			)}
+			<button type="button" className="relative text-neutral-950 lg:hidden" onClick={() => setOpen(!open)} aria-expanded={open}>
+				{open ? <XMarkIcon className="size-6 shrink-0" aria-hidden="true" /> : <Bars3Icon className="size-6 shrink-0" aria-hidden="true" />}
+				<span className="absolute top-1/2 left-1/2 size-[max(100%,3rem)] -translate-1/2 pointer-fine:hidden" aria-hidden="true" />
+				<span className="sr-only">{open ? 'Close menu' : 'Open menu'}</span>
+			</button>
 
-			<Dialog open={open} className="relative z-10" onClose={setOpen}>
-				<DialogBackdrop
-					transition
-					className="fixed inset-0 bg-black/80 transition-opacity duration-300 ease-out data-closed:opacity-0 data-leave:duration-200 data-leave:ease-in"
-				/>
-
-				<div className="fixed inset-0 top-20 z-10 w-screen overflow-y-auto">
-					<div className="flex min-h-full relative">
-						<DialogPanel
-							transition
-							className="bg-white text-neutral-800 absolute inset-x-4 bottom-4 p-4 py-10 text-center rounded-md transition duration-300 ease-out data-closed:translate-y-4 data-closed:opacity-0 data-leave:duration-200 data-leave:ease-in sm:data-closed:translate-y-0 sm:data-closed:scale-95"
-						>
-							<ul className="grid gap-3">
-								{menu.map((item) => (
+			<Dialog open={open} className="relative z-50 lg:hidden" onClose={setOpen}>
+				<DialogPanel className="fixed inset-0 top-24 overflow-y-auto bg-white px-5 pb-8 sm:top-28 sm:px-8">
+					<nav aria-label="Mobile navigation" className="flex min-h-full flex-col justify-between border-t border-neutral-950/10 pt-10">
+						<ul role="list" className="grid gap-4">
+							{menu.map((item) => {
+								const active = pathname === item.link || pathname.startsWith(`${item.link}/`);
+								return (
 									<li key={item.link}>
-										<Link
-											href={item.link}
-											onClick={() => {
-												setOpen(false);
-											}}
-											className="outline-hidden font-headings uppercase text-sm"
-										>
+										<Link href={item.link} onClick={() => setOpen(false)} aria-current={active ? 'page' : undefined} className={active ? 'text-4xl font-medium tracking-tight text-neutral-950' : 'text-4xl font-medium tracking-tight text-neutral-400'}>
 											{item.title}
 										</Link>
 									</li>
-								))}
-							</ul>
-						</DialogPanel>
-					</div>
-				</div>
+								);
+							})}
+						</ul>
+						<Link href="/contact" onClick={() => setOpen(false)} className="border-t border-neutral-950/10 pt-6 text-lg text-neutral-950">
+							Start a conversation
+						</Link>
+					</nav>
+				</DialogPanel>
 			</Dialog>
 		</>
 	);
 };
+
 export default MobileMenu;

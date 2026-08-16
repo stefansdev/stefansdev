@@ -1,8 +1,12 @@
-const HeroSingle = ({ title }) => (
-	<section className="bg-black pt-40 lg:pt-[240px] pb-10 lg:pb-[60px] relative">
-		<div className="container text-white">
-			<h1 className="font-headings text-4xl lg:text-6xl font-bold">{title}</h1>
+const HeroSingle = ({ title, eyebrow }) => (
+	<section className="py-20 sm:py-28 lg:py-36">
+		<div className="container grid gap-12 lg:grid-cols-[3fr_9fr] lg:items-end">
+			<p className="text-base text-neutral-500 sm:text-sm">{eyebrow || 'Stefan Stankovic'}</p>
+			<h1 className="max-w-[20ch] text-5xl font-medium tracking-tight text-balance text-neutral-950 sm:text-6xl lg:text-7xl">
+				{title}
+			</h1>
 		</div>
 	</section>
 );
+
 export default HeroSingle;

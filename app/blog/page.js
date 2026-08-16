@@ -1,49 +1,31 @@
 import Article from '@/components/elements/Article';
 import HeroSingle from '@/components/HeroSingle';
-
 import getBlog from '$queries/getBlog';
 import getPosts from '$queries/getPosts';
 
 export async function generateMetadata() {
 	const data = await getBlog();
-	return {
-		title: data.meta_title,
-		description: data.meta_description,
-		openGraph: {
-			title: data.meta_title,
-			description: data.meta_description,
-			images: [
-				{
-					url: `https://stefans.dev/assets/${data.meta_image.id}`,
-					width: data.meta_image.width,
-					height: data.meta_image.height,
-					alt: data.meta_image.title,
-				},
-			],
-		},
-	};
+	return { title: data.meta_title, description: data.meta_description };
 }
 
 const Blog = async () => {
-	const blog = await getBlog();
-	const posts = await getPosts();
+	const [blog, posts] = await Promise.all([getBlog(), getPosts()]);
+
 	return (
-		<div>
-			<HeroSingle title={blog.title} />
-			<div className="container">
-				<div className="md:grid-cols-3 grid grid-cols-1 gap-4 py-16">
-					{posts.map((article) => (
-						<Article
-							slug={article.slug}
-							title={article.title}
-							key={article.slug}
-							image={article.featured_image}
-							categories={article.categories}
-						/>
-					))}
+		<>
+			<HeroSingle title={blog.title} eyebrow="Notes" />
+			<section className="py-16 sm:py-24 lg:py-32">
+				<div className="container grid gap-12 border-t border-neutral-950/10 pt-8 lg:grid-cols-[3fr_9fr]">
+					<p className="text-base font-medium text-neutral-950 sm:text-sm">Writing</p>
+					<div>
+						{posts.map((article) => (
+							<Article key={article.slug} slug={article.slug} title={article.title} image={article.featured_image} categories={article.categories} />
+						))}
+					</div>
 				</div>
-			</div>
-		</div>
+			</section>
+		</>
 	);
 };
+
 export default Blog;

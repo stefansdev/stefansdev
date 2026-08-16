@@ -1,58 +1,40 @@
-import GithubIcon from '$svg/GithubIcon';
-import InstagramIcon from '$svg/InstagramIcon';
-import LinkedInIcon from '$svg/LinkedInIcon';
-import XIcon from '$svg/XIcon';
+import Link from 'next/link';
+
+const socialLinks = [
+	{ label: 'GitHub', href: 'https://github.com/stefansdev' },
+	{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/stefansdev/' },
+	{ label: 'Instagram', href: 'https://www.instagram.com/stefans.dev/' },
+	{ label: 'X', href: 'https://twitter.com/stefansdev' },
+];
 
 const Footer = () => {
 	const year = new Date().getFullYear();
+
 	return (
-		<footer className="border-t border-gray-100  overflow-hidden relative">
-			<div className="absolute inset-x-0 bottom-0 top-0 text-slate-900/10 [mask-image:linear-gradient(transparent,white)] pointer-events-none">
-				<svg aria-hidden="true" className="absolute inset-0 h-full w-full ">
-					<defs>
-						<pattern id=":Rem:" width="128" height="128" patternUnits="userSpaceOnUse" x="50%" y="100%">
-							<path d="M0 128V.5H128" fill="none" stroke="currentColor" />
-						</pattern>
-					</defs>
-					<rect width="100%" height="100%" fill="url(#:Rem:)" />
-				</svg>
-			</div>
-			<div className="container mx-auto grid gap-4 justify-center lg:flex lg:justify-between lg:space-x-10 py-10 ">
-				<div>
-					<ul className="text-neutral-600 flex space-x-4 items-center justify-center lg:justify-normal">
-						<li>
-							<a href="https://twitter.com/stefansdev" className="" target="_blank" rel="noreferrer">
-								<XIcon />
-							</a>
-						</li>
-						<li>
-							<a href="https://github.com/stefansdev" target="_blank" rel="noreferrer">
-								<GithubIcon />
-							</a>
-						</li>
-						<li>
-							<a
-								href="https://www.instagram.com/stefans.dev/"
-								className="[&_svg]:size-6"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<InstagramIcon />
-							</a>
-						</li>
-						<li>
-							<a
-								href="https://www.linkedin.com/in/stefansdev/"
-								className=""
-								target="_blank"
-								rel="noreferrer"
-							>
-								<LinkedInIcon />
-							</a>
-						</li>
-					</ul>
+		<footer className="bg-white pt-16 sm:pt-24">
+			<div className="container">
+				<div className="grid gap-12 border-t border-neutral-950/10 py-10 lg:grid-cols-[1fr_auto] lg:items-end">
+					<div className="grid gap-3">
+						<Link href="/" aria-label="Homepage" className="text-lg font-medium tracking-tight text-neutral-950">
+							Stefan Stankovic
+						</Link>
+						<p className="max-w-[44ch] text-base text-pretty text-neutral-500 sm:text-sm">
+							Products, systems and practical AI for businesses that need complicated things to work.
+						</p>
+					</div>
+					<div className="grid gap-8 lg:justify-items-end">
+						<ul role="list" className="flex flex-wrap gap-x-6 gap-y-3 text-base text-neutral-600 sm:text-sm">
+							{socialLinks.map((link) => (
+								<li key={link.label}>
+									<a href={link.href} target="_blank" rel="noreferrer" className="font-normal hover:text-neutral-950">
+										{link.label}
+									</a>
+								</li>
+							))}
+						</ul>
+						<p className="text-base text-neutral-500 sm:text-sm">© {year} Stefan Stankovic</p>
+					</div>
 				</div>
-				<div className="text-neutral-400">&copy; {year} Stefan S. | All rights reserved.</div>
 			</div>
 		</footer>
 	);
