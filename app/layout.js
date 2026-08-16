@@ -1,6 +1,7 @@
-import '@/styles/app.scss';
+import '@/styles/app.css';
 import { Analytics } from '@vercel/analytics/react';
 import localFont from 'next/font/local';
+import Script from 'next/script';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
@@ -145,6 +146,13 @@ export default function RootLayout({ children }) {
 				{children}
 				<Footer />
 				<Analytics />
+				<Script
+					async
+					src="https://c.analytics.anomys.dev/oa.js"
+					data-key="oa_pk_dDx4TDH5NWAMw3O88X38XzdSXOocTDJl"
+					data-collector="https://c.analytics.anomys.dev"
+					strategy="afterInteractive"
+				/>
 			</body>
 		</html>
 	);

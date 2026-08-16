@@ -1,4 +1,6 @@
-import { Github, Linkedin, Instagram } from 'lucide-react';
+import GithubIcon from '$svg/GithubIcon';
+import InstagramIcon from '$svg/InstagramIcon';
+import LinkedInIcon from '$svg/LinkedInIcon';
 import XIcon from '$svg/XIcon';
 
 const Footer = () => {
@@ -24,18 +26,18 @@ const Footer = () => {
 							</a>
 						</li>
 						<li>
-							<a href="https://github.com/stefansdev" className="" target="_blank" rel="noreferrer">
-								<Github />
+							<a href="https://github.com/stefansdev" target="_blank" rel="noreferrer">
+								<GithubIcon />
 							</a>
 						</li>
 						<li>
 							<a
 								href="https://www.instagram.com/stefans.dev/"
-								className=""
+								className="[&_svg]:size-6"
 								target="_blank"
 								rel="noreferrer"
 							>
-								<Instagram />
+								<InstagramIcon />
 							</a>
 						</li>
 						<li>
@@ -45,7 +47,7 @@ const Footer = () => {
 								target="_blank"
 								rel="noreferrer"
 							>
-								<Linkedin />
+								<LinkedInIcon />
 							</a>
 						</li>
 					</ul>

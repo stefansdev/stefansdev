@@ -60,7 +60,7 @@ const Header = () => {
 						<li key={item.link}>
 							<Link
 								href={item.link}
-								className={`rounded-sm border  px-5 py-2 transition-all hover:border-brand-black-lighter hover:bg-neutral-950 ${
+								className={`rounded-xs border px-5 py-2 transition-all hover:border-brand-black-lighter hover:bg-neutral-950 ${
 									pathname === item.link
 										? 'border-brand-black-lighter bg-neutral-950 text-red-500'
 										: 'border-transparent bg-transparent'

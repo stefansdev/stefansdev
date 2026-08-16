@@ -18,7 +18,7 @@ const Article = ({ slug, title, image, categories }) => (
 				{/* <ul className="flex mb-2 absolute top-4 left-4">
 					{categories.map((category, i) => (
 						<li
-							className="text-[10px] mr-2 font-semibold uppercase rounded-sm bg-gray-700 px-2 py-[2px] text-gray-50"
+							className="text-[10px] mr-2 font-semibold uppercase rounded-xs bg-gray-700 px-2 py-[2px] text-gray-50"
 							key={`cat_${i}`}
 						>
 							{category}

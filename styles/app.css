@@ -1,16 +1,63 @@
-$red: #ff6685;
-$green: #bad761;
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--color-brand-black: #000000;
+	--color-brand-black-lighter: #151515;
+	--color-brand-red: #cd3f37;
+	--font-sans: var(--font-mona-sans), ui-sans-serif, system-ui, sans-serif;
+	--font-headings: var(--font-nohemi), ui-sans-serif, system-ui, sans-serif;
+}
+
+@utility container {
+	width: 100%;
+	margin-inline: auto;
+	padding-inline: 1rem;
+
+	@media (width >= 64rem) {
+		max-width: 64rem;
+	}
+
+	@media (width >= 80rem) {
+		max-width: 80rem;
+	}
+
+	@media (width >= 96rem) {
+		max-width: 105rem;
+	}
+}
+
+::selection {
+	background-color: var(--color-red-500);
+	color: var(--color-white);
+}
+
+@utility image_cover {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: block;
+	width: 100%;
+	height: 100%;
+	translate: -50% -50%;
+	object-fit: cover;
+}
+
 /**
  * Monokai theme for Prism.JS
  *
  * @author Martijn Swaagman
  * @license MIT 2015
  */
-code[class*="language-"],
-pre[class*="language-"] {
+code[class*='language-'],
+pre[class*='language-'] {
 	color: #f8f8f2;
 	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-	font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
@@ -18,30 +65,23 @@ pre[class*="language-"] {
 	word-break: normal;
 	word-wrap: normal;
 	line-height: 1.5;
-
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
 	tab-size: 4;
-
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
 	hyphens: none;
 }
 
-pre[class*="language-"] {
+pre[class*='language-'] {
 	padding: 1em;
 	margin: 0.5em 0;
 	overflow: auto;
 	border-radius: 0.3em;
 }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
 	background: #282a3a;
 }
 
-:not(pre) > code[class*="language-"] {
+:not(pre) > code[class*='language-'] {
 	padding: 0.1em;
 	border-radius: 0.3em;
 }
@@ -65,8 +105,9 @@ pre[class*="language-"] {
 .token.tag,
 .token.constant,
 .token.symbol,
-.token.deleted {
-	color: $red;
+.token.deleted,
+.token.keyword {
+	color: #ff6685;
 }
 
 .token.boolean,
@@ -80,7 +121,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: $green;
+	color: #bad761;
 }
 
 .token.operator,
@@ -98,10 +139,6 @@ pre[class*="language-"] {
 	color: #e6db74;
 }
 
-.token.keyword {
-	color: $red;
-}
-
 .token.regex,
 .token.important {
 	color: #fd971f;
@@ -111,6 +148,7 @@ pre[class*="language-"] {
 .token.bold {
 	font-weight: bold;
 }
+
 .token.italic {
 	font-style: italic;
 }

@@ -12,7 +12,7 @@ const SocialBar = () => (
 						href="https://twitter.com/stefansdev"
 						target="_blank"
 						rel="noreferrer"
-						className="bg-white border border-gray-100 dark:border-gray-600 rounded-md py-2 px-4 grid grid-cols-[auto,1fr] items-center gap-4 transition-gpu transition-all duration-300 hover:bg-brand-twitter hover:text-white dark:bg-gray-800 dark:hover:bg-brand-twitter hover:-translate-y-1"
+						className="bg-white border border-gray-100 dark:border-gray-600 rounded-md py-2 px-4 grid grid-cols-[auto_1fr] items-center gap-4 transition-all duration-300 hover:bg-brand-twitter hover:text-white dark:bg-gray-800 dark:hover:bg-brand-twitter hover:-translate-y-1"
 					>
 						<TwitterIcon />
 						<div className="text-sm">
@@ -26,7 +26,7 @@ const SocialBar = () => (
 						href="https://instagram.com/stefans.dev"
 						target="_blank"
 						rel="noreferrer"
-						className="bg-white border border-gray-100 dark:border-gray-600 rounded-md py-2 px-4 grid grid-cols-[auto,1fr] items-center gap-4 transition-gpu transition-all duration-300 hover:bg-brand-instagram hover:text-white dark:bg-gray-800 dark:hover:bg-brand-instagram hover:-translate-y-1"
+						className="bg-white border border-gray-100 dark:border-gray-600 rounded-md py-2 px-4 grid grid-cols-[auto_1fr] items-center gap-4 transition-all duration-300 hover:bg-brand-instagram hover:text-white dark:bg-gray-800 dark:hover:bg-brand-instagram hover:-translate-y-1"
 					>
 						<InstagramIcon />
 						<div className="text-sm">
@@ -40,7 +40,7 @@ const SocialBar = () => (
 						href="https://github.com/stefansdev"
 						target="_blank"
 						rel="noreferrer"
-						className="bg-white  border border-gray-100 dark:border-gray-600 rounded-md py-2 px-4 grid grid-cols-[auto,1fr] items-center gap-4 transition-gpu transition-all duration-300 hover:bg-brand-github hover:text-white dark:hover:text-gray-800 dark:bg-gray-800 dark:hover:bg-white hover:-translate-y-1"
+						className="bg-white border border-gray-100 dark:border-gray-600 rounded-md py-2 px-4 grid grid-cols-[auto_1fr] items-center gap-4 transition-all duration-300 hover:bg-brand-github hover:text-white dark:hover:text-gray-800 dark:bg-gray-800 dark:hover:bg-white hover:-translate-y-1"
 					>
 						<GithubIcon />
 						<div className="text-sm">
@@ -54,7 +54,7 @@ const SocialBar = () => (
 						href="https://www.upwork.com/freelancers/stefansdev"
 						target="_blank"
 						rel="noreferrer"
-						className="bg-white border border-gray-100 dark:border-gray-600 rounded-md py-2 px-4 grid grid-cols-[auto,1fr] items-center gap-4 transition-gpu transition-all duration-300 hover:bg-brand-upwork hover:text-white dark:bg-gray-800 dark:hover:bg-brand-upwork hover:-translate-y-1"
+						className="bg-white border border-gray-100 dark:border-gray-600 rounded-md py-2 px-4 grid grid-cols-[auto_1fr] items-center gap-4 transition-all duration-300 hover:bg-brand-upwork hover:text-white dark:bg-gray-800 dark:hover:bg-brand-upwork hover:-translate-y-1"
 					>
 						<UpworkIcon />
 						<div className="text-sm">

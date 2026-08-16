@@ -5,7 +5,8 @@ import Content from '@/components/Content';
 import getPost from '$queries/getPost';
 
 export async function generateMetadata({ params }) {
-	const data = await getPost(params.slug);
+	const { slug } = await params;
+	const data = await getPost(slug);
 	return {
 		title: data.meta_title,
 		description: data.meta_description,
@@ -25,7 +26,8 @@ export async function generateMetadata({ params }) {
 }
 
 const SinglePost = async ({ params }) => {
-	const post = await getPost(params.slug);
+	const { slug } = await params;
+	const post = await getPost(slug);
 	const date = new Date(post.date_created);
 	return (
 		<div>
@@ -33,7 +35,7 @@ const SinglePost = async ({ params }) => {
 				<div className="container text-white">
 					<h1 className="font-headings mb-8 text-6xl font-bold">{post.title}</h1>
 					<div className="flex text-sm text-white">
-						<p className="grid grid-cols-[auto,1fr] gap-2 items-center mr-4">
+						<p className="grid grid-cols-[auto_1fr] gap-2 items-center mr-4">
 							<CalendarIcon className="w-4 h-4" />
 							{date.getDate()}. {monthNames[date.getMonth()]}, {date.getFullYear()}
 						</p>
