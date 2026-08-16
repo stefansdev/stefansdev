@@ -16,13 +16,12 @@ const Hero = () => (
 		<div className="container absolute left-1/2 bottom-10 lg:bottom-auto lg:top-1/2 z-10 -translate-x-1/2 lg:-translate-y-[40%] text-white">
 			<div className="max-w-[680px]">
 				<h1 className="font-headings mb-4 lg:mb-12 text-4xl lg:text-6xl font-bold bg-[linear-gradient(158deg,rgb(255,255,247)_8.55094%,rgb(152,152,138)_107.012%)] bg-clip-text text-transparent">
-					Jamstack & Headless web developer
+					Making complicated things useful.
 				</h1>
 				<div className="mb-10 lg:mb-16 lg:text-lg font-light text-neutral-400">
-					<p className="mb-2">Full Stack Javascript developer specialised in Jamstack & Headless.</p>
 					<p>
-						With a team of talented creatives by my side, we are building blazingly fast web sites and
-						applications.
+						I build AI products, automation and digital systems that solve real business problems,
+						simplify daily work and create room to grow.
 					</p>
 				</div>
 				<div className="font-headings flex items-center space-x-6 lg:space-x-10">
