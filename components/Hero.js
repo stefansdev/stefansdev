@@ -68,7 +68,7 @@ const Hero = () => (
 				<Image src="/home-car.png" fill sizes="(min-width: 640px) 300px, 100vw" alt="Grey Dodge Challenger parked beside a lake" className="object-cover" />
 			</figure>
 			<figure className="relative aspect-[4/3] overflow-hidden bg-neutral-900 outline-1 -outline-offset-1 outline-white/10" data-reveal-item="image" data-motion-image>
-				<Image src="/home-dubai-sunset.png" fill sizes="(min-width: 640px) 300px, 100vw" alt="Sunset over the Dubai skyline" className="object-cover" />
+				<Image src="/home-workspace-2026.webp" fill sizes="(min-width: 640px) 300px, 100vw" alt="Desk setup at night with two monitors and warm lighting, seen through a window" className="object-cover" />
 			</figure>
 		</section>
 
