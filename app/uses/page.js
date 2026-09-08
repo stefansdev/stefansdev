@@ -41,7 +41,7 @@ const sections = [
 			},
 			{
 				name: 'Desktop PC',
-				description: 'A custom-built PC running a dual-boot setup with Omarchy and Windows.',
+				description: 'A custom-built PC running Omarchy.',
 			},
 			{
 				name: 'Dock',
@@ -67,11 +67,11 @@ const sections = [
 			},
 			{
 				name: 'Keyboards',
-				description: 'Magic Keyboard is the main one, with MX Keys and Lofree Flow 2 also in rotation.',
+				description: 'NuPhy Air75 V3 Raycast Edition for macOS/Linux and NuPhy Air75 V2 for the gaming PC.',
 			},
 			{
 				name: 'Headphones',
-				description: 'Sony WH-1000XM4 for work and music, AirPods Pro outside and Logitech G PRO X 2 for gaming.',
+				description: 'AirPods Pro outside and Logitech G PRO X 2 for gaming.',
 			},
 			{
 				name: 'Speakers',
@@ -210,12 +210,12 @@ const UsesPage = () => (
 		<HeroSingle title="Uses" eyebrow="Tools and setup" />
 		<div className="container pb-12 sm:pb-16">
 			<figure className="grid gap-3 border-t border-white/10 pt-8" data-reveal-group>
-				<div className="relative aspect-[3/2] overflow-hidden outline-1 -outline-offset-1 outline-white/10" data-reveal-item="image" data-motion-image>
+				<div className="relative aspect-video overflow-hidden outline-1 -outline-offset-1 outline-white/10" data-reveal-item="image" data-motion-image>
 					<Image
-						src="/uses-desk-setup.png"
+						src="/setup-2026.webp"
 						fill
 						sizes="(min-width: 48rem) 44rem, calc(100vw - 2.5rem)"
-						alt="Desk setup with an ultrawide monitor, keyboard, speakers and desktop PC"
+						alt="Desk setup with two monitors, keyboards, speakers and an illuminated desktop PC"
 						className="object-cover object-center"
 						priority
 					/>
